@@ -49,8 +49,8 @@ export const SuperContextProvider: React.FC<{ children: ReactNode }> = ({
     // Append user message
     setMessages((prev) => [...prev, { text: message, sender: "user" }]);
 
-    const url = "http://localhost:5000/chat";
-    // const url = "https://chatbot-backend-common.onrender.com/chat";
+   // const url = "http://localhost:5000/chat";
+     const url = "https://chatbot-backend-common.onrender.com/chat";
     try {
       setIsGen(true);
       const response = await fetch(url, {
