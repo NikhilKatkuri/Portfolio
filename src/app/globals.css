@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-theme-surface: var(--palette-grey-0);
+  --color-theme-on-surface: var(--palette-grey-800);
+  --color-theme-on-surface-variant: var(--palette-grey-800);
+  --color-theme-text-primary: var(--palette-grey-1200);
+  --color-theme-text-secondary: var(--palette-grey-800);
+  --color-theme-surface-overlay: rgba(var(--palette-grey-0-rgb), 0.95);
+  --color-theme-button-primary: var(--palette-grey-1200);
+  --color-theme-button-on-primary: var(--palette-grey-0);
+  --color-theme-button-secondary: rgba(var(--palette-grey-400-rgb), 0.18);
+  --color-theme-button-on-secondary: var(--palette-grey-1200);
+  --spacing-btn-pad: var(--btn-padding);
+}
+
+:root {
+  /* Base values for when the user is at the top of the page */
+  --avatar-y-coord: 300px; /* How far down the image is in the Hero */
+  --avatar-scale: 1;       /* 1 = 100% full scale (240px wide) */
+  --avatar-size: 240px;    /* The true footprint size of the image */
+}
+
+.animating-avatar {
+  transition:
+    top 0.15s linear,
+    width 0.15s linear,
+    height 0.15s linear;
+}
+ 
+::-webkit-scrollbar{
+  display: none;
+}
