@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "../constants/Theme.css";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
+import Navbar from "@/components/sections/Navbar"; 
+import Footer from "@/components/sections/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={` h-full antialiased`}>
-      <body className="min-h-full flex flex-col relative">
+      <body className="min-h-full flex flex-col relative scroll-smooth">
         <Navbar />
         <div
           className="w-full pointer-events-none transition-all duration-75"
@@ -25,6 +25,7 @@ export default function RootLayout({
           }}
         /> 
         {children}
+        <Footer/>
       </body>
     </html>
   );

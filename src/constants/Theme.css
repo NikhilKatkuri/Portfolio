@@ -19,6 +19,7 @@
   --palette-grey-50-rgb: 230, 234, 240;
   --palette-grey-400-rgb: 183, 191, 217;
   --palette-grey-600-rgb: 170, 177, 204;
+  --palette-grey-800-rgb: 69, 71, 77;
   --palette-grey-1000-rgb: 33, 34, 38;
   --palette-grey-1200-rgb: 18, 19, 23;
 
@@ -63,24 +64,35 @@
   --theme-button-on-secondary: var(--palette-grey-1200);
 
   --theme-content-overlay: rgba(var(--palette-grey-400-rgb), 0.2);
-  --btn-padding: 8px 16px;
+
+  --theme-content-overlay-depth-02: rgba(var(--palette-grey-400-rgb), 0.25);
+  --btn-padding: 8.5px 18px;
+  --btn-padding-2: 10px 20px;
   --content-max-width: 1200px;
 
   --landing-main-text-size: 3.2rem;
   --landing-main-text-line-height: 4rem;
   --landing-main-text-letter-spacing: -0.00001em;
 
+  --footer-text-size: 10rem;
+  --footer-text-line-height: 10rem;
+  --footer-text-letter-spacing: -0.05em;
+
   --landing-secondary-text-size: 1.6rem;
   --landing-secondary-text-line-height: 2.2rem;
   --landing-secondary-text-letter-spacing: -0.00001em;
 
-  --base-size: 17.5px;
-  --base-line-height: 25.38px;
+  --base-size: 16px;
+  --base-line-height: 26px;
   --base-letter-spacing: 0.18px;
 
   --4xl-size: 42px;
   --4xl-line-height: 56px;
   --4xl-letter-spacing: -0.73px;
+
+  --5xl-size: 36px;
+  --5xl-line-height: 42px;
+  --5xl-letter-spacing: -0.73px;
 
   --6xl-size: 28px;
   --6xl-line-height: 36px;
@@ -88,7 +100,11 @@
 
   --4xl-paragraph-size: 20px;
   --4xl-paragraph-line-height: 28px;
-  --4xl-paragraph-letter-spacing: -0.73px;
+  --4xl-paragraph-letter-spacing: -0.03px;
+
+  --5xl-paragraph-size: 18px;
+  --5xl-paragraph-line-height: 26px;
+  --5xl-paragraph-letter-spacing: -0.02px;
 }
 
 ::selection {
@@ -107,6 +123,9 @@
     --landing-main-text-size: 3rem;
     --landing-main-text-line-height: 3.8rem;
     --landing-main-text-letter-spacing: -0.00001em;
+
+    --footer-text-size: 8rem;
+    --footer-text-line-height: 8rem;
   }
 }
 @media screen and (max-width: 1240px) {
@@ -122,6 +141,9 @@
 
     --4xl-size: 42px;
     --4xl-line-height: 60px;
+
+    --footer-text-size: 7rem;
+    --footer-text-line-height: 7rem;
   }
 }
 
@@ -132,6 +154,9 @@
     --landing-main-text-size: 2.4rem;
     --landing-main-text-line-height: 3.2rem;
     --landing-main-text-letter-spacing: -0.0001em;
+
+    --footer-text-size: 6rem;
+    --footer-text-line-height: 6rem;
   }
 }
 
@@ -151,6 +176,9 @@
 
     --4xl-paragraph-size: 20px;
     --4xl-paragraph-line-height: 28px;
+
+    --footer-text-size: 5rem;
+    --footer-text-line-height: 5rem;
   }
 }
 
@@ -170,6 +198,9 @@
 
     --4xl-paragraph-size: 18px;
     --4xl-paragraph-line-height: 28px;
+
+    --footer-text-size: 4rem;
+    --footer-text-line-height: 4rem;
   }
 }
 
@@ -263,6 +294,18 @@ body {
   color: var(--theme-text-primary);
 }
 
+.heading-5 {
+  font-size: var(--5xl-size);
+  line-height: var(--5xl-line-height);
+  letter-spacing: var(--5xl-letter-spacing);
+  font-weight: 350;
+  font-variation-settings:
+    "wdth" 100,
+    "opsz" 42;
+
+  color: var(--theme-text-primary);
+}
+
 .paragraph-4 {
   font-size: var(--4xl-paragraph-size);
   line-height: var(--4xl-paragraph-line-height);
@@ -273,6 +316,15 @@ body {
     "opsz" 42;
 }
 
+.paragraph-5 {
+  font-size: var(--5xl-paragraph-size);
+  line-height: var(--5xl-paragraph-line-height);
+  letter-spacing: var(--5xl-paragraph-letter-spacing);
+
+  font-variation-settings:
+    "wdth" 100,
+    "opsz" 42;
+}
 
 .heading-6 {
   font-size: var(--6xl-size);
@@ -284,4 +336,33 @@ body {
     "opsz" 42;
 
   color: var(--theme-text-primary);
+}
+
+.footer-leading {
+  font-size: var(--footer-text-size);
+  line-height: var(--footer-text-line-height);
+  letter-spacing: var(--footer-text-letter-spacing);
+  font-weight: 950;
+  font-variation-settings:
+    "wdth" 100,
+    "opsz" 144;
+  color: rgba(var(--palette-grey-50-rgb), 0.5);
+}
+
+.footer-leading-overlay {
+  font-size: var(--5xl-paragraph-size);
+  line-height: var(--5xl-paragraph-line-height);
+  letter-spacing: var(--5xl-paragraph-letter-spacing);
+
+  font-variation-settings:
+    "wdth" 100,
+    "opsz" 42;
+}
+
+@media screen and (min-width: 600px) {
+  .footer-leading-overlay {
+    font-size: var(--5xl-size);
+    line-height: var(--5xl-line-height);
+    letter-spacing: var(--5xl-letter-spacing);
+  }
 }

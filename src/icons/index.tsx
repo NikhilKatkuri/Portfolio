@@ -1,3 +1,5 @@
+import { SVGProps } from "react";
+
 export function SolarArrowRightUpBroken(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -196,6 +198,219 @@ export function SolarMagicStick3Linear(props: React.SVGProps<SVGSVGElement>) {
         <path strokeLinecap="round" strokeWidth="1.5" d="m6 10l4-4" />
         <path d="M16.1 2.307a.483.483 0 0 1 .9 0l.43 1.095a.48.48 0 0 0 .272.274l1.091.432a.486.486 0 0 1 0 .903l-1.09.432a.5.5 0 0 0-.273.273L17 6.81a.483.483 0 0 1-.9 0l-.43-1.095a.5.5 0 0 0-.273-.273l-1.09-.432a.486.486 0 0 1 0-.903l1.09-.432a.5.5 0 0 0 .273-.274zm3.867 6.823a.483.483 0 0 1 .9 0l.156.399c.05.125.148.224.273.273l.398.158a.486.486 0 0 1 0 .902l-.398.158a.5.5 0 0 0-.273.273l-.156.4a.483.483 0 0 1-.9 0l-.157-.4a.5.5 0 0 0-.272-.273l-.398-.158a.486.486 0 0 1 0-.902l.398-.158a.5.5 0 0 0 .272-.273zM5.133 15.307a.483.483 0 0 1 .9 0l.157.4a.48.48 0 0 0 .272.273l.398.157a.486.486 0 0 1 0 .903l-.398.158a.48.48 0 0 0-.272.273l-.157.4a.483.483 0 0 1-.9 0l-.157-.4a.48.48 0 0 0-.272-.273l-.398-.158a.486.486 0 0 1 0-.903l.398-.157a.48.48 0 0 0 .272-.274z" />
       </g>
+    </svg>
+  );
+}
+
+export function SolarAltArrowLeftBroken(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      {/* Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ */}
+      <path
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="m15 19l-6-7l1.5-1.75M15 5l-2 2.333"
+      />
+    </svg>
+  );
+}
+
+export function SolarAltArrowRightBroken(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      {/* Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ */}
+      <path
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="m9 5l2 2.333M9 19l6-7l-1.5-1.75"
+      />
+    </svg>
+  );
+}
+
+export function SolarLetterLinear(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      {/* Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ */}
+      <g fill="none" strokeWidth="1.5">
+        <path d="M2 12c0-3.771 0-5.657 1.172-6.828S6.229 4 10 4h4c3.771 0 5.657 0 6.828 1.172S22 8.229 22 12s0 5.657-1.172 6.828S17.771 20 14 20h-4c-3.771 0-5.657 0-6.828-1.172S2 15.771 2 12Z" />
+        <path
+          strokeLinecap="round"
+          d="m6 8l2.159 1.8c1.837 1.53 2.755 2.295 3.841 2.295s2.005-.765 3.841-2.296L18 8"
+        />
+      </g>
+    </svg>
+  );
+}
+
+export function SolarMapPointLinear(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      {/* Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ */}
+      <g fill="none" strokeWidth="1.5">
+        <path d="M4 10.143C4 5.646 7.582 2 12 2s8 3.646 8 8.143c0 4.462-2.553 9.67-6.537 11.531a3.45 3.45 0 0 1-2.926 0C6.553 19.812 4 14.606 4 10.144Z" />
+        <circle cx="12" cy="10" r="3" />
+      </g>
+    </svg>
+  );
+}
+
+export function SolarUserLinear(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      {/* Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ */}
+      <g fill="none" strokeWidth="1.5">
+        <circle cx="12" cy="6" r="4" />
+        <path d="M20 17.5c0 2.485 0 4.5-8 4.5s-8-2.015-8-4.5S7.582 13 12 13s8 2.015 8 4.5Z" />
+      </g>
+    </svg>
+  );
+}
+
+export const LinkedinIcon = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M8 7.625V8.125M3 9.4C3 7.16 3 6.04 3.436 5.184C3.81949 4.43139 4.43139 3.81949 5.184 3.436C6.04 3 7.16 3 9.4 3H14.6C16.84 3 17.96 3 18.816 3.436C19.5686 3.81949 20.1805 4.43139 20.564 5.184C21 6.04 21 7.16 21 9.4V14.6C21 16.84 21 17.96 20.564 18.816C20.1805 19.5686 19.5686 20.1805 18.816 20.564C17.96 21 16.84 21 14.6 21H9.4C7.16 21 6.04 21 5.184 20.564C4.43139 20.1805 3.81949 19.5686 3.436 18.816C3 17.96 3 16.84 3 14.6V9.4Z"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8 16.375V10.75M12 16.375V13.5M12 13.5V10.75M12 13.5C12 12.212 13.222 11.5 14.4 11.5C16 11.5 16 12.875 16 14.375V16.375"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const GithubIcon = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M5.19403 4.26753C7.09266 2.65357 9.50401 1.76853 11.9959 1.771C14.4877 1.7681 16.8991 2.65254 18.7981 4.26588C20.6971 5.87921 21.9595 8.11601 22.3593 10.5755C22.7591 13.035 22.27 15.5565 20.9798 17.6882C19.6895 19.8199 17.6824 21.4226 15.3179 22.209C14.7859 22.311 14.6159 22.001 14.6159 21.721V18.817C14.6406 18.4623 14.5893 18.1064 14.4655 17.773C14.3417 17.4397 14.1482 17.1366 13.8979 16.884C16.2349 16.626 18.6869 15.74 18.6869 11.71C18.7032 10.6674 18.3167 9.65877 17.6079 8.894C17.9279 7.99 17.8909 6.998 17.5039 6.12C17.5039 6.12 16.6299 5.839 14.6229 7.196C12.9042 6.72316 11.0897 6.72316 9.37093 7.196C7.36993 5.838 6.48793 6.12 6.48793 6.12C6.10103 6.99768 6.06419 7.99004 6.38493 8.894C5.67695 9.65892 5.29025 10.6668 5.30493 11.709C5.30493 15.728 7.75293 16.627 10.0809 16.893C9.69993 17.265 9.46493 17.76 9.41493 18.29C9.15789 18.4348 8.87467 18.5272 8.58168 18.5617C8.28868 18.5963 7.99174 18.5724 7.70806 18.4914C7.42438 18.4103 7.15959 18.2739 6.92904 18.0898C6.69848 17.9057 6.50674 17.6777 6.36493 17.419C6.19719 17.1283 5.96517 16.8799 5.68663 16.6927C5.40809 16.5055 5.09042 16.3845 4.75793 16.339C4.75793 16.339 3.73493 16.327 4.68693 16.977C5.24492 17.3335 5.65732 17.8775 5.84993 18.511C5.84993 18.511 6.45293 20.525 9.37193 19.892C9.37693 20.771 9.37193 21.466 9.37193 21.716C9.37193 21.993 9.20493 22.301 8.68193 22.209C6.31691 21.4239 4.30878 19.8223 3.01742 17.6911C1.72605 15.5599 1.23587 13.0384 1.63473 10.5786C2.03358 8.11883 3.29539 5.88148 5.19403 4.26753Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const MailIcon = (props: SVGProps<SVGSVGElement>) => {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M4 16.5714V7.42857C4 6.82237 4.24082 6.24099 4.66947 5.81233C5.09812 5.38368 5.67951 5.14286 6.28571 5.14286H17.7143C18.3205 5.14286 18.9019 5.38368 19.3305 5.81233C19.7592 6.24099 20 6.82237 20 7.42857V16.5714C20 17.1776 19.7592 17.759 19.3305 18.1877C18.9019 18.6163 18.3205 18.8571 17.7143 18.8571H6.28571C5.67951 18.8571 5.09812 18.6163 4.66947 18.1877C4.24082 17.759 4 17.1776 4 16.5714Z"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M6.28564 8.57143L11.9999 12L17.7142 8.57143"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export function SolarDownloadMinimalisticBoldDuotone(
+  props: SVGProps<SVGSVGElement>,
+) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      {/* Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ */}
+      <g fillRule="evenodd" clipRule="evenodd">
+        <path
+          d="M3 14.25a.75.75 0 0 1 .75.75c0 1.435.002 2.436.103 3.192c.099.734.28 1.122.556 1.399c.277.277.665.457 1.4.556c.754.101 1.756.103 3.191.103h6c1.435 0 2.436-.002 3.192-.103c.734-.099 1.122-.28 1.399-.556c.277-.277.457-.665.556-1.4c.101-.755.103-1.756.103-3.191a.75.75 0 0 1 1.5 0v.055c0 1.367 0 2.47-.116 3.337c-.122.9-.38 1.658-.982 2.26s-1.36.86-2.26.982c-.867.116-1.97.116-3.337.116h-6.11c-1.367 0-2.47 0-3.337-.116c-.9-.122-1.658-.38-2.26-.982s-.86-1.36-.981-2.26c-.117-.867-.117-1.97-.117-3.337V15a.75.75 0 0 1 .75-.75"
+          opacity=".5"
+        />
+        <path d="M12 16.75a.75.75 0 0 0 .553-.244l4-4.375a.75.75 0 1 0-1.107-1.012l-2.696 2.95V3a.75.75 0 0 0-1.5 0v11.068l-2.696-2.95a.75.75 0 0 0-1.108 1.013l4 4.375a.75.75 0 0 0 .554.244" />
+      </g>
+    </svg>
+  );
+}
+
+export function SolarArrowDownBroken(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      {/* Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ */}
+      <path
+        fill="none" 
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="m12 20l6-6m-6 6l-6-6m6 6V9.5M12 4v2.5"
+      />
     </svg>
   );
 }

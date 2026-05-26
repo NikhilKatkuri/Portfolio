@@ -51,7 +51,7 @@ const IconFlow = () => {
 
   return (
     <div className="flex w-full justify-center overflow-hidden my-12 ">
-      <div className="flex w-[200vw] -translate-x-50  h-36 relative md:h-64 gap-2 no-scrollbar scroll-smooth items-center px-8">
+      <div className="flex w-[200vw] -translate-x-50  h-52 relative md:h-64 gap-2 no-scrollbar scroll-smooth items-center px-8">
         {quatrpleIcons.map((Icon, index) => {
           const translateY =
             Math.round(Math.sin(index * frequency) * amplitude * 100) / 100;
