@@ -69,7 +69,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 rounded-full border border-(--palette-grey-100) hover:bg-(--palette-grey-20) p-btn-pad-2 text-sm  transition-all "
               >
-                <Icon className="size-5 stroke-theme-on-surface" />
+                <Icon className="size-5  fill-theme-on-surface stroke-theme-on-surface" />
                 <span>{label}</span>
               </a>
             ))}
