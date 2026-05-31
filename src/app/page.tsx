@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Experience from "@/components/sections/Experience";
 import FeaturedProject from "@/components/sections/FeaturedProject";
 import Hero from "@/components/sections/Hero"; 
@@ -6,6 +7,9 @@ import TechnicalExpertise from "@/components/sections/TechnicalExpertise";
 import IconFlow from "@/components/ui/IconFlow";  
 import Navbar from "@/components/sections/Navbar"; 
 import Footer from "@/components/sections/Footer";
+import { homeMetadata } from "@/constants/meta";
+
+export const metadata: Metadata = homeMetadata;
 
 const Home = () => {
   return (

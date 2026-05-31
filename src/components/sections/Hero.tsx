@@ -7,10 +7,10 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <div className="h-auto pb-32 w-full max-w-(--content-max-width) mx-auto max-lg:px-4">
-      <div className="landing-main">
-        <h1 className="">Designing systems that feel simple.</h1>
-        <h1 className="">Engineering systems that scale.</h1>
-      </div>
+      <h1 className="landing-main">
+        <p className="">Designing systems that feel simple.</p>
+        <p className="">Engineering systems that scale.</p>
+      </h1>
       <div className="my-4 landing-secondary ">
         <p className="">
           I&apos;m Nikhil, a Full-Stack and Android Engineer focused on

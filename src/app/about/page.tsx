@@ -1,7 +1,10 @@
 import Navbar from "@/components/sections/Navbar";
 import { GithubIcon, LinkedinIcon, MailIcon, NPMjs } from "@/icons";
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"; 
+
+import type { Metadata } from "next";
+import { aboutMetadata } from "@/constants/meta";
+export const metadata: Metadata = aboutMetadata; 
 
 const socialLinks = [
   {

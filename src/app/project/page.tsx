@@ -1,6 +1,11 @@
 import Footer from "@/components/sections/Footer";
 import Navbar from "@/components/sections/Navbar";
 
+import type { Metadata } from "next";
+import { projectsMetadata } from "@/constants/meta";
+import ProjectGrid from "@/components/client/ProjectGrid";
+export const metadata: Metadata = projectsMetadata; 
+
 const page = () => {
   return (
     <>
@@ -9,10 +14,10 @@ const page = () => {
       <main className="relative w-full min-h-dvh">
         <div className="max-w-(--content-max-width) mx-auto pb-12  mt-32 max-lg:px-4 justify-between w-full relative h-auto ">
           <div className="my-6">
-            <p className="heading-4 max-w-2xl">
+            <h1 className="heading-4 max-w-2xl">
               Selected work built with curiosity, systems thinking, and
               obsession for clean execution.
-            </p>
+            </h1>
             <p className="paragraph-4 mt-6 max-w-2xl">
               Over the years, I&apos;ve built products, tools, and experiments
               focused on solving practical problems through thoughtful
@@ -21,14 +26,7 @@ const page = () => {
               design.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xxl:grid-cols-4 gap-2 flex-1">
-            <div className="rounded-lg animate-pulse h-64 w-full bg-black/5"></div>
-            <div className="rounded-lg animate-pulse h-64 w-full bg-black/5"></div>
-            <div className="rounded-lg animate-pulse h-64 w-full bg-black/5"></div>
-            <div className="rounded-lg animate-pulse h-64 w-full bg-black/5"></div>
-            <div className="rounded-lg animate-pulse h-64 w-full bg-black/5"></div>
-            <div className="rounded-lg animate-pulse h-64 w-full bg-black/5"></div>
-          </div>
+         <ProjectGrid/>
         </div>
       </main>
       <Footer />

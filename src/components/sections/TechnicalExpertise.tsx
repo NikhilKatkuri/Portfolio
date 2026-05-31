@@ -3,9 +3,9 @@ const TechnicalExpertise = () => {
     <div className="min-h-screen w-full flex flex-col gap-8 max-lg:px-4">
       <div className="mx-auto max-w-(--content-max-width) w-full flex flex-col gap-8">
         <div>
-          <h1 className="heading-4 lg:my-3 text-left">
+          <h2 className="heading-4 lg:my-3 text-left">
             Technical Systems & Tooling
-          </h1>
+          </h2>
           <p className="paragraph-4 max-w-lg md:max-w-xl text-left text-pretty text-theme-on-surface/80">
             A precise breakdown of my development capabilities. I specialize in
             engineering automated terminal utilities, building clean web

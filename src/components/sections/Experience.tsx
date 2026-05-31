@@ -2,7 +2,7 @@ const Experience = () => {
   return (
     <div className="mx-auto max-w-(--content-max-width) w-full max-lg:px-4 flex flex-col h-auto py-12 gap-8">
       <div>
-        <h1 className="heading-4 lg:my-3">Experience</h1>
+        <h2 className="heading-4 lg:my-3">Experience</h2>
         <p className="paragraph-4 max-w-lg md:max-w-xl text-theme-on-surface/80">
           A breakdown of the languages, frameworks, and tools I use to build
           software. I focus on writing clean code, fixing performance

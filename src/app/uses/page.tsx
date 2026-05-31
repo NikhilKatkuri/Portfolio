@@ -1,5 +1,8 @@
 import Footer from "@/components/sections/Footer";
 import Navbar from "@/components/sections/Navbar";
+import { Metadata } from "next";
+import { usesMetadata } from "@/constants/meta";
+export const metadata: Metadata = usesMetadata; 
 
 const setupSections = [
   {
@@ -131,7 +134,7 @@ const setupSections = [
       },
     ],
   },
-];
+];  
 
 const page = () => {
   return (
@@ -141,9 +144,9 @@ const page = () => {
       <main className="relative w-full min-h-dvh">
         <div className="max-w-(--content-max-width) mx-auto pb-12  mt-32 max-lg:px-4 justify-between w-full relative h-auto ">
           <div className="my-6">
-            <p className="heading-4 max-w-2xl">
+            <h1 className="heading-4 max-w-2xl">
               The tools, systems, and environment behind my workflow.
-            </p>
+            </h1>
             <p className="paragraph-4 mt-6 max-w-2xl">
               A look into the hardware, software, and development tools I use
               daily to design, build, debug, and ship products efficiently.
