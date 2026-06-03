@@ -34,7 +34,7 @@
         <div className="flex flex-col gap-6 my-6">
           <div className="grid sm:grid-cols-2 w-full border rounded-md border-theme-on-surface/20 divide-y sm:divide-y-0 sm:divide-x divide-theme-on-surface/20">
 
-            <div className="p-6 lg:p-8 cursor-pointer hover:bg-(--palette-grey-100)/80 flex flex-col justify-between h-auto w-full">
+            <div className="p-6 lg:p-8 cursor-pointer hover:bg-theme-h-grey-100-80 flex flex-col justify-between h-auto w-full">
               <div className="mb-3">
                 <span className="text-xs font-mono">01 / METRICS</span>
                 <h3 className="text-lg font-medium mt-2 text-left">
@@ -50,7 +50,7 @@
               </p>
             </div>
 
-            <div className="p-6 lg:p-8 cursor-pointer hover:bg-(--palette-grey-100)/80 flex flex-col justify-between h-auto w-full bg-(--theme-surface-overlay-depth-01)/90">
+            <div className="p-6 lg:p-8 cursor-pointer hover:bg-theme-h-grey-100-80 flex flex-col justify-between h-auto w-full bg-(--theme-surface-overlay-depth-01)/90">
               <div className="mb-3">
                 <span className="text-xs font-mono">02 / AUTONOMY</span>
                 <h3 className="text-lg font-medium mt-2 text-left">
@@ -66,7 +66,7 @@
               </p>
             </div>
 
-            <div className="p-6 lg:p-8 cursor-pointer hover:bg-(--palette-grey-100)/80 flex flex-col justify-between h-auto w-full bg-(--theme-surface-overlay-depth-01)/90 border-t border-theme-on-surface/20">
+            <div className="p-6 lg:p-8 cursor-pointer hover:bg-theme-h-grey-100-80 flex flex-col justify-between h-auto w-full bg-(--theme-surface-overlay-depth-01)/90 border-t border-theme-on-surface/20">
               <div className="mb-3">
                 <span className="text-xs font-mono">03 / OWNERSHIP</span>
                 <h3 className="text-lg font-medium mt-2 text-left">
@@ -82,7 +82,7 @@
               </p>
             </div>
 
-            <div className="p-6 lg:p-8 cursor-pointer hover:bg-(--palette-grey-100)/80 transition-all ease-in-out duration-200 flex flex-col justify-between h-auto w-full border-t border-theme-on-surface/20">
+            <div className="p-6 lg:p-8 cursor-pointer hover:bg-theme-h-grey-100-80 transition-all ease-in-out duration-200 flex flex-col justify-between h-auto w-full border-t border-theme-on-surface/20">
               <div className="mb-3">
                 <span className="text-xs font-mono">04 / TRANSPARENCY</span>
                 <h3 className="text-lg font-medium mt-2 text-left">

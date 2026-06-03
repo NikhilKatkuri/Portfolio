@@ -12,7 +12,7 @@ const page = () => {
       <Navbar />
 
       <main className="relative w-full min-h-dvh">
-        <div className="max-w-(--content-max-width) mx-auto pb-12  mt-32 max-lg:px-4 justify-between w-full relative h-auto ">
+        <div className="max-w-content-mx mx-auto pb-12  mt-32 max-lg:px-4 justify-between w-full relative h-auto ">
           <div className="my-6">
             <h1 className="heading-4 max-w-2xl">
               Selected work built with curiosity, systems thinking, and

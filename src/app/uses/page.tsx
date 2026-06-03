@@ -2,7 +2,7 @@ import Footer from "@/components/sections/Footer";
 import Navbar from "@/components/sections/Navbar";
 import { Metadata } from "next";
 import { usesMetadata } from "@/constants/meta";
-export const metadata: Metadata = usesMetadata; 
+export const metadata: Metadata = usesMetadata;
 
 const setupSections = [
   {
@@ -134,7 +134,7 @@ const setupSections = [
       },
     ],
   },
-];  
+];
 
 const page = () => {
   return (
@@ -142,7 +142,7 @@ const page = () => {
       <Navbar />
 
       <main className="relative w-full min-h-dvh">
-        <div className="max-w-(--content-max-width) mx-auto pb-12  mt-32 max-lg:px-4 justify-between w-full relative h-auto ">
+        <div className="max-w-content-mx mx-auto pb-12  mt-32 max-lg:px-4 justify-between w-full relative h-auto ">
           <div className="my-6">
             <h1 className="heading-4 max-w-2xl">
               The tools, systems, and environment behind my workflow.

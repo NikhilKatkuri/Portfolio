@@ -27,7 +27,7 @@ const FeaturedProject = () => {
     >
       <div
         ref={divRef}
-        className="max-w-(--content-max-width) flex w-full flex-col max-lg:px-4 mx-auto"
+        className="max-w-content-mx flex w-full flex-col max-lg:px-4 mx-auto"
       >
         <h2 className="heading-4 lg:my-3">Featured Projects</h2>
         <p className="paragraph-4 max-w-lg">

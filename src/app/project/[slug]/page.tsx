@@ -5,7 +5,7 @@ import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 import Image from "next/image";
 import Link from "next/link";
-import { SolarArrowRightUpBroken, SolarArrowRightUpBroken as SolarArrowLeftLinear } from "@/icons/index";
+import { SolarArrowRightUpBroken,  SolarAltArrowLeftBroken } from "@/icons/index";
 import type { Metadata } from "next";
  
 export function generateStaticParams() {
@@ -75,13 +75,13 @@ const ProjectPage = async ({ params }: { params: Promise<{ slug: string }> }) =>
       <Navbar isStatic />
 
       <main className="relative w-full min-h-dvh">
-        <div className="max-w-(--content-max-width) mx-auto pb-24 mt-20 max-lg:px-4 w-full">
+        <div className="max-w-content-mx mx-auto pb-24 mt-20 max-lg:px-4 w-full">
           
           <Link
             href="/project"
             className="inline-flex items-center gap-1.5 paragraph-5 mb-10 opacity-60 hover:opacity-100 transition-opacity"
           >
-            <SolarArrowLeftLinear className="size-4 stroke-current" />
+            <SolarAltArrowLeftBroken className="size-4 stroke-current" />
             All projects
           </Link>
  
@@ -265,11 +265,11 @@ const ProjectPage = async ({ params }: { params: Promise<{ slug: string }> }) =>
                 </div>
               )}
 
-              {project.npmDownloads !== undefined && (
+              {project.metrics?.name.trim() && (
                 <div>
-                  <SectionHeading>npm downloads</SectionHeading>
+                  <SectionHeading>{project.metrics.name}</SectionHeading>
                   <p className="heading-4">
-                    {project.npmDownloads.toLocaleString()}
+                    {project.metrics.count.toLocaleString()}
                   </p>
                 </div>
               )}

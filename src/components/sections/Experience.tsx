@@ -1,95 +1,107 @@
+import ExperienceData from "@/constants/exprience";
+import { ExperienceRecord } from "@/types";
+
+const formatDate = (date?: string): string => {
+  if (!date) return "Present";
+  const [year, month] = date.split("-");
+  if (!month) return year;
+  return new Date(`${year}-${month}-01`).toLocaleDateString("en-US", {
+    month: "short",
+    year: "numeric",
+  });
+};
+
+const TechPill = ({ name }: { name: string }) => (
+  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border border-theme-on-surface/10 text-theme-on-surface/60">
+    {name}
+  </span>
+);
+
+const ExperienceCard = ({
+  experience,
+  isLast,
+}: {
+  experience: ExperienceRecord;
+  isLast: boolean;
+}) => (
+  <div className="flex gap-6 md:gap-10">
+    <div className="flex flex-col items-center pt-1 shrink-0">
+      <div
+        className={`size-2.5 rounded-full ring-2 ring-offset-2 ring-offset-white transition-colors ${
+          experience.isCurrent
+            ? "bg-emerald-600 ring-emerald-200 animate-pulse"
+            : "bg-theme-border-on-surface ring-transparent"
+        }`}
+      />
+      {!isLast && (
+        <div className="w-px flex-1 mt-2 bg-theme-border-on-surface" />
+      )}
+    </div>
+
+    <div className={`w-full ${!isLast ? "pb-10" : ""}`}>
+      <p className="text-sm font-medium tracking-wide uppercase text-theme-on-surface mb-3">
+        {formatDate(experience.startDate)}
+        <span className="mx-1.5">–</span>
+        {experience.isCurrent ? "Present" : formatDate(experience.endDate)}
+        {experience.isCurrent && (
+          <span className="ml-2 normal-case tracking-normal font-normal text-emerald-600">
+            Current
+          </span>
+        )}
+      </p>
+
+      <div className="rounded-xl px-5 py-4  border border-theme-border-on-surface/80 cursor-pointer hover:bg-theme-h-grey-100-80 transition-colors duration-300 ">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-3">
+          <h3 className="heading-6 text-theme-on-surface">
+            {experience.title}
+          </h3>
+          <span className="text-xs font-mono text-theme-text-tertiary shrink-0">
+            {experience.company}
+          </span>
+        </div>
+
+        <p className="paragraph-4 text-theme-text-tertiary leading-relaxed">
+          {experience.description ?? experience.summary}
+        </p>
+
+        {experience.technologies && experience.technologies.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mt-4">
+            {experience.technologies.map((t) => (
+              <TechPill key={t.name} name={t.name} />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+);
+
 const Experience = () => {
+  const sorted = [...ExperienceData].sort(
+    (a, b) => (a.order ?? 99) - (b.order ?? 99),
+  );
+
   return (
-    <div className="mx-auto max-w-(--content-max-width) w-full max-lg:px-4 flex flex-col h-auto py-12 gap-8">
-      <div>
-        <h2 className="heading-4 lg:my-3">Experience</h2>
-        <p className="paragraph-4 max-w-lg md:max-w-xl text-theme-on-surface/80">
+    <section className="mx-auto max-w-content-mx w-full max-lg:px-4 py-16">
+      <div className="mb-10">
+        <h2 className="heading-4 mb-3">Experience</h2>
+        <p className="paragraph-4 max-w-lg text-theme-text-tertiary">
           A breakdown of the languages, frameworks, and tools I use to build
           software. I focus on writing clean code, fixing performance
           bottlenecks, and delivering responsive web and mobile projects.
         </p>
       </div>
 
-      <div className="my-6 space-y-6 max-w-3xl">
-        <div className="group flex gap-6"> 
-          <div className="flex flex-col items-center">
-            <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse scale-110"></div>
-            <div className="w-0.5 h-full bg-theme-on-surface/20 mt-2"></div>
-          </div>
-
-          <div className="pb-6 w-full">
-            <p className="text-sm font-medium text-theme-on-surface/60 mb-2">
-              2026 June - Present
-            </p>
-            <div className="p-5 rounded-xl group-hover:bg-(--palette-grey-100) cursor-pointer border border-theme-on-surface/5 transition-colors duration-300">
-              <h2 className="heading-6 mb-2 text-theme-on-surface">
-                Full Stack Developer Intern
-              </h2>
-              <p className="text-sm font-mono text-theme-on-surface/80 mb-3">
-                PixelHexa
-              </p>
-              <p className="paragraph-4 text-theme-on-surface/80 leading-relaxed">
-                Build responsive user interfaces using React.js, Next.js, and
-                Tailwind CSS. Code secure backend REST APIs with Node.js,
-                Express.js, and MongoDB to support active SaaS products.
-              </p>
-            </div>
-          </div>
-        </div>
- 
-        <div className="group flex gap-6">
-          <div className="flex flex-col items-center">
-            <div className="w-3 h-3 rounded-full bg-theme-on-surface/60"></div>
-            <div className="w-0.5 h-full bg-theme-on-surface/20 mt-2"></div>
-          </div>
-
-          <div className="pb-6 w-full">
-            <p className="text-sm font-medium text-theme-on-surface/60 mb-2">
-              2026 March - 2026 May
-            </p>
-            <div className="p-5 rounded-xl group-hover:bg-(--palette-grey-100) cursor-pointer border border-theme-on-surface/5 transition-colors duration-300">
-              <h2 className="heading-6 mb-2 text-theme-on-surface">
-                Android Developer Intern
-              </h2>
-              <p className="text-sm font-mono text-theme-on-surface/80 mb-3">
-                Galactix Solutions Pvt. Ltd.
-              </p>
-              <p className="paragraph-4 text-theme-on-surface/80 leading-relaxed">
-                Developed mobile app features using React Native and Expo. Fixed
-                layout layout bugs across different screen sizes, resolved local
-                storage issues, and prepared assets for app deployment.
-              </p>
-            </div>
-          </div>
-        </div>
- 
-        <div className="group flex gap-6"> 
-          <div className="flex flex-col items-center">
-            <div className="w-3 h-3 rounded-full bg-theme-on-surface/60"></div>
-            <div className="w-0.5 h-full bg-theme-on-surface/20 mt-2"></div>
-          </div>
-
-          <div className="pb-6 w-full">
-            <p className="text-sm font-medium text-theme-on-surface/60 mb-2">
-              2025 - 2026
-            </p>
-            <div className="p-5 rounded-xl group-hover:bg-(--palette-grey-100) cursor-pointer border border-theme-on-surface/5 transition-colors duration-300">
-              <h2 className="heading-6 mb-2 text-theme-on-surface">
-                Student Faculty Technical Lead
-              </h2>
-              <p className="text-sm font-mono text-theme-on-surface/80 mb-3">
-                SSG - HITM
-              </p>
-              <p className="paragraph-4 text-theme-on-surface/80 leading-relaxed">
-                Run hands-on coding workshops and code crash courses for peers.
-                Teach students version control setups, Git branching paths, and
-                backend engineering basics to help onboard new developers.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div className="max-w-2xl">
+        {sorted.map((experience, index) => (
+          <ExperienceCard
+            key={experience.id}
+            experience={experience}
+            isLast={index === sorted.length - 1}
+          />
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -69,7 +69,7 @@ export default function AboutPage() {
           }}
         />
 
-        <section className="mx-auto flex min-h-screen w-full max-w-(--content-max-width) flex-col px-6 pb-20 pt-32 lg:px-8">
+        <section className="mx-auto flex min-h-screen w-full max-w-content-mx flex-col px-6 pb-20 pt-32 lg:px-8">
           <div className="grid gap-16 xl:grid-cols-[1fr_480px]">
             {/* LEFT */}
             <div className="max-w-3xl">
@@ -302,7 +302,7 @@ export default function AboutPage() {
                     style={{
                       fontSize: "1.15rem",
                       lineHeight: "1.7rem",
-                      fontWeight: 600,
+                      fontWeight: 450,
                       color: "var(--theme-text-primary)",
                     }}
                   >

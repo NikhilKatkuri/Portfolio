@@ -62,7 +62,10 @@ const Projects: ProjectRecord[] = [
 
     featured: true,
     publishedAt: "2025-12-20",
-    npmDownloads: 0,
+    metrics: {
+      name: "",
+      count: 0,
+    },
   },
   {
     slug: "git-lite-cli",
@@ -153,7 +156,10 @@ const Projects: ProjectRecord[] = [
 
     featured: true,
     publishedAt: "2025-06-01",
-    npmDownloads: 2100,
+    metrics: {
+      name: "npmDownloads",
+      count: 2100,
+    },
   },
   {
     slug: "dynamic-portfolio-cms",
@@ -216,7 +222,10 @@ const Projects: ProjectRecord[] = [
 
     featured: true,
     publishedAt: "2025-12-20",
-    npmDownloads: 0,
+    metrics: {
+      name: "",
+      count: 0,
+    },
   },
   {
     slug: "git-lite-cli",
@@ -307,7 +316,10 @@ const Projects: ProjectRecord[] = [
 
     featured: true,
     publishedAt: "2025-06-01",
-    npmDownloads: 2100,
+    metrics: {
+      name: "npmDownloads",
+      count: 2100,
+    },
   },
 ];
 export default Projects;
