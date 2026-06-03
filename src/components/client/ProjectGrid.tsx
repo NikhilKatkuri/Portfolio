@@ -59,11 +59,12 @@ const ProjectGrid = () => {
               className="project-card flex flex-col gap-2 group"
             >
               {/* Thumbnail placeholder */}
-              <div className="relative rounded-xl h-64 w-full overflow-hidden bg-neutral-100">
+              <div className="relative rounded-xl h-64 w-full overflow-hidden bg-[var(--color-neutral-100)]">
                 {/* Base animated breathe */}
                 <div
-                  className="card-breathe absolute inset-0 bg-linear-to-br from-neutral-200 via-neutral-100 to-neutral-200"
+                  className="card-breathe absolute inset-0"
                   style={{
+                    background: `linear-gradient(to bottom right, var(--color-neutral-200), var(--color-neutral-100), var(--color-neutral-200))`,
                     animation: `breathe ${glint.duration} ease-in-out infinite`,
                     animationDelay: glint.delay,
                   }}
@@ -91,15 +92,15 @@ const ProjectGrid = () => {
                 />
 
                 {/* Hover overlay */}
-                <div className="card-overlay absolute inset-0 bg-black/5 rounded-xl" />
+                <div className="card-overlay absolute inset-0 bg-[var(--color-black-5)] rounded-xl" />
 
                 {/* Hover label */}
-                <div className="card-label absolute bottom-3 right-3 text-xs font-medium text-neutral-400 bg-white/80 backdrop-blur-sm px-2 py-1 rounded-full">
+                <div className="card-label absolute bottom-3 right-3 text-xs font-medium text-[var(--color-neutral-400)] bg-[var(--color-white-80)] backdrop-blur-sm px-2 py-1 rounded-full">
                   View project →
                 </div>
               </div>
 
-              <p className="text-lg leading-snug group-hover:text-black/70 transition-colors duration-200">
+              <p className="text-lg leading-snug group-hover:text-[var(--color-black-70)] transition-colors duration-200">
                 {d.title}
               </p>
             </Link>

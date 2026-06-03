@@ -19,11 +19,11 @@ const ActiveBtn = ({ name, link }: { name: string; link: string }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="cursor-pointer group bg-theme-button-primary flex items-center gap-2 rounded-full text-theme-button-on-primary p-btn-pad"
+      className="cursor-pointer group bg-button-primary flex items-center gap-2 rounded-full text-button-on-primary p-btn-pad"
     >
       {name}
       <span>
-        <SolarArrowRightUpBroken className="stroke-theme-button-on-primary size-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+        <SolarArrowRightUpBroken className="stroke-button-on-primary size-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
       </span>
     </a>
   );
@@ -35,7 +35,7 @@ const InActiveBtn = ({ name, link }: { name: string; link: string }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="cursor-pointer group inline-flex items-center gap-3 rounded-full text-theme-button-on-secondary border border-(--palette-grey-100) bg-(--palette-grey-100)/30 shadow-xs hover:shadow hover:bg-theme-button-secondary transition-all ease-in-out duration-200 p-btn-pad-2"
+      className="cursor-pointer group inline-flex items-center gap-3 rounded-full text-button-on-tertiary border border-button-tertiary-border bg-button-tertiary   hover:bg-button-hover-tertiary transition-all ease-in-out duration-200 p-btn-pad-2"
     >
       {name}
       <SolarArrowRightUpBroken className="size-5 stroke-theme-on-surface transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -165,7 +165,7 @@ const ProjectScrollCard = ({ startXat = 0 }: ProjectScrollCardProps) => {
           <div
             key={i}
             ref={i === 0 ? firstCardRef : null}
-            className="shrink-0 aspect-video h-64 mr-4  sm:h-72 lg:h-100 rounded-2xl bg-black/5 flex items-center justify-center cursor-pointer hover:bg-black/10 transition-colors"
+            className="shrink-0 aspect-video h-64 mr-4  sm:h-72 lg:h-100 rounded-2xl bg-[var(--color-black-5)] flex items-center justify-center cursor-pointer hover:bg-[var(--color-black-10)] transition-colors"
             onClick={() => handleCardClick(i)}
           >
             <div className="text-center px-4">
@@ -202,7 +202,7 @@ const ProjectScrollCard = ({ startXat = 0 }: ProjectScrollCardProps) => {
           <AnimatePresence mode="wait">
             <motion.p
               key={activeIndex}
-              className="heading-6 my-2"
+              className="heading-6 my-2 text-primary"
               initial={{ opacity: 0, y: direction === "right" ? 20 : -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: direction === "right" ? -20 : 20 }}
@@ -215,7 +215,7 @@ const ProjectScrollCard = ({ startXat = 0 }: ProjectScrollCardProps) => {
           <AnimatePresence mode="wait">
             <motion.div
               key={`${activeIndex}-desc`}
-              className="paragraph-4"
+              className="paragraph-4 "
               initial={{ opacity: 0, y: direction === "right" ? 20 : -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: direction === "right" ? -20 : 20 }}
@@ -244,36 +244,23 @@ const ProjectScrollCard = ({ startXat = 0 }: ProjectScrollCardProps) => {
                     <InActiveBtn key={index} name={url.label} link={url.url} />
                   );
                 })
-              ) : (
-                <>
-                  <a className="cursor-pointer group bg-theme-button-primary flex items-center gap-2 rounded-full text-theme-button-on-primary p-btn-pad">
-                    Live Link
-                    <span>
-                      <SolarArrowRightUpBroken className="stroke-theme-button-on-primary size-5 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                    </span>
-                  </a>
-                  <a className="cursor-pointer group inline-flex items-center gap-3 rounded-full text-theme-button-on-secondary border border-(--palette-grey-100) bg-(--palette-grey-100)/30 shadow-xs hover:shadow hover:bg-theme-button-secondary transition-all ease-in-out duration-200 p-btn-pad-2">
-                    Source Code
-                    <SolarArrowRightUpBroken className="size-5 stroke-theme-on-surface transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                  </a>
-                </>
-              )}
+              ) : null}
             </motion.div>
           </AnimatePresence>
         </div>
 
-        <div className="flex items-center bg-theme-button-secondary rounded-full max-md:mx-auto">
+        <div className="flex items-center bg-button-secondary rounded-full max-md:mx-auto">
           <button
-            className="flex items-center hover:bg-theme-button-secondary cursor-pointer justify-center w-10 h-10 rounded-full hover:text-theme-button-on-primary"
+            className="flex items-center hover:bg-button-secondary cursor-pointer justify-center w-10 h-10 rounded-full hover:text-button-on-primary"
             onClick={() => scrollByCard("left")}
           >
-            <SolarAltArrowLeftBroken className="stroke-theme-on-surface group-hover:stroke-theme-button-on-primary size-5" />
+            <SolarAltArrowLeftBroken className="stroke-theme-on-surface group-hover:stroke-button-on-primary size-5" />
           </button>
           <button
-            className="flex items-center hover:bg-theme-button-secondary cursor-pointer justify-center w-10 h-10 rounded-full hover:text-theme-button-on-primary"
+            className="flex items-center hover:bg-button-secondary cursor-pointer justify-center w-10 h-10 rounded-full hover:text-button-on-primary"
             onClick={() => scrollByCard("right")}
           >
-            <SolarAltArrowRightBroken className="stroke-theme-on-surface group-hover:stroke-theme-button-on-primary size-5" />
+            <SolarAltArrowRightBroken className="stroke-theme-on-surface group-hover:stroke-button-on-primary size-5" />
           </button>
         </div>
       </div>

@@ -1,5 +1,4 @@
-import "./globals.css";
-import "../constants/Theme.css"; 
+import "./globals.css"; 
 import type { Metadata } from "next";
 import { homeMetadata } from "@/constants/meta";
 import { getUnifiedSchema } from "@/constants/schema";
@@ -23,7 +22,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col relative scroll-smooth bg-white text-black dark:bg-neutral-950 dark:text-white">
+      <body className="min-h-full flex flex-col relative scroll-smooth bg-theme-surface text-theme-on-surface">
         {children}
       </body>
     </html>

@@ -5,8 +5,7 @@ import {
   SolarSmartphoneBroken,
   SolarCheckCircleLinear,
   SolarCodeBroken,
-  SolarProgrammingLinear,
-  SolarLayersMinimalisticBoldDuotone,
+  SolarProgrammingLinear, 
   SolarMagicStick3Linear,
 } from "@/icons/index";
 import { useEffect, useState } from "react";
@@ -17,8 +16,7 @@ const icons = [
   SolarSmartphoneBroken,
   SolarCheckCircleLinear,
   SolarCodeBroken,
-  SolarProgrammingLinear,
-  SolarLayersMinimalisticBoldDuotone,
+  SolarProgrammingLinear, 
   SolarMagicStick3Linear,
 ];
 
@@ -65,13 +63,13 @@ const IconFlow = () => {
               }}
             >
               <div
-                className="min-w-20 md:min-w-24 aspect-square rounded-full border bg-(--theme-surface-overlay-depth-01) border-(--palette-grey-1000-12) flex items-center justify-center animate-float"
+                className="min-w-20 md:min-w-24 aspect-square rounded-full border bg-theme-overlay border-theme-border flex items-center justify-center animate-float"
                 style={{
                   animationDelay: `${index * 0.15}s`,
                   transform: `translateY(${-translateY}px)`, // Merged cleanly into a single style block
                 }}
               >
-                <Icon className="stroke-theme-on-surface size-5 md:size-7" />
+                <Icon className="stroke-theme-on-overlay size-5 md:size-7" />
               </div>
             </div>
           );

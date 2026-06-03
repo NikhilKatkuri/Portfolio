@@ -24,11 +24,11 @@ const Navbar = ({ isStatic = true }: NavbarProps) => {
   return (
     <header
       role="banner"
-      className="h-16 flex items-center justify-between w-full sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100"
+      className="h-16 flex items-center justify-between w-full sticky top-0 z-50 bg-theme-surface border-b border-theme-border"
     >
-      <div className="max-w-(--content-max-width) mx-auto h-16 flex items-center max-lg:px-4 justify-between w-full relative">
+      <div className="max-w-content-mx mx-auto h-16 flex items-center max-lg:px-4 justify-between w-full relative">
         <motion.div
-          className="rounded-full bg-gray-200 absolute origin-left"
+          className="rounded-full bg-[var(--color-gray-200)] absolute origin-left"
           style={
             isStatic
               ? { width: 42, height: 42 }
@@ -56,10 +56,10 @@ const Navbar = ({ isStatic = true }: NavbarProps) => {
           <SlideHover data={data} />
         </ul>
 
-        <button className="bg-theme-button-primary flex items-center gap-2 cursor-pointer rounded-full text-theme-button-on-primary p-btn-pad">
+        <button className="bg-button-primary flex items-center gap-2 cursor-pointer rounded-full text-button-on-primary p-btn-pad hover:bg-button-hover-primary transition-colors duration-200">
           Let&apos;s Build
           <span>
-            <SolarArrowRightUpBroken className="stroke-theme-button-on-primary size-5" />
+            <SolarArrowRightUpBroken className="stroke-button-on-primary size-5" />
           </span>
         </button>
       </div>

@@ -1,10 +1,10 @@
 import Navbar from "@/components/sections/Navbar";
 import { GithubIcon, LinkedinIcon, MailIcon, NPMjs } from "@/icons";
-import Image from "next/image"; 
+import Image from "next/image";
 
 import type { Metadata } from "next";
 import { aboutMetadata } from "@/constants/meta";
-export const metadata: Metadata = aboutMetadata; 
+export const metadata: Metadata = aboutMetadata;
 
 const socialLinks = [
   {
@@ -49,20 +49,14 @@ export default function AboutPage() {
     <>
       <Navbar />
 
-      <main
-        className="relative w-full overflow-hidden"
-        style={{
-          background: "var(--theme-surface)",
-        }}
-      >
-        {/* Background Glow */}
+      <main className="relative w-full overflow-hidden">
         <div
           className="absolute inset-0 -z-10"
           style={{
             background: `
               radial-gradient(
                 circle at top,
-                rgba(var(--palette-grey-400-rgb), 0.12),
+                rgba(var(--palette-400), 0.12),
                 transparent 35%
               )
             `,
@@ -74,31 +68,23 @@ export default function AboutPage() {
             {/* LEFT */}
             <div className="max-w-3xl">
               {/* EYEBROW */}
-              <div
-                className="mb-6 inline-flex items-center rounded-full border px-4 py-2 text-sm backdrop-blur"
-                style={{
-                  borderColor: "var(--palette-grey-100)",
-                  background: "rgba(var(--palette-grey-400-rgb),0.06)",
-                  color: "var(--theme-text-secondary)",
-                }}
-              >
+              <div className="mb-6 inline-flex bg-theme-surface items-center  border-theme-border-on-surface rounded-full border px-4 py-2 text-sm backdrop-blur">
                 Full Stack Engineer • Hyderabad, India
               </div>
 
               {/* TITLE */}
-              <h1 className="max-w-4xl heading-4">
+              <h1 className="max-w-4xl heading-4 text-primary">
                 I build software that solves real problems — not tutorial
                 projects.
               </h1>
 
               {/* DESCRIPTION */}
               <p
-                className="mt-8 max-w-2xl"
+                className="mt-8 max-w-2xl "
                 style={{
-                  fontSize: "var(--5xl-paragraph-size)",
-                  lineHeight: "var(--5xl-paragraph-line-height)",
-                  letterSpacing: "var(--5xl-paragraph-letter-spacing)",
-                  color: "var(--theme-text-secondary)",
+                  fontSize: "var(--text-lg-size)",
+                  lineHeight: "var(--text-lg-lh)",
+                  letterSpacing: "var(--text-lg-ls)",
                 }}
               >
                 I’m Nikhil Katkuri, a full-stack developer focused on building
@@ -111,22 +97,19 @@ export default function AboutPage() {
                 {stats.map((item) => (
                   <div
                     key={item.label}
-                    className="rounded-3xl p-5 transition-all duration-300 hover:-translate-y-1"
+                    className="rounded-3xl p-5 transition-all bg-white duration-300 hover:-translate-y-1"
                     style={{
-                      border: "1px solid var(--palette-grey-100)",
-                      background: "rgba(var(--palette-grey-0-rgb),0.7)",
-                      backdropFilter: "blur(12px)",
                       boxShadow:
-                        "0px 10px 30px rgba(var(--palette-grey-1000-rgb),0.04)",
+                        "0px 10px 30px rgba(var(--palette-1000),0.04)",
                     }}
                   >
-                    <p className="heading-6">{item.value}</p>
+                    <p className="heading-6 text-primary">{item.value}</p>
 
                     <p
                       className="mt-1"
                       style={{
                         fontSize: "0.92rem",
-                        color: "var(--theme-text-secondary)",
+                        color: "var(--color-secondary)",
                       }}
                     >
                       {item.label}
@@ -140,11 +123,10 @@ export default function AboutPage() {
                 {/* SECTION */}
                 <div>
                   <h2
-                    className="mb-3"
+                    className="mb-3 text-primary"
                     style={{
-                      fontSize: "1.3rem",
-                      fontWeight: 600,
-                      color: "var(--theme-text-primary)",
+                      fontSize: "1.4rem",
+                      fontWeight: 450,
                     }}
                   >
                     Engineering Philosophy
@@ -153,10 +135,9 @@ export default function AboutPage() {
                   <p
                     className="max-w-2xl"
                     style={{
-                      fontSize: "var(--base-size)",
+                      fontSize: "var(--text-base-size)",
                       lineHeight: "2rem",
-                      letterSpacing: "var(--base-letter-spacing)",
-                      color: "var(--theme-text-secondary)",
+                      letterSpacing: "var(--text-base-ls)",
                     }}
                   >
                     I prefer building systems from first principles instead of
@@ -170,11 +151,10 @@ export default function AboutPage() {
                 {/* SECTION */}
                 <div>
                   <h2
-                    className="mb-3"
+                    className="mb-3 text-primary"
                     style={{
                       fontSize: "1.3rem",
-                      fontWeight: 600,
-                      color: "var(--theme-text-primary)",
+                      fontWeight: 450,
                     }}
                   >
                     Experience
@@ -183,18 +163,17 @@ export default function AboutPage() {
                   <p
                     className="max-w-2xl"
                     style={{
-                      fontSize: "var(--base-size)",
+                      fontSize: "var(--text-base-size)",
                       lineHeight: "2rem",
-                      letterSpacing: "var(--base-letter-spacing)",
-                      color: "var(--theme-text-secondary)",
+                      letterSpacing: "var(--text-base-ls)",
                     }}
                   >
                     I’ve worked across full-stack web applications and
                     cross-platform interfaces. During my internship at{" "}
                     <span
                       style={{
-                        color: "var(--theme-text-primary)",
-                        fontWeight: 600,
+                        color: "var(--color-primary)",
+                        fontWeight: 450,
                       }}
                     >
                       Galactix Solutions
@@ -207,11 +186,10 @@ export default function AboutPage() {
                 {/* SECTION */}
                 <div>
                   <h2
-                    className="mb-3"
+                    className="mb-3 text-primary"
                     style={{
                       fontSize: "1.3rem",
-                      fontWeight: 600,
-                      color: "var(--theme-text-primary)",
+                      fontWeight: 450,
                     }}
                   >
                     Current Direction
@@ -220,18 +198,17 @@ export default function AboutPage() {
                   <p
                     className="max-w-2xl"
                     style={{
-                      fontSize: "var(--base-size)",
+                      fontSize: "var(--text-base-size)",
                       lineHeight: "2rem",
-                      letterSpacing: "var(--base-letter-spacing)",
-                      color: "var(--theme-text-secondary)",
+                      letterSpacing: "var(--text-base-ls)",
                     }}
                   >
                     I’m currently joining{" "}
                     <span
                       style={{
-                        color: "var(--theme-text-primary)",
-                        fontWeight: 600,
+                        fontWeight: 450,
                       }}
+                      className="text-primary"
                     >
                       PixelHexa
                     </span>{" "}
@@ -239,9 +216,9 @@ export default function AboutPage() {
                     personal engineering brand,{" "}
                     <span
                       style={{
-                        color: "var(--theme-text-primary)",
                         fontWeight: 700,
                       }}
+                      className="text-primary"
                     >
                       Stratify Minds
                     </span>
@@ -251,15 +228,15 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
- 
+
             <div className="xl:sticky xl:top-28 xl:h-fit">
               <div
                 className="group relative overflow-hidden rounded-[36px] p-2"
                 style={{
-                  border: "1px solid var(--palette-grey-100)",
-                  background: "rgba(var(--palette-grey-0-rgb),0.7)",
+                  border: "1px solid var(--palette-100)",
+                  background: "rgba(var(--palette-0-rgb),0.7)",
                   boxShadow:
-                    "0px 20px 50px rgba(var(--palette-grey-1000-rgb),0.08)",
+                    "0px 20px 50px rgba(var(--palette-1000),0.08)",
                 }}
               >
                 <Image
@@ -271,45 +248,42 @@ export default function AboutPage() {
                   className="h-auto w-full rounded-[28px] object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               </div>
- 
+
               <div
-                className="mt-6 rounded-4xl p-6"
+                className="mt-6 rounded-4xl p-6 border border-theme-border-on-surface"
                 style={{
-                  border: "1px solid var(--palette-grey-100)",
-                  background: "rgba(var(--palette-grey-0-rgb),0.75)",
+                  background: "rgba(var(--palette-0-rgb),0.75)",
                   backdropFilter: "blur(20px)",
                   boxShadow:
-                    "0px 10px 30px rgba(var(--palette-grey-1000-rgb),0.05)",
+                    "0px 10px 30px rgba(var(--palette-1000),0.03)",
                 }}
               >
                 <div
                   className="pb-5"
                   style={{
-                    borderBottom: "1px solid var(--palette-grey-100)",
+                    borderBottom: "1px solid var(--palette-200)",
                   }}
                 >
                   <p
                     style={{
                       fontSize: "0.9rem",
-                      color: "var(--theme-text-secondary)",
                     }}
                   >
                     Currently focused on
                   </p>
 
                   <h3
-                    className="mt-2"
+                    className="mt-2 text-primary"
                     style={{
                       fontSize: "1.15rem",
                       lineHeight: "1.7rem",
                       fontWeight: 450,
-                      color: "var(--theme-text-primary)",
                     }}
                   >
                     SaaS systems, frontend architecture, and developer tooling.
                   </h3>
                 </div>
- 
+
                 <div className="mt-5 flex flex-col gap-2">
                   {socialLinks.map((item) => {
                     const Icon = item.icon;
@@ -322,23 +296,24 @@ export default function AboutPage() {
                         rel="noopener noreferrer"
                         className="group flex items-center gap-4 rounded-2xl px-3 py-3 transition-all duration-300"
                         style={{
-                          transitionTimingFunction: "var(--ease-out-cubic)",
+                          transitionTimingFunction:
+                            "cubic-bezier(0.16, 1, 0.3, 1)",
                         }}
                       >
                         <span
                           className="flex h-11 w-11 items-center justify-center rounded-2xl transition-all duration-300 group-hover:scale-105"
                           style={{
-                            border: "1px solid var(--palette-grey-100)",
-                            background: "var(--theme-surface-overlay)",
+                            border: "1px solid var(--palette-100)",
+                            background:
+                              "rgba(var(--palette-400), 0.1)",
                           }}
                         >
                           <Icon className="h-5 w-5 fill-theme-on-surface" />
                         </span>
 
                         <span
-                          className="transition-all duration-300 group-hover:translate-x-1"
+                          className="transition-all text-primary duration-300 group-hover:translate-x-1"
                           style={{
-                            color: "var(--theme-text-primary)",
                             fontSize: "0.96rem",
                             fontWeight: 500,
                           }}

@@ -32,13 +32,19 @@ export async function generateMetadata({
  
 const StatusBadge = ({ status }: { status: ProjectRecord["status"] }) => {
   const map = {
-    completed: { label: "Completed", dot: "bg-emerald-400" },
-    "in-progress": { label: "In Progress", dot: "bg-amber-400" },
-    maintenance: { label: "Maintenance", dot: "bg-sky-400" },
+    completed: { label: "Completed", dot: "bg-[var(--color-emerald-400)]" },
+    "in-progress": { label: "In Progress", dot: "bg-[var(--color-amber-400)]" },
+    maintenance: { label: "Maintenance", dot: "bg-[var(--color-sky-400)]" },
   } as const;
   const { label, dot } = map[status];
   return (
-    <span className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full border border-(--palette-grey-1000-12) bg-(--theme-surface-overlay-depth-01)">
+    <span
+      className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full border"
+      style={{
+        borderColor: "var(--palette-1000-12)",
+        background: "var(--color-theme-overlay)",
+      }}
+    >
       <span className={`size-1.5 rounded-full ${dot}`} />
       {label}
     </span>
@@ -46,7 +52,13 @@ const StatusBadge = ({ status }: { status: ProjectRecord["status"] }) => {
 };
 
 const TechPill = ({ name }: { name: string }) => (
-  <span className="text-xs px-2.5 py-1 rounded-full border border-(--palette-grey-1000-12) bg-(--theme-surface-overlay-depth-01)">
+  <span
+    className="text-xs px-2.5 py-1 rounded-full border"
+    style={{
+      borderColor: "var(--palette-1000-12)",
+      background: "var(--color-theme-overlay)",
+    }}
+  >
     {name}
   </span>
 );
@@ -128,7 +140,11 @@ const ProjectPage = async ({ params }: { params: Promise<{ slug: string }> }) =>
                     href={url.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="cursor-pointer group inline-flex items-center gap-2 rounded-full text-theme-button-on-secondary border border-(--palette-grey-100) bg-(--palette-grey-100)/30 hover:bg-theme-button-secondary transition-all ease-in-out duration-200 p-btn-pad-2"
+                    className="cursor-pointer group inline-flex items-center gap-2 rounded-full text-theme-button-on-secondary border transition-all ease-in-out duration-200 p-btn-pad-2 hover:bg-theme-button-secondary"
+                    style={{
+                      borderColor: "var(--palette-100)",
+                      backgroundColor: "rgba(var(--palette-100), 0.3)",
+                    }}
                   >
                     {url.label}
                     <SolarArrowRightUpBroken className="size-4 stroke-theme-on-surface transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -139,7 +155,12 @@ const ProjectPage = async ({ params }: { params: Promise<{ slug: string }> }) =>
           </div>
 
           {/* ── Meta strip ── */}
-          <div className="flex flex-wrap gap-x-8 gap-y-2 paragraph-5 opacity-60 mb-12 pb-12 border-b border-(--palette-grey-1000-12)">
+          <div
+            className="flex flex-wrap gap-x-8 gap-y-2 paragraph-5 opacity-60 mb-12 pb-12 border-b"
+            style={{
+              borderColor: "var(--palette-1000-12)",
+            }}
+          >
             <span>
               <span className="font-medium">Role</span> · {project.role}
             </span>
@@ -227,7 +248,10 @@ const ProjectPage = async ({ params }: { params: Promise<{ slug: string }> }) =>
                     {project.images.map((src, i) => (
                       <div
                         key={i}
-                        className="relative aspect-video rounded-xl overflow-hidden bg-(--theme-surface-overlay-depth-01)"
+                        className="relative aspect-video rounded-xl overflow-hidden"
+                        style={{
+                          background: "var(--color-theme-overlay)",
+                        }}
                       >
                         <Image
                           src={src}
@@ -284,7 +308,10 @@ const ProjectPage = async ({ params }: { params: Promise<{ slug: string }> }) =>
                       href={url.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex items-center justify-between gap-2 paragraph-4 py-2 border-b border-(--palette-grey-1000-12) hover:opacity-70 transition-opacity"
+                      className="group inline-flex items-center justify-between gap-2 paragraph-4 py-2 border-b transition-opacity hover:opacity-70"
+                      style={{
+                        borderColor: "var(--palette-1000-12)",
+                      }}
                     >
                       {url.label}
                       <SolarArrowRightUpBroken className="size-4 stroke-current transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 shrink-0" />

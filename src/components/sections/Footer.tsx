@@ -26,8 +26,8 @@ const SOCIALS = [
 
 const Footer = () => {
   return (
-    <footer className="relative overflow-hidden bg-(--palette-grey-10) border-t border-(--palette-grey-200)">
-      <div className="relative mx-auto max-w-7xl px-6 pt-20 md:pt-24 border-b border-(--palette-grey-200) pb-4 ">
+    <footer className="relative overflow-hidden bg-theme-tertiary border-t border-theme-border-on-surface">
+      <div className="relative mx-auto max-w-7xl px-6 pt-20 md:pt-24 border-b border-theme-border-on-surface pb-4 ">
         <div className="flex flex-col gap-16">
           <div className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-end">
             <div className="max-w-2xl">
@@ -46,13 +46,13 @@ const Footer = () => {
             </div>
 
             <div className="gap-3 flex flex-wrap">
-              <a className="group inline-flex items-center gap-3 rounded-full text-theme-button-on-primary bg-theme-button-primary p-btn-pad-2 ">
+              <a className="group inline-flex items-center gap-3 rounded-full text-button-on-primary bg-button-primary p-btn-pad-2 ">
                 Resume
-                <SolarDownloadMinimalisticBoldDuotone className="h-4 w-4 fill-theme-button-on-primary transition-transform duration-300 group-hover:scale-125 scale-100" />
+                <SolarDownloadMinimalisticBoldDuotone className="h-4 w-4 fill-button-on-primary transition-transform duration-300 group-hover:scale-125 scale-100" />
               </a>
               <a
                 href="mailto:nikhil07.dev@gmail.com"
-                className="group inline-flex items-center gap-3 rounded-full text-theme-button-on-secondary bg-theme-button-secondary p-btn-pad-2 "
+                className="group inline-flex items-center gap-3 rounded-full text-button-on-secondary border border-button-secondary-border bg-button-secondary p-btn-pad-2 "
               >
                 Get in touch
                 <SolarArrowRightUpBroken className="h-4 w-4 stroke-theme-on-surface transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -67,7 +67,7 @@ const Footer = () => {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 rounded-full border border-(--palette-grey-100) hover:bg-(--palette-grey-20) p-btn-pad-2 text-sm  transition-all "
+                className="group inline-flex items-center gap-3 rounded-full border border-theme-border-on-surface hover:bg-theme-h-100-80 p-btn-pad-2 text-sm  transition-all "
               >
                 <Icon className="size-5  fill-theme-on-surface stroke-theme-on-surface" />
                 <span>{label}</span>
@@ -80,9 +80,9 @@ const Footer = () => {
 
             <div className="flex flex-wrap items-center gap-3">
               <span>Next.js</span>
-              <div className="h-1 w-1 rounded-full bg-zinc-700" />
+              <div className="h-1 w-1 rounded-full bg-theme-on-primary" />
               <span>Tailwind CSS</span>
-              <div className="h-1 w-1 rounded-full bg-zinc-700" />
+              <div className="h-1 w-1 rounded-full bg-theme-on-primary" />
 
               <span>Hyderabad, IN</span>
             </div>

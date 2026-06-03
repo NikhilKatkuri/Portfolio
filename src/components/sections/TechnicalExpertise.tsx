@@ -1,12 +1,12 @@
 const TechnicalExpertise = () => {
   return (
     <div className="min-h-screen w-full flex flex-col gap-8 max-lg:px-4">
-      <div className="mx-auto max-w-(--content-max-width) w-full flex flex-col gap-8">
+      <div className="mx-auto max-w-content-mx w-full flex flex-col gap-8">
         <div>
           <h2 className="heading-4 lg:my-3 text-left">
             Technical Systems & Tooling
           </h2>
-          <p className="paragraph-4 max-w-lg md:max-w-xl text-left text-pretty text-theme-on-surface/80">
+          <p className="paragraph-4 max-w-lg md:max-w-xl text-left text-pretty ">
             A precise breakdown of my development capabilities. I specialize in
             engineering automated terminal utilities, building clean web
             layouts, and developing cross-platform mobile synchronization
@@ -16,10 +16,10 @@ const TechnicalExpertise = () => {
 
         <div className="flex flex-col gap-6 my-6">
           <div className="grid sm:grid-cols-2 w-full border rounded-md border-theme-border-on-surface divide-y sm:divide-y-0 sm:divide-x divide-theme-on-surface/20">
-            <div className="cursor-pointer hover:bg-theme-h-grey-100-80 transition-all ease-in-out duration-200 p-6 lg:p-8 flex flex-col justify-between h-auto  w-full">
+            <div className="cursor-pointer hover:bg-theme-h-100-80 transition-all ease-in-out duration-200 p-6 lg:p-8 flex flex-col justify-between h-auto  w-full">
               <div className="mb-3">
                 <span className="text-xs font-mono ">01 / SERVER</span>
-                <h3 className="text-lg font-medium mt-2 text-left">
+                <h3 className="text-lg font-medium mt-2 text-left text-primary">
                   Backend Foundations
                 </h3>
               </div>
@@ -31,10 +31,10 @@ const TechnicalExpertise = () => {
               </p>
             </div>
 
-            <div className="cursor-pointer hover:bg-theme-h-grey-100-80 transition-all ease-in-out duration-200 p-6 lg:p-8 flex flex-col justify-between h-auto  w-full bg-(--theme-surface-overlay-depth-01)/90">
+            <div className="cursor-pointer hover:bg-theme-h-100-80 transition-all ease-in-out duration-200 p-6 lg:p-8 flex flex-col justify-between h-auto  w-full bg-theme-tertiary border-0">
               <div className="mb-3">
                 <span className="text-xs font-mono ">02 / INTERFACES</span>
-                <h3 className="text-lg font-medium mt-2 text-left">
+                <h3 className="text-lg font-medium mt-2 text-left text-primary">
                   Frontend Development
                 </h3>
               </div>
@@ -47,10 +47,10 @@ const TechnicalExpertise = () => {
               </p>
             </div>
 
-            <div className="cursor-pointer hover:bg-theme-h-grey-100-80 transition-all ease-in-out duration-200 p-6 lg:p-8 flex flex-col justify-between h-auto  w-full bg-(--theme-surface-overlay-depth-01)/90 border-t border-theme-on-surface/20">
+            <div className="cursor-pointer hover:bg-theme-h-100-80 transition-all ease-in-out duration-200 p-6 lg:p-8 flex flex-col justify-between h-auto  w-full bg-theme-tertiary border-t border-theme-border-on-surface">
               <div className="mb-3">
                 <span className="text-xs font-mono ">03 / MOBILE</span>
-                <h3 className="text-lg font-medium mt-2 text-left">
+                <h3 className="text-lg font-medium mt-2 text-left text-primary">
                   Mobile Development
                 </h3>
               </div>
@@ -62,10 +62,10 @@ const TechnicalExpertise = () => {
               </p>
             </div>
 
-            <div className="cursor-pointer hover:bg-theme-h-grey-100-80 transition-all ease-in-out duration-200 p-6 lg:p-8 flex flex-col justify-between h-auto  w-full border-t border-theme-on-surface/20">
+            <div className="cursor-pointer hover:bg-theme-h-100-80 transition-all ease-in-out duration-200 p-6 lg:p-8 flex flex-col justify-between h-auto  w-full border-t border-theme-border-on-surface">
               <div className="mb-3">
                 <span className="text-xs font-mono ">04 / TOOLING</span>
-                <h3 className="text-lg font-medium mt-2 text-left">
+                <h3 className="text-lg font-medium mt-2 text-left text-primary">
                   CLI & Automation
                 </h3>
               </div>
@@ -78,7 +78,10 @@ const TechnicalExpertise = () => {
               </p>
             </div>
           </div>
-
+          {/**
+           *
+           * need to chnage this
+           */}
           <div className="w-full border rounded-md border-theme-border-on-surface  p-6 lg:p-8 flex flex-col gap-6">
             <div>
               <span className="text-xs font-mono ">THE STACK</span>
@@ -88,7 +91,7 @@ const TechnicalExpertise = () => {
             </div>
 
             <div className="flex flex-col gap-5 text-sm">
-              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-theme-on-surface/10 pb-3">
+              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-theme-border-on-surface pb-3">
                 <span className="text-xs font-mono  uppercase tracking-wider w-full sm:w-40 shrink-0 text-left pt-1">
                   Languages
                 </span>
@@ -103,7 +106,7 @@ const TechnicalExpertise = () => {
                   ].map((tech) => (
                     <span
                       key={tech}
-                      className="text-xs font-mono px-2.5 py-1 rounded-sm bg-theme-on-surface/5 border border-theme-on-surface/10 text-theme-on-surface/90"
+                      className="text-xs font-mono px-2.5 py-1 rounded-sm bg-theme-on-surface/5 border  text-theme-on-surface/90"
                     >
                       {tech}
                     </span>
