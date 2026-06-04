@@ -87,7 +87,7 @@ export default function AboutPage() {
                   letterSpacing: "var(--text-lg-ls)",
                 }}
               >
-                I’m Nikhil Katkuri, a full-stack developer focused on building
+                I&apos;m Nikhil Katkuri, a full-stack developer focused on building
                 scalable products, developer tooling, and clean frontend systems
                 with strong engineering fundamentals.
               </p>
@@ -97,7 +97,7 @@ export default function AboutPage() {
                 {stats.map((item) => (
                   <div
                     key={item.label}
-                    className="rounded-3xl p-5 transition-all bg-white duration-300 hover:-translate-y-1"
+                    className="rounded-3xl p-5 transition-all bg-white [data-theme='dark']:bg-black duration-300 hover:-translate-y-1"
                     style={{
                       boxShadow:
                         "0px 10px 30px rgba(var(--palette-1000),0.04)",

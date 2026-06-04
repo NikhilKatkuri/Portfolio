@@ -1,9 +1,12 @@
+import TechIconsComponent from "../ui/TechIcons";
+
+ 
 const TechnicalExpertise = () => {
   return (
     <div className="min-h-screen w-full flex flex-col gap-8 max-lg:px-4">
       <div className="mx-auto max-w-content-mx w-full flex flex-col gap-8">
         <div>
-          <h2 className="heading-4 lg:my-3 text-left">
+          <h2 className="heading-4 lg:my-3 text-left text-primary">
             Technical Systems & Tooling
           </h2>
           <p className="paragraph-4 max-w-lg md:max-w-xl text-left text-pretty ">
@@ -78,108 +81,17 @@ const TechnicalExpertise = () => {
               </p>
             </div>
           </div>
-          {/**
-           *
-           * need to chnage this
-           */}
-          <div className="w-full border rounded-md border-theme-border-on-surface  p-6 lg:p-8 flex flex-col gap-6">
-            <div>
-              <span className="text-xs font-mono ">THE STACK</span>
-              <h3 className="text-lg font-medium mt-1 text-left">
+
+          <div className="w-full p-6 lg:p-8 flex flex-col gap-6">
+            <div className="*:text-center">
+              <h3 className="text-sm font-mono ">THE STACK</h3>
+              <h3 className="text-lg font-medium my-3 text-primary">
                 Languages & Tooling Ecosystem
               </h3>
             </div>
 
-            <div className="flex flex-col gap-5 text-sm">
-              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-theme-border-on-surface pb-3">
-                <span className="text-xs font-mono  uppercase tracking-wider w-full sm:w-40 shrink-0 text-left pt-1">
-                  Languages
-                </span>
-                <div className="flex flex-wrap gap-1.5 justify-start w-full">
-                  {[
-                    "TypeScript",
-                    "JavaScript (ES6+)",
-                    "Kotlin",
-                    "Java",
-                    "Python",
-                    "C",
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs font-mono px-2.5 py-1 rounded-sm bg-theme-on-surface/5 border  text-theme-on-surface/90"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-theme-on-surface/10 pb-3">
-                <span className="text-xs font-mono  uppercase tracking-wider w-full sm:w-40 shrink-0 text-left pt-1">
-                  Frameworks
-                </span>
-                <div className="flex flex-wrap gap-1.5 justify-start w-full">
-                  {[
-                    "Next.js",
-                    "React.js",
-                    "Node.js",
-                    "Express.js",
-                    "React Native",
-                    "Expo",
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs font-mono px-2.5 py-1 rounded-sm bg-theme-on-surface/5 border border-theme-on-surface/10 text-theme-on-surface/90"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6 border-b border-theme-on-surface/10 pb-3">
-                <span className="text-xs font-mono  uppercase tracking-wider w-full sm:w-40 shrink-0 text-left pt-1">
-                  Data & Layer
-                </span>
-                <div className="flex flex-wrap gap-1.5 justify-start w-full">
-                  {[
-                    "MongoDB",
-                    "Mongoose ODM",
-                    "RESTful APIs",
-                    "JWT Auth",
-                    "AsyncStorage",
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs font-mono px-2.5 py-1 rounded-sm bg-theme-on-surface/5 border border-theme-on-surface/10 text-theme-on-surface/90"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6">
-                <span className="text-xs font-mono  uppercase tracking-wider w-full sm:w-40 shrink-0 text-left pt-1">
-                  Infra & Tools
-                </span>
-                <div className="flex flex-wrap gap-1.5 justify-start w-full">
-                  {[
-                    "Git",
-                    "GitHub Actions",
-                    "Vercel",
-                    "Render",
-                    "NPM Ecosystem",
-                    "Figma",
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-xs font-mono px-2.5 py-1 rounded-sm bg-theme-on-surface/5 border border-theme-on-surface/10 text-theme-on-surface/90"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+            <div className="h-auto min-h-64 lg:min-h-96 flex items-center justify-center">
+              <TechIconsComponent />
             </div>
           </div>
         </div>

@@ -159,7 +159,7 @@ const page = () => {
                 className="grid grid-cols-1 gap-6 md:grid-cols-[180px_1fr]"
               >
                 <div>
-                  <h3 className="sticky top-18 pt-6 paragraph-4 text-theme-text-primary">
+                  <h3 className="sticky top-18 pt-6 paragraph-4 text-primary">
                     {section.category}
                   </h3>
                 </div>
@@ -169,7 +169,7 @@ const page = () => {
                       key={item.title}
                       className="group rounded-[28px]  cursor-pointer hover:bg-theme-h-100-80 transition-all ease-in-out duration-200 p-6 flex flex-col justify-between h-auto  w-full"
                     >
-                      <h4 className="transition-all duration-300 group-hover:translate-x-1 paragraph-4 text-theme-text-primary">
+                      <h4 className="transition-all duration-300 group-hover:translate-x-1 paragraph-4 text-primary">
                         {item.title}
                       </h4>
                       <p className="mt-3 max-w-2xl">{item.description}</p>

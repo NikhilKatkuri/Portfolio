@@ -165,7 +165,7 @@ const ProjectScrollCard = ({ startXat = 0 }: ProjectScrollCardProps) => {
           <div
             key={i}
             ref={i === 0 ? firstCardRef : null}
-            className="shrink-0 aspect-video h-64 mr-4  sm:h-72 lg:h-100 rounded-2xl bg-[var(--color-black-5)] flex items-center justify-center cursor-pointer hover:bg-[var(--color-black-10)] transition-colors"
+            className="shrink-0 aspect-video h-64 mr-4  sm:h-72 lg:h-100 rounded-2xl bg-(--color-black-5) flex items-center justify-center cursor-pointer hover:bg-(--color-black-10) transition-colors"
             onClick={() => handleCardClick(i)}
           >
             <div className="text-center px-4">
@@ -236,27 +236,33 @@ const ProjectScrollCard = ({ startXat = 0 }: ProjectScrollCardProps) => {
               exit={{ opacity: 0, y: direction === "right" ? -20 : 20 }}
               transition={{ duration: 0.3, delay: 0.2 }}
             >
-              {featuredProjects.length > 0 ? (
-                featuredProjects[activeIndex].urls.map((url, index) => {
-                  return url.isPrimary ? (
-                    <ActiveBtn key={index} name={url.label} link={url.url} />
-                  ) : (
-                    <InActiveBtn key={index} name={url.label} link={url.url} />
-                  );
-                })
-              ) : null}
+              {featuredProjects.length > 0
+                ? featuredProjects[activeIndex].urls.map((url, index) => {
+                    return url.isPrimary ? (
+                      <ActiveBtn key={index} name={url.label} link={url.url} />
+                    ) : (
+                      <InActiveBtn
+                        key={index}
+                        name={url.label}
+                        link={url.url}
+                      />
+                    );
+                  })
+                : null}
             </motion.div>
           </AnimatePresence>
         </div>
 
         <div className="flex items-center bg-button-secondary rounded-full max-md:mx-auto">
           <button
+            aria-label="Scroll Left"
             className="flex items-center hover:bg-button-secondary cursor-pointer justify-center w-10 h-10 rounded-full hover:text-button-on-primary"
             onClick={() => scrollByCard("left")}
           >
             <SolarAltArrowLeftBroken className="stroke-theme-on-surface group-hover:stroke-button-on-primary size-5" />
           </button>
           <button
+            aria-label="Scroll Right"
             className="flex items-center hover:bg-button-secondary cursor-pointer justify-center w-10 h-10 rounded-full hover:text-button-on-primary"
             onClick={() => scrollByCard("right")}
           >

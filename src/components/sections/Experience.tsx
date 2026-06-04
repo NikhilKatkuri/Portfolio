@@ -29,7 +29,7 @@ const ExperienceCard = ({
       <div
         className={`size-2.5 rounded-full ring-2 ring-offset-2 ring-offset-white transition-colors ${
           experience.isCurrent
-            ? "bg-[var(--color-emerald-600)] ring-[var(--color-emerald-200)] animate-pulse"
+            ? "bg-(--color-emerald-600) ring-(--color-emerald-200) animate-pulse"
             : "bg-theme-border-on-surface ring-transparent"
         }`}
       />
@@ -44,7 +44,7 @@ const ExperienceCard = ({
         <span className="mx-1.5">–</span>
         {experience.isCurrent ? "Present" : formatDate(experience.endDate)}
         {experience.isCurrent && (
-          <span className="ml-2 normal-case tracking-normal font-normal text-[var(--color-emerald-600)]">
+          <span className="ml-2 normal-case tracking-normal font-normal text-(--color-emerald-600)">
             Current
           </span>
         )}
@@ -58,7 +58,7 @@ const ExperienceCard = ({
           </span>
         </div>
 
-        <p className="paragraph-4 text-tertiary leading-relaxed">
+        <p className="paragraph-6 text-tertiary leading-relaxed">
           {experience.description ?? experience.summary}
         </p>
 

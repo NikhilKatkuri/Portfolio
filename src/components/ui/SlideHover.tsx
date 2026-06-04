@@ -43,18 +43,20 @@ const SlideHover = <T extends Data>({ data }: SlideHoverProps<T>) => {
   return (
     <>
       {data.map((item, index) => (
-        <Link
-          id={`${index}`}
-          key={index}
-          className={`p-btn-pad rounded-full smooth-transition ${isActive(item.href) ? "bg-button-secondary" : ""} text-button-on-secondary `}
-          href={item.href}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          {item.name}
-        </Link>
+        <li key={index} className="relative">
+          <Link
+            id={`${index}`}
+            key={index}
+            className={`p-btn-pad rounded-full smooth-transition ${isActive(item.href) ? "bg-button-secondary" : ""} text-button-on-secondary `}
+            href={item.href}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            {item.name}
+          </Link>
+        </li>
       ))}
-      <div
+      <li
         className="absolute top-0 bottom-0 left-0 rounded-full bg-button-secondary transition-all duration-300 ease-out pointer-events-none"
         style={{
           width: sliderStyle.width,

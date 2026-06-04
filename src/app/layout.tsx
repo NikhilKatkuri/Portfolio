@@ -21,6 +21,10 @@ export default function RootLayout({
             __html: JSON.stringify(getUnifiedSchema()),
           }}
         />
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com;"
+        />
       </head>
       <body className="min-h-full flex flex-col relative scroll-smooth bg-theme-surface text-theme-on-surface">
         {children}

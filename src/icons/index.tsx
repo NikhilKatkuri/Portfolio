@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+ 
 
 export function SolarArrowRightUpBroken(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -178,7 +178,7 @@ export function SolarMagicStick3Linear(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarAltArrowLeftBroken(props: SVGProps<SVGSVGElement>) {
+export function SolarAltArrowLeftBroken(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -199,7 +199,7 @@ export function SolarAltArrowLeftBroken(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarAltArrowRightBroken(props: SVGProps<SVGSVGElement>) {
+export function SolarAltArrowRightBroken(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +220,7 @@ export function SolarAltArrowRightBroken(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarLetterLinear(props: SVGProps<SVGSVGElement>) {
+export function SolarLetterLinear(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -241,7 +241,7 @@ export function SolarLetterLinear(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarMapPointLinear(props: SVGProps<SVGSVGElement>) {
+export function SolarMapPointLinear(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -259,7 +259,7 @@ export function SolarMapPointLinear(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarUserLinear(props: SVGProps<SVGSVGElement>) {
+export function SolarUserLinear(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -277,7 +277,7 @@ export function SolarUserLinear(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export const LinkedinIcon = (props: SVGProps<SVGSVGElement>) => {
+export const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -289,7 +289,7 @@ export const LinkedinIcon = (props: SVGProps<SVGSVGElement>) => {
   );
 };
 
-export const GithubIcon = (props: SVGProps<SVGSVGElement>) => {
+export const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -304,7 +304,7 @@ export const GithubIcon = (props: SVGProps<SVGSVGElement>) => {
     </svg>
   );
 };
-export const MailIcon = (props: SVGProps<SVGSVGElement>) => {
+export const MailIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -320,7 +320,7 @@ export const MailIcon = (props: SVGProps<SVGSVGElement>) => {
 };
 
 export function SolarDownloadMinimalisticBoldDuotone(
-  props: SVGProps<SVGSVGElement>,
+  props: React.SVGProps<SVGSVGElement>,
 ) {
   return (
     <svg
@@ -342,7 +342,7 @@ export function SolarDownloadMinimalisticBoldDuotone(
   );
 }
 
-export function SolarArrowDownBroken(props: SVGProps<SVGSVGElement>) {
+export function SolarArrowDownBroken(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -362,7 +362,7 @@ export function SolarArrowDownBroken(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-export function NPMjs(props: SVGProps<SVGSVGElement>) {
+export function NPMjs(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="24"

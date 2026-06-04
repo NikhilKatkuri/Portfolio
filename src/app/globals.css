@@ -31,7 +31,6 @@ html {
   --palette-1100: 24, 25, 29;
   --palette-1200: 18, 19, 23;
 
-
   --palette-50-20: 65, 67, 71;
   --palette-1000-12: 222, 223, 226;
   --palette-blue-600: 50, 121, 249;
@@ -55,6 +54,27 @@ html {
   --avatar-y-coord: 200px;
   --avatar-scale: 1;
   --avatar-size: 240px;
+}
+
+[data-theme="dark"] {
+  --palette-0: 18, 19, 23;
+  --palette-10: 24, 25, 29;
+  --palette-15: 28, 29, 33;
+  --palette-20: 33, 34, 38;
+  --palette-50: 41, 42, 47;
+  --palette-100: 47, 48, 52;
+  --palette-200: 69, 71, 77;
+  --palette-300: 100, 103, 110;
+  --palette-400: 80, 90, 130;
+  --palette-800: 178, 187, 197;
+  --palette-900: 205, 212, 220;
+  --palette-1000: 225, 230, 236;
+  --palette-1100: 239, 242, 247;
+  --palette-1200: 248, 249, 252;
+
+  --palette-50-20: 255, 255, 255, 0.08;
+  --palette-1000-12: 0, 0, 0, 0.12;
+  --palette-blue-600: 50, 121, 249;
 }
 
 @theme inline {
@@ -127,7 +147,7 @@ html {
 
   /* Accent Colors - Status & States */
   --color-emerald-400: rgb(52, 211, 153);
-  --color-emerald-600: rgb(16, 185, 129);
+  --color-emerald-600: rgb(6, 95, 70);
   --color-emerald-200: rgb(167, 243, 208);
   --color-amber-400: rgb(251, 191, 36);
   --color-sky-400: rgb(56, 189, 248);
