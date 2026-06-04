@@ -34,6 +34,7 @@ const TechIconsComponent = () => {
   );
 };
 
+const darkIcons = ["github", "express", "vercel", "expo"];
 const IconCard = ({ icon }: { icon: { name: string; icon: string } }) => (
   <div
     aria-label={icon.name}
@@ -43,7 +44,7 @@ const IconCard = ({ icon }: { icon: { name: string; icon: string } }) => (
     <img
       src={`/icons/${icon.icon}`}
       alt={icon.name}
-      className="w-10 aspect-square"
+      className={`w-10 aspect-square ${darkIcons.includes(icon.name) ? "in-data-[theme='dark']:invert" : ""}`}
     />
     <span className="text-xs text-gray-500 capitalize my-1.5">{icon.name}</span>
   </div>

@@ -5,22 +5,25 @@ import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 import Image from "next/image";
 import Link from "next/link";
-import { SolarArrowRightUpBroken,  SolarAltArrowLeftBroken } from "@/icons/index";
+import {
+  SolarArrowRightUpBroken,
+  SolarAltArrowLeftBroken,
+} from "@/icons/index";
 import type { Metadata } from "next";
- 
+import cn from "@/utils/cn";
+import buttonVariants from "@/constants/ui/button";
+
 export function generateStaticParams() {
   return (Projects as ProjectRecord[]).map((p) => ({ slug: p.slug }));
 }
- 
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const project = (Projects as ProjectRecord[]).find(
-    (p) => p.slug === slug,
-  );
+  const project = (Projects as ProjectRecord[]).find((p) => p.slug === slug);
   if (!project) return {};
   return {
     title: project.metaTitle ?? project.title,
@@ -29,7 +32,7 @@ export async function generateMetadata({
     openGraph: { images: project.ogImage ? [project.ogImage] : [] },
   };
 }
- 
+
 const StatusBadge = ({ status }: { status: ProjectRecord["status"] }) => {
   const map = {
     completed: { label: "Completed", dot: "bg-[var(--color-emerald-400)]" },
@@ -39,11 +42,8 @@ const StatusBadge = ({ status }: { status: ProjectRecord["status"] }) => {
   const { label, dot } = map[status];
   return (
     <span
-      className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full border"
-      style={{
-        borderColor: "var(--palette-1000-12)",
-        background: "var(--color-theme-overlay)",
-      }}
+      className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full border border-tertiary/80"
+
     >
       <span className={`size-1.5 rounded-full ${dot}`} />
       {label}
@@ -66,12 +66,14 @@ const TechPill = ({ name }: { name: string }) => (
 const SectionHeading = ({ children }: { children: React.ReactNode }) => (
   <h2 className="heading-6 mb-4">{children}</h2>
 );
- 
-const ProjectPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
+
+const ProjectPage = async ({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) => {
   const { slug } = await params;
-  const project = (Projects as ProjectRecord[]).find(
-    (p) => p.slug === slug,
-  );
+  const project = (Projects as ProjectRecord[]).find((p) => p.slug === slug);
   if (!project) notFound();
 
   const techGroups = Object.entries(project.technologies).filter(
@@ -87,8 +89,7 @@ const ProjectPage = async ({ params }: { params: Promise<{ slug: string }> }) =>
       <Navbar isStatic />
 
       <main className="relative w-full min-h-dvh">
-        <div className="max-w-content-mx mx-auto pb-24 mt-20 max-lg:px-4 w-full">
-          
+        <div className="max-w-content-mx mx-auto pb-24 mt-10 max-lg:px-4 w-full">
           <Link
             href="/project"
             className="inline-flex items-center gap-1.5 paragraph-5 mb-10 opacity-60 hover:opacity-100 transition-opacity"
@@ -96,7 +97,7 @@ const ProjectPage = async ({ params }: { params: Promise<{ slug: string }> }) =>
             <SolarAltArrowLeftBroken className="size-4 stroke-current" />
             All projects
           </Link>
- 
+
           {project.featuredImage && (
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-10 bg-(--theme-surface-overlay-depth-01)">
               <Image
@@ -110,56 +111,46 @@ const ProjectPage = async ({ params }: { params: Promise<{ slug: string }> }) =>
             </div>
           )}
 
-          {/* ── Title row ── */}
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-8">
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-3 flex-wrap">
                 <h1 className="heading-3">{project.title}</h1>
                 <StatusBadge status={project.status} />
               </div>
-              <p className="paragraph-4 max-w-2xl">{project.summary}</p>
+              <p className="paragraph-4 max-w-2xl ">{project.summary}</p>
             </div>
-
-            {/* Primary CTA */}
+ 
             <div className="flex gap-3 flex-wrap shrink-0">
-              {project.urls.map((url, i) =>
-                url.isPrimary ? (
-                  <a
-                    key={i}
-                    href={url.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cursor-pointer group bg-theme-button-primary inline-flex items-center gap-2 rounded-full text-theme-button-on-primary p-btn-pad"
-                  >
-                    {url.label}
-                    <SolarArrowRightUpBroken className="stroke-theme-button-on-primary size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                  </a>
-                ) : (
-                  <a
-                    key={i}
-                    href={url.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cursor-pointer group inline-flex items-center gap-2 rounded-full text-theme-button-on-secondary border transition-all ease-in-out duration-200 p-btn-pad-2 hover:bg-theme-button-secondary"
-                    style={{
-                      borderColor: "var(--palette-100)",
-                      backgroundColor: "rgba(var(--palette-100), 0.3)",
-                    }}
-                  >
-                    {url.label}
-                    <SolarArrowRightUpBroken className="size-4 stroke-theme-on-surface transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                  </a>
-                ),
-              )}
+              {project.urls.map((url, i) => (
+                <a
+                  key={i}
+                  href={url.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    buttonVariants.base,
+                    url.isPrimary
+                      ? buttonVariants.variants.primary
+                      : buttonVariants.variants.secondary,
+                    "group inline-flex items-center gap-2",
+                  )}
+                >
+                  {url.label}
+                  <SolarArrowRightUpBroken
+                    className={cn(
+                      "size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5",
+                      url.isPrimary
+                        ? buttonVariants.iconVariants.primaryStroke
+                        : buttonVariants.iconVariants.secondaryStroke,
+                    )}
+                  />
+                </a>
+              ))}
             </div>
           </div>
-
-          {/* ── Meta strip ── */}
+ 
           <div
-            className="flex flex-wrap gap-x-8 gap-y-2 paragraph-5 opacity-60 mb-12 pb-12 border-b"
-            style={{
-              borderColor: "var(--palette-1000-12)",
-            }}
+            className="flex flex-wrap gap-x-8 gap-y-2 paragraph-5  mb-12 pb-12 border-b-2 border-theme-border"
           >
             <span>
               <span className="font-medium">Role</span> · {project.role}
@@ -174,10 +165,8 @@ const ProjectPage = async ({ params }: { params: Promise<{ slug: string }> }) =>
               </span>
             )}
           </div>
-
-          {/* ── Two-column body ── */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12">
-            {/* Left — narrative */}
+ 
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12"> 
             <div className="flex flex-col gap-12">
               {project.description && (
                 <section>
@@ -239,8 +228,7 @@ const ProjectPage = async ({ params }: { params: Promise<{ slug: string }> }) =>
                   </ul>
                 </section>
               )}
-
-              {/* Extra images */}
+ 
               {project.images && project.images.length > 0 && (
                 <section>
                   <SectionHeading>Gallery</SectionHeading>

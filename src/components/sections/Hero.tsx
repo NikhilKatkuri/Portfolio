@@ -1,3 +1,4 @@
+import { decisions } from "@/constants/content/home";
 import {
   SolarArrowRightUpBroken,
   SolarDownloadMinimalisticBoldDuotone,
@@ -5,19 +6,16 @@ import {
 import Link from "next/link";
 
 const Hero = () => {
+  const { hero } = decisions;
   return (
     <div className="h-auto pb-32 w-full max-w-content-mx mx-auto max-lg:px-4">
       <h1 className="landing-main text-surface">
-        <p className="">Designing systems that feel simple.</p>
-        <p className="">Engineering systems that scale.</p>
+        {hero.title.map((part, index) => (
+          <p key={index}>{part}</p>
+        ))}
       </h1>
       <div className="my-4 landing-secondary text-tertiary">
-        <p className="">
-          I&apos;m Nikhil, a Full-Stack and Android Engineer focused on
-          designing, maintaining, and evolving performant systems. I specialize
-          in building clean architectures that balance deep backend engineering
-          with seamless user experiences.
-        </p>
+        <p className="">{hero.body}</p>
       </div>
       <div className="flex flex-wrap gap-4">
         <Link

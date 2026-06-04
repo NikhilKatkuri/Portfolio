@@ -1,12 +1,12 @@
 "use client";
 import { useLayoutEffect, useRef, useState } from "react";
 import ProjectScrollCard from "../client/ProjectScrollCard"; 
+import { decisions } from "@/constants/content/home";
 
 const FeaturedProject = () => {
   const divRef = useRef<HTMLDivElement>(null);
   const [xAxis, setXAxis] = useState(0);
- 
-
+  
   const handleLayout = () => {
     if (!divRef.current) return;
     setXAxis(divRef.current.getBoundingClientRect().x);
@@ -20,6 +20,7 @@ const FeaturedProject = () => {
     };
   }, []);
 
+  const { featuredProjects } = decisions;
   return (
     <div
       id="featured-projects"
@@ -29,10 +30,11 @@ const FeaturedProject = () => {
         ref={divRef}
         className="max-w-content-mx flex w-full flex-col max-lg:px-4 mx-auto"
       >
-        <h2 className="heading-4 text-primary lg:my-3">Featured Projects</h2>
-        <p className="paragraph-4 max-w-lg">
-          Selected work focused on scalable systems, modern architectures, and
-          performance-oriented user experiences.
+        <h2 className="heading-4 text-primary lg:my-3">
+          {featuredProjects.title}
+        </h2>
+        <p className="paragraph-4 max-w-lg whitespace-pre-wrap">
+          {featuredProjects.body}
         </p>
       </div>
       <div className="w-full h-full relative overflow-x-hidden pb-12 max-lg:px-4 ">

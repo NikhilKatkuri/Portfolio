@@ -52,9 +52,9 @@ const Navbar = ({ isStatic = true }: NavbarProps) => {
 
         <div className="h-10 w-10 block" />
 
-        <ul className="flex items-center relative max-md:hidden">
+        <div className="flex items-center relative max-md:hidden">
           <SlideHover data={data} />
-        </ul>
+        </div>
 
         <button 
         aria-label="Contact me"

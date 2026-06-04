@@ -1,54 +1,12 @@
 "use client";
+import { animations } from "@/constants/content/projects";
 import Projects from "@/constants/projects";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
-
-// Deterministic "random" values per card so SSR and client match
-const GLINTS = [
-  { delay: "0s", duration: "2.4s", angle: "110deg" },
-  { delay: "0.4s", duration: "2.8s", angle: "125deg" },
-  { delay: "0.8s", duration: "2.2s", angle: "100deg" },
-  { delay: "1.2s", duration: "3.0s", angle: "115deg" },
-  { delay: "0.2s", duration: "2.6s", angle: "108deg" },
-  { delay: "0.6s", duration: "2.5s", angle: "120deg" },
-  { delay: "1.0s", duration: "2.9s", angle: "105deg" },
-  { delay: "0.3s", duration: "2.3s", angle: "130deg" },
-];
 
 const ProjectGrid = () => {
+  const GLINTS = animations.GLINTS;
   return (
     <>
-      <style>{`
-        @keyframes shimmer {
-          0%   { transform: translateX(-100%) skewX(-12deg); }
-          100% { transform: translateX(250%)  skewX(-12deg); }
-        }
-        @keyframes breathe {
-          0%, 100% { opacity: 0.55; }
-          50%       { opacity: 0.85; }
-        }
-        @keyframes glint {
-          0%        { opacity: 0; transform: translateX(-120%) rotate(0deg); }
-          10%       { opacity: 1; }
-          90%       { opacity: 1; }
-          100%      { opacity: 0; transform: translateX(220%)  rotate(0deg); }
-        }
-        .project-card:hover .card-shimmer  { animation-play-state: paused; }
-        .project-card:hover .card-breathe  { animation-play-state: paused; opacity: 1; }
-        .project-card:hover .card-glint    { animation-play-state: paused; opacity: 0; }
-        .project-card:hover .card-overlay  { opacity: 1; }
-        .project-card:hover .card-label    { transform: translateY(0); opacity: 1; }
-        .card-overlay {
-          opacity: 0;
-          transition: opacity 0.35s ease;
-        }
-        .card-label {
-          transform: translateY(6px);
-          opacity: 0;
-          transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-      `}</style>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xxl:grid-cols-4 gap-2 gap-y-6 flex-1">
         {Projects.map((d, i) => {
           const glint = GLINTS[i % GLINTS.length];
@@ -58,9 +16,7 @@ const ProjectGrid = () => {
               key={i}
               className="project-card flex flex-col gap-2 group"
             >
-              {/* Thumbnail placeholder */}
-              <div className="relative rounded-xl h-64 w-full overflow-hidden bg-[var(--color-neutral-100)]">
-                {/* Base animated breathe */}
+              <div className="relative rounded-xl h-64 w-full overflow-hidden bg-(--color-neutral-100)">
                 <div
                   className="card-breathe absolute inset-0"
                   style={{
@@ -69,8 +25,6 @@ const ProjectGrid = () => {
                     animationDelay: glint.delay,
                   }}
                 />
-
-                {/* Shimmer sweep */}
                 <div
                   className="card-shimmer absolute inset-0"
                   style={{
@@ -81,7 +35,6 @@ const ProjectGrid = () => {
                   }}
                 />
 
-                {/* Diagonal glint — one sharp bright streak */}
                 <div
                   className="card-glint absolute inset-0"
                   style={{
@@ -91,16 +44,13 @@ const ProjectGrid = () => {
                   }}
                 />
 
-                {/* Hover overlay */}
-                <div className="card-overlay absolute inset-0 bg-[var(--color-black-5)] rounded-xl" />
-
-                {/* Hover label */}
-                <div className="card-label absolute bottom-3 right-3 text-xs font-medium text-[var(--color-neutral-400)] bg-[var(--color-white-80)] backdrop-blur-sm px-2 py-1 rounded-full">
+                <div className="card-overlay absolute inset-0 bg-(--color-black-5) rounded-xl" />
+                <div className="card-label absolute bottom-3 right-3 text-xs font-medium text-(--color-neutral-400) bg-(--color-white-80) backdrop-blur-sm px-2 py-1 rounded-full">
                   View project →
                 </div>
               </div>
 
-              <p className="text-lg leading-snug group-hover:text-[var(--color-black-70)] transition-colors duration-200">
+              <p className="text-lg leading-snug ) transition-colors duration-200">
                 {d.title}
               </p>
             </Link>

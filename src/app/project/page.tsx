@@ -4,9 +4,11 @@ import Navbar from "@/components/sections/Navbar";
 import type { Metadata } from "next";
 import { projectsMetadata } from "@/constants/meta";
 import ProjectGrid from "@/components/client/ProjectGrid";
-export const metadata: Metadata = projectsMetadata; 
+import { descisions } from "@/constants/content/projects";
+export const metadata: Metadata = projectsMetadata;
 
 const page = () => {
+  const { intro } = descisions;
   return (
     <>
       <Navbar />
@@ -14,19 +16,10 @@ const page = () => {
       <main className="relative w-full min-h-dvh">
         <div className="max-w-content-mx mx-auto pb-12  mt-32 max-lg:px-4 justify-between w-full relative h-auto ">
           <div className="my-6">
-            <h1 className="heading-4 max-w-2xl">
-              Selected work built with curiosity, systems thinking, and
-              obsession for clean execution.
-            </h1>
-            <p className="paragraph-4 mt-6 max-w-2xl">
-              Over the years, I&apos;ve built products, tools, and experiments
-              focused on solving practical problems through thoughtful
-              engineering. These projects reflect how I think about
-              architecture, developer experience, performance, and product
-              design.
-            </p>
+            <h1 className="heading-4 max-w-2xl text-primary">{intro.title}</h1>
+            <p className="paragraph-4 mt-6 max-w-2xl">{intro.body}</p>
           </div>
-         <ProjectGrid/>
+          <ProjectGrid />
         </div>
       </main>
       <Footer />

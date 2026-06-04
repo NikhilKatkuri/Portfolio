@@ -1,6 +1,6 @@
 import { ExperienceRecord } from "@/types";
 
-const ExperienceData: ExperienceRecord[] = [
+const rawExperienceData: ExperienceRecord[] = [
   {
     id: "pixelhexa-fullstack-intern",
     title: "Full Stack Developer Intern",
@@ -70,5 +70,9 @@ const ExperienceData: ExperienceRecord[] = [
     order: 3,
   },
 ];
+
+export const ExperienceData = rawExperienceData.toSorted(
+  (a, b) => (a.order ?? Infinity) - (b.order ?? Infinity),
+);
 
 export default ExperienceData;
