@@ -5,14 +5,16 @@ const publicLinks = {
   github: "https://github.com/nikhilKatkuri",
   npm: "https://www.npmjs.com/~nikhil07k",
   mail: "mailto:nikhil07.dev@gmail.com",
-  resume: "",
+  resume: "/api/resume",
 };
 
-const publicConfigStrict ={
+const publicConfigStrict = {
   name: "Nikhil Katkuri",
   title: "Full Stack SDE",
   location: "Hyderabad, India",
-  brand:'Startify Minds',
+  brand: "Startify Minds",
+  dbName: "portfolio-Nikhil-Katkuri-db",
+  resume: "https://drive.google.com/file/d/1fC33eQqzGF8MBSHnUjz9mxcHGCnXuJSR/view"
 } as const;
 
 const socialLinks = [

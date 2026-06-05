@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import publicLinks from "./links";
 
 const OWNER_NAME = "Nikhil Katkuri";
 const PORTFOLIO_URL = "https://nikhilkatkuri.com";
-const PORTFOLIO_EMAIL = "nikhil07.dev@gmail.com";
+const PORTFOLIO_EMAIL = publicLinks.mail.replace("mailto:", "");
 const TWITTER_HANDLE = "@nkatkuri";
 const OG_IMAGE_PATH = "/og-image.png";
 
@@ -11,13 +12,12 @@ interface MetadataConfig {
   title: string;
   description: string;
   ogImage?: string;
-  ogType?: "website" | "profile" | "article"; // Added article type for dynamic posts
+  ogType?: "website" | "profile" | "article";
   keywords?: string[];
 }
 
 function createMetadata(config: MetadataConfig): Metadata {
   const fullUrl = `${PORTFOLIO_URL}${config.path}`;
-  // CRITICAL FIX: metadataBase simplifies relative paths, but manually building full URLs ensures social apps parse them flawlessly
   const ogImageUrl = config.ogImage
     ? `${PORTFOLIO_URL}${config.ogImage}`
     : `${PORTFOLIO_URL}${OG_IMAGE_PATH}`;
@@ -36,14 +36,14 @@ function createMetadata(config: MetadataConfig): Metadata {
       title: config.title,
       description: config.description,
       url: fullUrl,
-      siteName: `${OWNER_NAME} | Full-Stack Engineer`,
+      siteName: `${OWNER_NAME} | Senior Full-Stack Engineer`,
       locale: "en_US",
       images: [
         {
           url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: `${OWNER_NAME} - Full Stack Engineer & AI Specialist`,
+          alt: `${OWNER_NAME} - Senior Full-Stack Engineer`,
         },
       ],
       type: config.ogType || "website",
@@ -66,17 +66,17 @@ function createMetadata(config: MetadataConfig): Metadata {
 
 const homeMetadata: Metadata = createMetadata({
   path: "/",
-  title: "Nikhil Katkuri | Senior Full-Stack Engineer & AI Specialist",
+  title: "Nikhil Katkuri | Senior Full-Stack Engineer",
   description:
-    "Portfolio of Nikhil Katkuri, a Full-Stack Engineer from Hyderabad specializing in Next.js, TypeScript, React, and LLM workflows. Exploring local AI inference and scalable system design.",
+    "Portfolio of Nikhil Katkuri, a Senior Full-Stack Engineer from Hyderabad specializing in Next.js, TypeScript, React, and high-performance frontend architectures. Exploring offline-first systems, CLI developer tooling, and scalable monorepos.",
   ogType: "profile",
   keywords: [
     "Nikhil Katkuri",
     "Full Stack Engineer Hyderabad",
     "Next.js Developer India",
     "TypeScript Developer",
-    "Ollama Integration",
-    "Local LLM Development",
+    "Offline-First Architecture",
+    "Monorepo Web Applications",
     "Software Engineer Portfolio",
     "Tailwind CSS Specialist",
   ],
@@ -86,7 +86,7 @@ const aboutMetadata: Metadata = createMetadata({
   path: "/about",
   title: "About | Nikhil Katkuri - Engineering Background & Philosophy",
   description:
-    "Discover Nikhil Katkuri's professional journey, core architectural values, and technical expertise in full-stack engineering, interface exploration, and backend debugging.",
+    "Discover Nikhil Katkuri's professional journey, core architectural values, and technical expertise in full-stack engineering, performance optimization, and robust web applications.",
   ogImage: "/og-about.png",
   ogType: "profile",
   keywords: [
@@ -94,21 +94,21 @@ const aboutMetadata: Metadata = createMetadata({
     "Software Engineering Philosophy",
     "Full Stack Career Journey",
     "Hyderabad Developer Biography",
-    "Technical Leadership",
+    "Technical Systems Design",
   ],
 });
- 
+
 const projectsMetadata: Metadata = createMetadata({
   path: "/project",
-  title: "Project | Featured Work by Nikhil Katkuri",
+  title: "Projects | Featured Work by Nikhil Katkuri",
   description:
-    "Explore a curated collection of production-grade web applications, interactive software development, and AI tools built by Nikhil Katkuri using modern web frameworks.",
+    "Explore a curated collection of production-grade web applications, developer CLI utilities, monorepos, and offline-first platforms built by Nikhil Katkuri.",
   ogImage: "/og-projects.png",
   keywords: [
     "Nikhil Katkuri Projects",
     "Next.js Portfolio Showcases",
     "Full Stack Case Studies",
-    "AI Web Applications",
+    "Developer Tooling CLI",
     "Software Engineering Portfolio",
   ],
 });
@@ -117,13 +117,13 @@ const usesMetadata: Metadata = createMetadata({
   path: "/uses",
   title: "Uses | Tools, Tech Stack & Workflow of Nikhil Katkuri",
   description:
-    "An inside look at the hardware, editor extensions, development environments, and local/cloud AI toolchains (Ollama, Claude, Gemini) utilized daily by Nikhil Katkuri.",
+    "An inside look at the hardware, editor extensions, terminal configurations, and development toolchains (Turborepo, Node.js, Next.js) utilized daily by Nikhil Katkuri.",
   ogImage: "/og-uses.png",
   keywords: [
     "Developer Setup",
     "Nikhil Katkuri Workspace",
     "VS Code Configuration",
-    "Local AI Workflow",
+    "Full-Stack Workflow",
     "Windows 11 Development Environment",
     "PowerShell Developer Setup",
   ],
@@ -141,7 +141,12 @@ function createDynamicProjectMetadata(
     title: `${title} | Project by Nikhil Katkuri`,
     description: summary,
     ogType: "article",
-    keywords: [...tags, "Nikhil Katkuri Project", "Software Case Study"],
+    keywords: [
+      ...tags,
+      "Nikhil Katkuri Project",
+      "Software Case Study",
+      "Full-Stack Development",
+    ],
   });
 }
 

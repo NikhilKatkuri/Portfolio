@@ -2,68 +2,75 @@ import { ProjectRecord } from "@/types";
 
 const Projects: ProjectRecord[] = [
   {
-    slug: "dynamic-portfolio-cms",
-    title: "Dynamic Portfolio CMS",
+    slug: "paperwork",
+    title: "Paperwork",
     summary:
-      "A full-stack portfolio platform with real-time content management and AI-assisted personalization.",
+      "A Google Forms-inspired open-source platform designed for building dynamic forms, handling submissions, and streamlining document workflows.",
     description:
-      "Built a production-ready portfolio CMS with ISR, real-time updates, and AI content suggestions using Next.js, TypeScript, and MongoDB. Features include a user-friendly admin interface, AI-powered content recommendations, and seamless integration with the Next.js App Router for dynamic page generation.",
-    metaTitle: "Dynamic Portfolio CMS | Next.js + AI Project by Nikhil Katkuri",
+      "Paperwork is an intuitive form builder utility designed to mirror the simplicity of Google Forms while offering developers enhanced flexibility. It allows users to easily scaffold customized input forms, validate responses, and manage schema-driven data ingestion without complex overhead.",
+    metaTitle: "Paperwork - Google Forms Inspired Builder | Nikhil Katkuri",
     metaDescription:
-      "Built a production-ready portfolio CMS with ISR, real-time updates, and AI content suggestions using Next.js, TypeScript, and MongoDB.",
+      "An open-source, Google Forms-inspired utility built by Nikhil Katkuri to simplify dynamic form creation, structured data entry, and custom workflows.",
     keywords: [
-      "Next.js",
-      "Portfolio CMS",
-      "AI Integration",
-      "ISR",
-      "Full-Stack Project",
+      "Form Builder",
+      "Google Forms Alternative",
+      "Dynamic Forms",
+      "Schema Validation",
+      "TypeScript",
+      "Open Source",
     ],
 
-    featuredImage: "/projects/dynamic-cms-hero.jpg",
-    images: [
-      "/projects/cms-1.jpg",
-      "/projects/cms-2.jpg",
-      "/projects/cms-3.jpg",
-    ],
-    videoUrl: "https://youtube.com/watch?v=...",
+    featuredImage: "/projects/paperwork-hero.jpg",
+    images: ["/projects/paperwork-1.jpg", "/projects/paperwork-2.jpg"],
+    videoUrl: "",
 
-    role: "Full-Stack Engineer",
+    role: "Creator & Lead Engineer",
     status: "completed",
-    startDate: "2025-08",
-    endDate: "2025-12",
+    startDate: "2025-01",
+    endDate: "2025-05",
 
     challenge:
-      "Needed a maintainable portfolio that can be updated without touching code.",
+      "Building flexible, reusable web forms that can adapt to changing structural requirements often demands tedious frontend adjustments and re-deployments.",
     solution:
-      "Built a headless CMS using Next.js App Router, MDX, and MongoDB with real-time preview.",
+      "Developed a clean, schema-driven approach inspired by Google Forms that translates declarative field configurations directly into interactive user questionnaires with built-in validation.",
     results: [
-      "Reduced content update time by 90%",
-      "Achieved 98 Lighthouse Performance score",
-      "Implemented AI-powered content suggestions",
+      "Streamlined web form deployment pipelines down to a single configuration file",
+      "Created an easily extendable interface pattern for custom question types",
+      "Delivered a lightweight, open-source codebase ready for custom self-hosting",
     ],
     keyFeatures: [
-      "Real-time content editing",
-      "ISR & On-demand revalidation",
-      "AI content assistant",
-      "Dark mode with smooth transitions",
+      "Google Forms-inspired input components and validation states",
+      "Dynamic configuration engines for rapid question structure modifications",
+      "Centralized response processing and structured payload validation",
     ],
 
-    tags: ["Next.js", "TypeScript", "MongoDB", "Tailwind", "AI"],
+    tags: [
+      "TypeScript",
+      "Node.js",
+      "Form Builder",
+      "Developer Tools",
+      "Open Source",
+    ],
     technologies: {
-      frontend: ["Next.js 15", "React", "Tailwind CSS", "Framer Motion"],
-      backend: ["Next.js API Routes", "MongoDB", "Mongoose"],
-      tools: ["Vercel", "Clerk Auth", "MDX"],
+      frontend: ["React", "Tailwind CSS"],
+      backend: ["Node.js", "TypeScript"],
+      tools: ["ESLint", "Prettier", "Zod"],
+      infrastructure: ["GitHub Actions"],
     },
 
     urls: [
-      { label: "Live Demo", url: "https://...", isPrimary: true },
-      { label: "Source Code", url: "https://github.com/...", icon: "github" },
+      {
+        label: "Source Code",
+        url: "https://github.com/nikhilKatkuri/paperwork",
+        icon: "github",
+        isPrimary: true,
+      },
     ],
 
     featured: true,
-    publishedAt: "2025-12-20",
+    publishedAt: "2025-05-15",
     metrics: {
-      name: "",
+      name: "stars",
       count: 0,
     },
   },
@@ -88,13 +95,13 @@ const Projects: ProjectRecord[] = [
       "Developer Productivity",
     ],
 
-    featuredImage: "/projects/git-lite-cli-hero.jpg", // Add your image
+    featuredImage: "/projects/git-lite-cli-hero.jpg",
     images: [
       "/projects/git-lite-cli-1.jpg",
       "/projects/git-lite-cli-2.jpg",
       "/projects/git-lite-cli-3.jpg",
     ],
-    videoUrl: "", // Add a demo video if available
+    videoUrl: "",
 
     role: "Creator & Lead Developer",
     status: "completed",
@@ -129,11 +136,8 @@ const Projects: ProjectRecord[] = [
       "Open Source",
     ],
     technologies: {
-      frontend: [],
       backend: ["Node.js", "TypeScript"],
-      mobile: [],
-      database: [],
-      tools: ["Commander.js", "Inquirer.js", "Octokit", "Chalk", "Vercel"],
+      tools: ["Commander.js", "Inquirer.js", "Octokit", "Chalk"],
       infrastructure: ["NPM", "GitHub Actions", "Docker"],
     },
 
@@ -145,12 +149,8 @@ const Projects: ProjectRecord[] = [
       },
       {
         label: "Source Code",
-        url: "https://github.com/NikhilKatkuri/git-lite-cli",
+        url: "https://github.com/nikhilKatkuri/git-lite-cli",
         icon: "github",
-      },
-      {
-        label: "Documentation",
-        url: "https://github.com/NikhilKatkuri/git-lite-cli#readme",
       },
     ],
 
@@ -162,164 +162,71 @@ const Projects: ProjectRecord[] = [
     },
   },
   {
-    slug: "dynamic-portfolio-cms",
-    title: "Dynamic Portfolio CMS",
+    slug: "offline-first-notes-app",
+    title: "Offline-First Notes Application",
     summary:
-      "A full-stack portfolio platform with real-time content management and AI-assisted personalization.",
+      "A high-performance, monorepo-structured note-taking application designed with real-time sync and robust local persistence.",
     description:
-      "Built a production-ready portfolio CMS with ISR, real-time updates, and AI content suggestions using Next.js, TypeScript, and MongoDB. Features include a user-friendly admin interface, AI-powered content recommendations, and seamless integration with the Next.js App Router for dynamic page generation.",
-    metaTitle: "Dynamic Portfolio CMS | Next.js + AI Project by Nikhil Katkuri",
+      "An offline-first workspace configured inside a clean Turborepo/Yarn monorepo. It leverages advanced local databases for seamless user interactions and updates background data synchronization the moment network connectivity is re-established.",
+    metaTitle: "Offline-First Notes Monorepo | Nikhil Katkuri",
     metaDescription:
-      "Built a production-ready portfolio CMS with ISR, real-time updates, and AI content suggestions using Next.js, TypeScript, and MongoDB.",
+      "High-performance, secure note-taking architecture utilizing local storage synchronization mechanisms inside a managed TypeScript monorepo.",
     keywords: [
-      "Next.js",
-      "Portfolio CMS",
-      "AI Integration",
-      "ISR",
-      "Full-Stack Project",
+      "Offline-First",
+      "Monorepo",
+      "Turborepo",
+      "Local-first",
+      "Sync Engine",
+      "Note Taking App",
     ],
 
-    featuredImage: "/projects/dynamic-cms-hero.jpg",
-    images: [
-      "/projects/cms-1.jpg",
-      "/projects/cms-2.jpg",
-      "/projects/cms-3.jpg",
-    ],
-    videoUrl: "https://youtube.com/watch?v=...",
+    featuredImage: "/projects/notes-app-hero.jpg",
+    images: ["/projects/notes-1.jpg", "/projects/notes-2.jpg"],
+    videoUrl: "",
 
-    role: "Full-Stack Engineer",
-    status: "completed",
-    startDate: "2025-08",
-    endDate: "2025-12",
+    role: "Full-Stack & Systems Architect",
+    status: "in-progress",
+    startDate: "2026-02",
 
     challenge:
-      "Needed a maintainable portfolio that can be updated without touching code.",
+      "Standard web interfaces experience high latency and risk losing user information during spotty network connections or sudden dropouts.",
     solution:
-      "Built a headless CMS using Next.js App Router, MDX, and MongoDB with real-time preview.",
+      "Implemented a Monorepo design mapping clean state transformations directly to a localized database client layer alongside background reconciliation workers.",
     results: [
-      "Reduced content update time by 90%",
-      "Achieved 98 Lighthouse Performance score",
-      "Implemented AI-powered content suggestions",
+      "Zero interface lag during note alterations",
+      "Conflict-free background synchronization processes",
+      "Highly scalable structural isolation utilizing unified monorepo sharing",
     ],
     keyFeatures: [
-      "Real-time content editing",
-      "ISR & On-demand revalidation",
-      "AI content assistant",
-      "Dark mode with smooth transitions",
+      "Instant optimistic UI mutations",
+      "Robust local storage state caching",
+      "Shared UI and utility packages in a singular monorepo structure",
+      "Markdown formatting and rich editor integration",
     ],
 
-    tags: ["Next.js", "TypeScript", "MongoDB", "Tailwind", "AI"],
+    tags: ["React", "TypeScript", "Monorepo", "Offline-First", "Tailwind"],
     technologies: {
-      frontend: ["Next.js 15", "React", "Tailwind CSS", "Framer Motion"],
-      backend: ["Next.js API Routes", "MongoDB", "Mongoose"],
-      tools: ["Vercel", "Clerk Auth", "MDX"],
+      frontend: ["React", "TypeScript", "Tailwind CSS"],
+      database: ["IndexedDB", "LocalForage"],
+      tools: ["Turborepo", "Yarn Workspaces", "Vite"],
     },
 
     urls: [
-      { label: "Live Demo", url: "https://...", isPrimary: true },
-      { label: "Source Code", url: "https://github.com/...", icon: "github" },
-    ],
-
-    featured: true,
-    publishedAt: "2025-12-20",
-    metrics: {
-      name: "",
-      count: 0,
-    },
-  },
-  {
-    slug: "git-lite-cli",
-    title: "Git Lite CLI",
-    summary:
-      "A lightweight, interactive command-line tool that simplifies common Git and GitHub workflows with clean commands and smart automation.",
-    description:
-      "Git Lite CLI (glc) is a powerful yet simple Node.js CLI tool with 2.1K+ downloads. It automates repository creation, commits, branching, and GitHub workflows from your terminal, making Git easier for developers of all levels.",
-    metaTitle: "Git Lite CLI - Simplify Git Workflows | Nikhil Katkuri",
-    metaDescription:
-      "Git Lite CLI (glc) - A powerful yet simple Node.js CLI tool with 2.1K+ downloads. Automate repository creation, commits, branching, and GitHub workflows from your terminal.",
-    keywords: [
-      "Git CLI",
-      "Developer Tooling",
-      "GitHub Automation",
-      "Command Line Tool",
-      "NPM Package",
-      "TypeScript CLI",
-      "Git Lite",
-      "Developer Productivity",
-    ],
-
-    featuredImage: "/projects/git-lite-cli-hero.jpg", // Add your image
-    images: [
-      "/projects/git-lite-cli-1.jpg",
-      "/projects/git-lite-cli-2.jpg",
-      "/projects/git-lite-cli-3.jpg",
-    ],
-    videoUrl: "", // Add a demo video if available
-
-    role: "Creator & Lead Developer",
-    status: "completed",
-    startDate: "2025-05",
-    endDate: "2026-01",
-
-    challenge:
-      "Git commands can be complex and repetitive for many developers. New users often struggle with remembering flags and managing GitHub authentication flows.",
-    solution:
-      "Built an intuitive CLI that wraps common Git operations into simple, memorable commands with interactive prompts, smart defaults, and seamless GitHub integration.",
-    results: [
-      "2,100+ organic NPM downloads",
-      "Simplified daily Git workflow for many users",
-      "Active maintenance with regular updates",
-      "Well-documented authentication and usage guides",
-    ],
-    keyFeatures: [
-      "Simplified commands like `glc save`, `glc sync`, `glc branch`",
-      "Interactive GitHub authentication",
-      "Smart repository cloning and management",
-      "Built-in repository doctor and recovery tools",
-      "gitignore templates and repository size analysis",
-    ],
-
-    tags: [
-      "CLI",
-      "TypeScript",
-      "Node.js",
-      "Git",
-      "GitHub",
-      "Developer Tool",
-      "Open Source",
-    ],
-    technologies: {
-      frontend: [],
-      backend: ["Node.js", "TypeScript"],
-      mobile: [],
-      database: [],
-      tools: ["Commander.js", "Inquirer.js", "Octokit", "Chalk", "Vercel"],
-      infrastructure: ["NPM", "GitHub Actions", "Docker"],
-    },
-
-    urls: [
-      {
-        label: "Live on NPM",
-        url: "https://www.npmjs.com/package/git-lite-cli",
-        isPrimary: true,
-      },
       {
         label: "Source Code",
-        url: "https://github.com/NikhilKatkuri/git-lite-cli",
+        url: "https://github.com/NikhilKatkuri/notes_monorepo",
         icon: "github",
-      },
-      {
-        label: "Documentation",
-        url: "https://github.com/NikhilKatkuri/git-lite-cli#readme",
+        isPrimary: true,
       },
     ],
 
     featured: true,
-    publishedAt: "2025-06-01",
+    publishedAt: "2026-03-01",
     metrics: {
-      name: "npmDownloads",
-      count: 2100,
+      name: "packages",
+      count: 3,
     },
   },
 ];
+
 export default Projects;
