@@ -23,6 +23,9 @@ const Footer = () => {
               {footer.cta.map((cta, index) => (
                 <a
                   key={index}
+                  href={cta.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={cn(
                     buttonVariants.base,
                     cta.isPrimary

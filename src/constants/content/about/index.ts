@@ -4,7 +4,7 @@ const stats = [
     label: "NPM Downloads",
   },
   {
-    value: "Full Stack",
+    value: "Android / Web",
     label: "Engineering",
   },
   {
@@ -15,16 +15,16 @@ const stats = [
 
 const experience = {
   title: "Experience",
-  done: "I've worked across full-stack web applications and cross-platform interfaces. During my internship at *Galactix Solutions*  , I focused on solving responsive UI and layout stability problems across complex viewport conditions.",
+  done: "I've worked across cross-platform mobile interfaces and modern web applications. During my internship at Galactix Solutions Pvt. Ltd., I focused on solving mobile application layout bugs, local storage issues, and cross-device interface stability using React Native and Expo.",
   sub: {
     title: "Current Direction",
-    body: " I'm currently joining *PixelHexa* as a Full Stack Developer Intern while building under my personal engineering brand, *Stratify Minds*",
+    body: "I'm continuing to scale my development skill set, working deep with mobile and web architectures while building under my personal engineering brand, Stratify Minds.",
   },
 };
 
 const status = {
   title: "Currently focused on",
-  body: "SaaS systems, frontend architecture, and developer tooling.",
+  body: "Mobile application systems, frontend architecture, and developer tooling.",
 };
 
 const philosophy = {
@@ -33,16 +33,16 @@ const philosophy = {
 };
 
 const intro = {
-  pin: "Full Stack Engineer • Hyderabad, India",
-  title: " I build software that solves real problems — not tutorial projects.",
-  body: "I'm Nikhil Katkuri, a full-stack developer focused on building scalable products, developer tooling, and clean frontend systems with strong engineering fundamentals.",
+  pin: "Android & Web Developer • Hyderabad, India",
+  title: "I build software that solves real problems — not tutorial projects.",
+  body: "I'm Nikhil Katkuri, a developer focused on building scalable products, efficient cross-platform apps, and developer tooling with strong engineering fundamentals.",
 };
 
-const descisions = {
+const decisions = {
   experience,
   philosophy,
   intro,
   status,
 };
 
-export { stats, descisions };
+export { stats, decisions };

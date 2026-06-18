@@ -2,14 +2,14 @@ import Navbar from "@/components/sections/Navbar";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { aboutMetadata } from "@/constants/meta";
-import { descisions, stats } from "@/constants/content/about";
+import { decisions, stats } from "@/constants/content/about";
 import SocailLinksComponent from "@/components/about/SocailLinksComponent";
 import { formatDynamicText } from "@/utils/dynamic";
 
 export const metadata: Metadata = aboutMetadata;
 
 export default function AboutPage() {
-  const { intro, philosophy, experience, status } = descisions;
+  const { intro, philosophy, experience, status } = decisions;
   return (
     <>
       <Navbar />

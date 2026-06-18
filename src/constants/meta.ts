@@ -36,14 +36,14 @@ function createMetadata(config: MetadataConfig): Metadata {
       title: config.title,
       description: config.description,
       url: fullUrl,
-      siteName: `${OWNER_NAME} | Senior Full-Stack Engineer`,
+      siteName: `${OWNER_NAME} | Full-Stack Engineer Intern`,
       locale: "en_US",
       images: [
         {
           url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: `${OWNER_NAME} - Senior Full-Stack Engineer`,
+          alt: `${OWNER_NAME} - Full-Stack Engineer Intern at Galactix Solutions`,
         },
       ],
       type: config.ogType || "website",
@@ -62,39 +62,37 @@ function createMetadata(config: MetadataConfig): Metadata {
   };
 }
 
-// --- METADATA INSTANCES ---
-
 const homeMetadata: Metadata = createMetadata({
   path: "/",
-  title: "Nikhil Katkuri | Senior Full-Stack Engineer",
+  title: "Nikhil Katkuri | Full-Stack Engineer Intern",
   description:
-    "Portfolio of Nikhil Katkuri, a Senior Full-Stack Engineer from Hyderabad specializing in Next.js, TypeScript, React, and high-performance frontend architectures. Exploring offline-first systems, CLI developer tooling, and scalable monorepos.",
+    "Portfolio of Nikhil Katkuri, a Full-Stack Engineer Intern at Galactix Solutions Pvt. Ltd. specializing in Next.js, TypeScript, React, and modern web architectures. Exploring offline-first systems, CLI developer tooling, and scalable monorepos.",
   ogType: "profile",
   keywords: [
     "Nikhil Katkuri",
-    "Full Stack Engineer Hyderabad",
+    "Galactix Solutions Intern",
+    "Full Stack Intern Hyderabad",
     "Next.js Developer India",
     "TypeScript Developer",
     "Offline-First Architecture",
     "Monorepo Web Applications",
     "Software Engineer Portfolio",
-    "Tailwind CSS Specialist",
   ],
 });
 
 const aboutMetadata: Metadata = createMetadata({
   path: "/about",
-  title: "About | Nikhil Katkuri - Engineering Background & Philosophy",
+  title: "About | Nikhil Katkuri - Professional Journey & Engineering Focus",
   description:
-    "Discover Nikhil Katkuri's professional journey, core architectural values, and technical expertise in full-stack engineering, performance optimization, and robust web applications.",
+    "Discover Nikhil Katkuri's engineering journey, current experience as an intern at Galactix Solutions Pvt. Ltd., core development values, and technical expertise in modern full-stack web applications.",
   ogImage: "/og-about.png",
   ogType: "profile",
   keywords: [
     "About Nikhil Katkuri",
-    "Software Engineering Philosophy",
+    "Galactix Solutions Experience",
+    "Software Engineering Internship",
     "Full Stack Career Journey",
     "Hyderabad Developer Biography",
-    "Technical Systems Design",
   ],
 });
 
@@ -102,7 +100,7 @@ const projectsMetadata: Metadata = createMetadata({
   path: "/project",
   title: "Projects | Featured Work by Nikhil Katkuri",
   description:
-    "Explore a curated collection of production-grade web applications, developer CLI utilities, monorepos, and offline-first platforms built by Nikhil Katkuri.",
+    "Explore a curated collection of production-ready web applications, developer CLI utilities, monorepos, and projects built by Nikhil Katkuri.",
   ogImage: "/og-projects.png",
   keywords: [
     "Nikhil Katkuri Projects",
@@ -129,7 +127,6 @@ const usesMetadata: Metadata = createMetadata({
   ],
 });
 
-// Helper factory function for your dynamic pages (/project/[id])
 function createDynamicProjectMetadata(
   id: string,
   title: string,

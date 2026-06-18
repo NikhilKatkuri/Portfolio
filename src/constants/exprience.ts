@@ -2,39 +2,15 @@ import { ExperienceRecord } from "@/types";
 
 const rawExperienceData: ExperienceRecord[] = [
   {
-    id: "pixelhexa-fullstack-intern",
-    title: "Full Stack Developer Intern",
-    company: "PixelHexa",
-    startDate: "2026-06",
-    isCurrent: true,
-    employmentType: "internship",
-    workMode: "remote",
-    summary:
-      "Building responsive UIs and secure backend APIs for active SaaS products.",
-    description:
-      "Build responsive user interfaces using React.js, Next.js, and Tailwind CSS. Code secure backend REST APIs with Node.js, Express.js, and MongoDB to support active SaaS products.",
-    technologies: [
-      { name: "React.js", category: "framework" },
-      { name: "Next.js", category: "framework" },
-      { name: "Tailwind CSS", category: "framework" },
-      { name: "Node.js", category: "platform" },
-      { name: "Express.js", category: "framework" },
-      { name: "MongoDB", category: "database" },
-    ],
-    featured: true,
-    order: 1,
-  },
-  {
     id: "galactix-android-intern",
     title: "Android Developer Intern",
     company: "Galactix Solutions Pvt. Ltd.",
     startDate: "2026-03",
-    endDate: "2026-05",
-    isCurrent: false,
+    isCurrent: true,
     employmentType: "internship",
     workMode: "remote",
     summary:
-      "Developed mobile app features and resolved cross-device layout and storage issues using React Native and Expo.",
+      "Developing mobile app features and resolving cross-device layout and storage issues using React Native and Expo.",
     description:
       "Developed mobile app features using React Native and Expo. Fixed layout bugs across different screen sizes, resolved local storage issues, and prepared assets for app deployment.",
     technologies: [
@@ -42,7 +18,7 @@ const rawExperienceData: ExperienceRecord[] = [
       { name: "Expo", category: "platform" },
     ],
     featured: true,
-    order: 2,
+    order: 1,
   },
   {
     id: "ssg-hitm-tech-lead",
@@ -67,7 +43,7 @@ const rawExperienceData: ExperienceRecord[] = [
       "Curriculum Design",
     ],
     featured: false,
-    order: 3,
+    order: 2,
   },
 ];
 
