@@ -9,7 +9,7 @@ import Link from "next/link";
 const Hero = () => {
   const { hero } = decisions;
   return (
-    <div className="h-auto pb-32 w-full max-w-content-mx mx-auto max-lg:px-4">
+    <div className="h-auto pb-16 lg:pb-32 w-full max-w-content-mx mx-auto max-lg:px-4">
       <h1 className="landing-main text-surface">
         {hero.title.map((part, index) => (
           <p key={index}>{part}</p>

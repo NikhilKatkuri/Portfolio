@@ -33,7 +33,7 @@ const page = () => {
                   {section.items.map((item) => (
                     <div
                       key={item.title}
-                      className="group rounded-[28px]  cursor-pointer hover:bg-theme-h-100-80 transition-all ease-in-out duration-200 p-6 flex flex-col justify-between h-auto  w-full"
+                      className="group rounded-[28px]  cursor-pointer hover:bg-button-nav-hover in-data-[theme='dark']:hover:bg-button-nav-hover transition-all ease-in-out duration-200 p-6 flex flex-col justify-between h-auto  w-full"
                     >
                       <h4 className="transition-all duration-300 group-hover:translate-x-1 paragraph-4 text-primary">
                         {item.title}

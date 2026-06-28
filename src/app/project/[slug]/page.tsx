@@ -12,7 +12,7 @@ import {
 import type { Metadata } from "next";
 import cn from "@/utils/cn";
 import buttonVariants from "@/constants/ui/button";
- 
+
 const projectList = Projects as ProjectRecord[];
 
 function getProjectBySlug(slug: string): ProjectRecord | undefined {
@@ -43,7 +43,7 @@ export async function generateMetadata({
     },
   };
 }
- 
+
 const StatusBadge = ({ status }: { status: ProjectRecord["status"] }) => {
   const map = {
     completed: { label: "Completed", dot: "bg-emerald-400" },
@@ -102,10 +102,10 @@ const ProjectPage = async ({ params }: PageProps) => {
           </Link>
 
           {/* Hero Featured Image Container */}
-          {project.featuredImage && (
+          {
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-10 bg-theme-surface-depth border border-theme-border shadow-md">
               <Image
-                src={project.featuredImage}
+                src={project.featuredImage ?? "/projects/placeholder.jpg"}
                 alt={`${project.title} Banner`}
                 fill
                 priority
@@ -113,7 +113,7 @@ const ProjectPage = async ({ params }: PageProps) => {
                 className="object-cover object-top hover:scale-[1.01] transition-transform duration-700 ease-out"
               />
             </div>
-          )}
+          }
 
           {/* Title Header Block */}
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">
@@ -271,7 +271,6 @@ const ProjectPage = async ({ params }: PageProps) => {
               )}
             </div>
 
-            {/* Sidebar Columns */}
             <aside className="flex flex-col gap-8 lg:sticky lg:top-24">
               {techGroups.length > 0 && (
                 <div className="p-6 rounded-2xl border border-theme-border bg-theme-surface-depth/30">
@@ -296,13 +295,12 @@ const ProjectPage = async ({ params }: PageProps) => {
               {project.metrics?.name?.trim() && (
                 <div className="p-6 rounded-2xl border border-theme-border bg-theme-surface-depth/30">
                   <SectionHeading>{project.metrics.name}</SectionHeading>
-                  <p className="heading-2 font-bold tracking-tight text-theme-primary">
+                  <p className="heading-2 tracking-tight text-theme-on-tertiary">
                     {project.metrics.count.toLocaleString()}
                   </p>
                 </div>
               )}
 
-              {/* Navigation Links Block */}
               <div className="p-6 rounded-2xl border border-theme-border bg-theme-surface-depth/30">
                 <SectionHeading>Links</SectionHeading>
                 <div className="flex flex-col gap-1">
@@ -312,7 +310,7 @@ const ProjectPage = async ({ params }: PageProps) => {
                       href={url.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex items-center justify-between gap-2 paragraph-4 py-2.5 border-b border-theme-border/50 text-theme-on-surface-variant hover:text-theme-primary transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-theme-primary last:border-b-0"
+                      className="group flex items-center justify-between gap-2 paragraph-4 py-2.5 border-b border-theme-border/50 text-theme-on-tertiary hover:text-theme-on-primary transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-theme-primary last:border-b-0"
                     >
                       {url.label}
                       <SolarArrowRightUpBroken className="size-4 stroke-current transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 shrink-0" />

@@ -1,5 +1,5 @@
 import { decisions } from "@/constants/content/home";
-import TechIconsComponent from "../ui/TechIcons"; 
+import TechIconsComponent from "../ui/TechIcons";
 import ContinousBox from "../ui/ContinousBox";
 
 const TechnicalExpertise = () => {
@@ -7,7 +7,7 @@ const TechnicalExpertise = () => {
   const breakthrough = technicalExpertise.technicalBreakThrough;
 
   return (
-    <div className="min-h-screen w-full flex flex-col gap-8 max-lg:px-4">
+    <div className="mt-6 w-full flex flex-col gap-8 max-lg:px-4">
       <div className="mx-auto max-w-content-mx w-full flex flex-col gap-8">
         <div>
           <h2 className="heading-4 lg:my-3 text-left text-primary">

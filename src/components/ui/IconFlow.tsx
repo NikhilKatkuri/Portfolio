@@ -5,7 +5,7 @@ import {
   SolarSmartphoneBroken,
   SolarCheckCircleLinear,
   SolarCodeBroken,
-  SolarProgrammingLinear, 
+  SolarProgrammingLinear,
   SolarMagicStick3Linear,
 } from "@/icons/index";
 import { useEffect, useState } from "react";
@@ -16,14 +16,13 @@ const icons = [
   SolarSmartphoneBroken,
   SolarCheckCircleLinear,
   SolarCodeBroken,
-  SolarProgrammingLinear, 
+  SolarProgrammingLinear,
   SolarMagicStick3Linear,
 ];
 
 const IconFlow = () => {
   const quatrpleIcons = [...icons, ...icons, ...icons, ...icons];
 
-  const amplitude = 32;
   const frequency = 0.5;
   const [transformX, setTransformX] = useState(0);
 
@@ -51,8 +50,7 @@ const IconFlow = () => {
     <div className="flex w-full justify-center overflow-hidden my-12 ">
       <div className="flex w-[200vw] -translate-x-50  h-52 relative md:h-64 gap-2 no-scrollbar scroll-smooth items-center px-8">
         {quatrpleIcons.map((Icon, index) => {
-          const translateY =
-            Math.round(Math.sin(index * frequency) * amplitude * 100) / 100;
+          const translateY = Math.round(Math.sin(index * frequency));
 
           return (
             <div
@@ -66,7 +64,7 @@ const IconFlow = () => {
                 className="min-w-20 md:min-w-24 aspect-square rounded-full border bg-theme-overlay border-theme-border flex items-center justify-center animate-float"
                 style={{
                   animationDelay: `${index * 0.15}s`,
-                  transform: `translateY(${-translateY}px)`, // Merged cleanly into a single style block
+                  transform: `translateY(calc(${translateY}*var(--amp)))`,
                 }}
               >
                 <Icon className="stroke-theme-on-overlay size-5 md:size-7" />

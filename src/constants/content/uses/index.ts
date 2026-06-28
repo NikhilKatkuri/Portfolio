@@ -20,18 +20,6 @@ const setupSections = [
       },
     ],
   },
-
-  {
-    category: "Java & Backend",
-    items: [
-      {
-        title: "IntelliJ IDEA",
-        description:
-          "Used mainly for Java development, backend systems, object-oriented programming, and deeper debugging workflows where stronger IDE tooling becomes valuable.",
-      },
-    ],
-  },
-
   {
     category: "Design",
     items: [

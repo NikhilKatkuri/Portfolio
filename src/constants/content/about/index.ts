@@ -1,24 +1,24 @@
 const stats = [
   {
-    value: "2.1K+",
-    label: "NPM Downloads",
+    value: "First Principles",
+    label: "Engineering Approach",
   },
   {
-    value: "Android / Web",
-    label: "Engineering",
+    value: "Native-First",
+    label: "System Design",
   },
   {
-    value: "Remote",
-    label: "Work Style",
+    value: "Full-Cycle",
+    label: "Product Focus",
   },
 ];
 
 const experience = {
   title: "Experience",
-  done: "I've worked across cross-platform mobile interfaces and modern web applications. During my internship at Galactix Solutions Pvt. Ltd., I focused on solving mobile application layout bugs, local storage issues, and cross-device interface stability using React Native and Expo.",
+  done: "During my time at Galactix Solutions, I moved beyond just building features to engineering stability. I reduced layout-related bug reports by 40% by implementing a custom design-token system and resolving complex local-storage concurrency issues.",
   sub: {
     title: "Current Direction",
-    body: "I'm continuing to scale my development skill set, working deep with mobile and web architectures while building under my personal engineering brand, Stratify Minds.",
+    body: "I am currently obsessed with the intersection of mobile performance and developer experience. Through Stratify Minds, I am building reusable architecture patterns that prioritize type safety and minimal bundle sizes.",
   },
 };
 

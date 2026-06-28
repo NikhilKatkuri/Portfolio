@@ -1,4 +1,4 @@
-import "./globals.css"; 
+import "./globals.css";
 import type { Metadata } from "next";
 import { homeMetadata } from "@/constants/meta";
 import { getUnifiedSchema } from "@/constants/schema";
@@ -10,9 +10,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
- 
   return (
-    <html  lang="en" className="h-full antialiased">
+    <html
+      lang="en"
+      className="h-full antialiased"
+      data-scroll-behavior="smooth"
+      data-theme="dark"
+    >
       <head>
         <script
           type="application/ld+json"

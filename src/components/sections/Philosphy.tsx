@@ -12,7 +12,7 @@ const Philosophy = () => {
           </h2>
           <div className="mb-6">
             <p className="paragraph-4 max-w-lg md:max-w-2xl text-left text-pretty ">
-              <mark className="bg-theme-primary  px-2 py-0.5 rounded-sm font-medium">
+              <mark className="bg-theme-primary text-secondary  px-2 py-0.5 rounded-sm font-medium">
                 {philosophy.quote}
               </mark>
             </p>

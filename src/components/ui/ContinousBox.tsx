@@ -11,8 +11,24 @@ interface ContinousBoxProps<T> {
 }
 
 const isTargeted = (index: number) => index % 4 === 1 || index % 4 === 2;
+const edges = (len: number) => [0, 1, len - 2, len - 1];
 
+const borders = (i: number) => {
+  switch (i) {
+    case 0:
+      return "rounded-tl-md rounded-tr-md";
+    case 1:
+      return "rounded-tr-md";
+    case 2:
+      return "rounded-bl-md";
+    case 3:
+      return "rounded-bl-md rounded-br-md";
+    default:
+      return "";
+  }
+};
 const ContinousBox = ({ card }: ContinousBoxProps<CardItem>) => {
+  const edgeIndices = edges(card.length);
   return card.map((item, index) => (
     <div
       key={index}
@@ -21,8 +37,10 @@ const ContinousBox = ({ card }: ContinousBoxProps<CardItem>) => {
         "bg-theme-surface z-0",
         "transition-all duration-300 ease-out transform-gpu",
         "hover:scale-[1.03] hover:z-10",
-        "hover:shadow-[0_20px_50px_rgba(var(--palette-100))]",
-        isTargeted(index) && "bg-theme-secondary",
+        "hover:shadow-[0_20px_50px_rgba(var(--palette-100),0.3)]",
+        edgeIndices.includes(index) && borders(edgeIndices.indexOf(index)),
+        isTargeted(index) && "lg:bg-theme-secondary",
+        index % 2 === 0 && "max-lg:bg-theme-secondary",
       )}
     >
       <div className="mb-3">

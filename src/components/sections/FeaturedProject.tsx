@@ -1,12 +1,12 @@
 "use client";
 import { useLayoutEffect, useRef, useState } from "react";
-import ProjectScrollCard from "../client/ProjectScrollCard"; 
+import ProjectScrollCard from "../client/ProjectScrollCard";
 import { decisions } from "@/constants/content/home";
 
 const FeaturedProject = () => {
   const divRef = useRef<HTMLDivElement>(null);
   const [xAxis, setXAxis] = useState(0);
-  
+
   const handleLayout = () => {
     if (!divRef.current) return;
     setXAxis(divRef.current.getBoundingClientRect().x);
@@ -24,7 +24,7 @@ const FeaturedProject = () => {
   return (
     <div
       id="featured-projects"
-      className="min-h-screen w-full flex flex-col pt-12 gap-8  mx-auto"
+      className=" w-full flex flex-col   gap-8  mx-auto"
     >
       <div
         ref={divRef}

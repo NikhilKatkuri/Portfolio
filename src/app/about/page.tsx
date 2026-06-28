@@ -42,13 +42,13 @@ export default function AboutPage() {
                   {stats.map((item) => (
                     <div
                       key={item.label}
-                      className="rounded-3xl p-5 transition-all bg-white in-data-[theme='dark']:bg-black duration-300 hover:-translate-y-1 border border-theme-border-on-surface/50"
+                      className="rounded-3xl p-5 transition-all bg-theme-tertiary duration-300 hover:-translate-y-1 border border-theme-border-on-surface/50"
                       style={{
                         boxShadow:
                           "0px 10px 30px rgba(var(--palette-1000),0.02)",
                       }}
                     >
-                      <p className="heading-6 text-primary">{item.value}</p>
+                      <p className="paragraph-4 text-primary">{item.value}</p>
                       <p className="mt-1">{item.label}</p>
                     </div>
                   ))}
@@ -102,7 +102,9 @@ export default function AboutPage() {
                   alt="Nikhil Katkuri"
                   width={520}
                   height={640}
+                  loading="eager"
                   priority
+                  sizes="(max-width:640px) 120px, 242px"
                   className="h-auto w-full rounded-[28px] object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               </div>

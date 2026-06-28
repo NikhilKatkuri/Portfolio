@@ -6,7 +6,7 @@ export interface UrlRecord {
 }
 export interface Metrics {
   name: string;
-  count: number ;
+  count: number | string;
 }
 export interface ProjectRecord {
   // Basic Info
@@ -21,7 +21,7 @@ export interface ProjectRecord {
   keywords?: string[];
 
   // Media
-  featuredImage: string;
+  featuredImage?: string;
   images: string[];
   videoUrl?: string;
   thumbnail?: string;
@@ -52,7 +52,7 @@ export interface ProjectRecord {
 
   ogImage?: string;
   publishedAt?: string;
-  featured?: boolean; 
+  featured?: boolean;
   metrics?: Metrics;
 }
 
@@ -83,15 +83,15 @@ export interface ExperienceHighlight {
 }
 
 export interface ExperienceRecord {
-   id: string;
+  id: string;
   title: string;
-  company: string; 
+  company: string;
   companyUrl?: string;
-  companyLogo?: string; 
+  companyLogo?: string;
   companySize?: string;
 
   startDate: string;
-  endDate?: string; 
+  endDate?: string;
   isCurrent?: boolean;
 
   // ── Classification ────────────────────────────────────────────────────────

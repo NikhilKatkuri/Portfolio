@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import TechIcons from "@/constants/icons";
 
-const TechIconsComponent = () => { 
+const TechIconsComponent = () => {
   const rows = [...new Array(5)].map((_, rowIndex) => {
     const targetRow = rowIndex + 1;
     return TechIcons.filter((icon) => icon.row === targetRow);
@@ -9,7 +9,7 @@ const TechIconsComponent = () => {
 
   return (
     <div className="w-full h-auto flex flex-col gap-y-6 items-center justify-center">
-      <div className="min-[1124px]:hidden grid grid-cols-5 gap-4 justify-items-center items-center">
+      <div className="min-[1124px]:hidden flex flex-wrap gap-4 justify-items-center items-center">
         {TechIcons.map((icon) => (
           <IconCard key={icon.name} icon={icon} />
         ))}

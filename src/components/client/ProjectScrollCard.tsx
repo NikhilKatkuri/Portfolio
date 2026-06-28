@@ -8,6 +8,7 @@ import {
 } from "@/icons/index";
 import { ProjectRecord } from "@/types";
 import Projects from "@/constants/projects";
+import Image from "next/image";
 
 interface ProjectScrollCardProps {
   startXat?: number;
@@ -165,12 +166,25 @@ const ProjectScrollCard = ({ startXat = 0 }: ProjectScrollCardProps) => {
           <div
             key={i}
             ref={i === 0 ? firstCardRef : null}
-            className="shrink-0 aspect-video h-64 mr-4  sm:h-72 lg:h-100 rounded-2xl bg-(--color-black-5) flex items-center justify-center cursor-pointer hover:bg-(--color-black-10) transition-colors"
+            className="relative shrink-0 aspect-video w-[calc(100%-0.4rem)] mr-4 sm:w-96 lg:w-xl rounded-2xl overflow-hidden cursor-pointer group"
             onClick={() => handleCardClick(i)}
           >
-            <div className="text-center px-4">
-              <p className="heading-6 text-theme-on-surface">{project.title}</p>
-            </div>
+            {/* Image */}
+            <Image
+              src={project.featuredImage ?? "/projects/placeholder.jpg"}
+              alt={project.title}
+              fill
+              loading="eager"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="(max-width:640px) 100vw, (max-width:1024px) 384px, 576px"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src =
+                  "/projects/placeholder.jpg";
+              }}
+            />
+
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-linear-to-t from-black/50 via-black/10 to-transparent" />
           </div>
         ))}
 

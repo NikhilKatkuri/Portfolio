@@ -28,20 +28,19 @@ export async function proxy(req: NextRequest) {
     ...getUtmParams(searchParams),
   };
 
- 
-  const trackingEndpoint = process.env.INTERNAL_URL + "/api/track";
-  
+  const base =
+    process.env.INTERNAL_URL ?? `${req.nextUrl.protocol}//${req.nextUrl.host}`;
+  const trackingEndpoint = `${base}/api/track`;
+
   waitUntil(
-    fetch(trackingEndpoint.toString(), {
+    fetch(trackingEndpoint, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Cookie: `${SESSION_COOKIE}=${sessionId}`,
       },
       body: JSON.stringify(data),
-    })
-      .then()
-      .catch(),
+    }).catch(() => {}),
   );
 
   const res = NextResponse.next();

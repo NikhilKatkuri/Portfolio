@@ -80,8 +80,8 @@ html {
 @theme inline {
   /* Theme Colors */
   --color-theme-surface: rgb(var(--palette-0));
-  --color-theme-primary: rgba(var(--palette-50)) ;
-  --color-theme-secondary: rgb(var(--palette-15)) ;
+  --color-theme-primary: rgba(var(--palette-50));
+  --color-theme-secondary: rgb(var(--palette-15));
   --color-theme-tertiary: rgb(var(--palette-10));
 
   --color-theme-on-surface: rgb(var(--palette-900), 0.9);
@@ -541,7 +541,6 @@ body {
   }
 }
 
-/* — Misc — */
 .smooth-transition {
   transition: all 0.3s ease-in-out;
 }
@@ -621,4 +620,33 @@ body {
   transition:
     transform 0.3s ease,
     opacity 0.3s ease;
+}
+
+.icon {
+  --amp: 32px;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    --amp: 16px;
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(290%);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
 }
