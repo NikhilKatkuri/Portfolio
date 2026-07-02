@@ -40,5 +40,16 @@ const socialLinks = [
   },
 ];
 
-export { socialLinks, publicConfigStrict };
+const Mails = {
+  "lets-build":{
+    subject:"Interested in Working Together",
+    "body":"Hi, I came across your portfolio and really liked your work. I have a project in mind that I think could be a great fit, and I'd love to set up a quick call this week to discuss it further. Looking forward to hearing from you."
+  },
+    "get-contected":{
+    subject:"Get in Touch",
+    "body":"Hi, I came across your portfolio and really liked your work. I'd love to connect and discuss a potential project — do you have time for a quick chat this week?"
+  },
+}
+
+export { socialLinks, publicConfigStrict, Mails };
 export default publicLinks;

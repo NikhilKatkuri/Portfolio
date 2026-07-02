@@ -1,5 +1,6 @@
 import publicLinks, {
   publicConfigStrict, 
+  Mails
 } from "@/constants/links";
 import { GithubIcon, LinkedinIcon, MailIcon, SolarArrowRightUpBroken, SolarDownloadMinimalisticBoldDuotone } from "@/icons";
 
@@ -22,6 +23,8 @@ const SOCIALS = [
   },
 ];
 
+const m = Mails['get-contected']
+
 const CTA = [
   {
     isPrimary: true,
@@ -32,10 +35,11 @@ const CTA = [
   {
     isPrimary: false,
     label: "Get in touch",
-    href: publicLinks.mail,
+    href: `${publicLinks.mail}?subject=${m.subject}&body=${m.body}`,
     icon: SolarArrowRightUpBroken,
   },
 ];
+
 
 const footer = {
   flag: "AVAILABILITY",

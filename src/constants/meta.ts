@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import publicLinks from "./links";
 
 const OWNER_NAME = "Nikhil Katkuri";
-const PORTFOLIO_URL = "https://nikhilkatkuri.com";
+const PORTFOLIO_URL = process.env.NEXT_PUBLIC_SITE_URL as string;
 const PORTFOLIO_EMAIL = publicLinks.mail.replace("mailto:", "");
 const TWITTER_HANDLE = "@nkatkuri";
 const OG_IMAGE_PATH = "/og-image.png";

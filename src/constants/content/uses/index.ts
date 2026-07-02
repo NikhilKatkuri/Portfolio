@@ -5,7 +5,7 @@ const setupSections = [
       {
         title: "Ryzen 3 Laptop • 8GB RAM",
         description:
-          "My primary machine for full-stack development, UI engineering, and daily workflow management. Not the most powerful setup, but it forces me to optimize performance, manage resources carefully, and build efficiently.",
+          "My primary machine for full-stack development and daily workflows. I maintain a dual-boot setup with Windows 11 and Ubuntu; I am currently actively learning Ubuntu to deepen my understanding of Linux-based development environments, command-line efficiency, and server-side workflows.",
       },
     ],
   },
@@ -16,7 +16,7 @@ const setupSections = [
       {
         title: "VS Code",
         description:
-          "My primary editor for frontend, TypeScript, React, and full-stack web workflows. I rely heavily on extensions, Git integration, snippets, and fast iteration cycles.",
+          "My primary editor for frontend, TypeScript, and full-stack development. I use it consistently across both Windows and Ubuntu, making my transition between operating systems seamless.",
       },
     ],
   },
@@ -37,7 +37,7 @@ const setupSections = [
       {
         title: "Android Studio",
         description:
-          "Used for mobile experimentation, emulator testing, and cross-platform development workflows.",
+          "Used for mobile experimentation, emulator testing, and cross-platform development workflows, primarily within my Windows environment.",
       },
     ],
   },
@@ -46,19 +46,19 @@ const setupSections = [
     category: "Environment",
     items: [
       {
-        title: "Windows 11",
+        title: "Dual-Boot: Windows 11 & Ubuntu",
         description:
-          "My primary operating system optimized for compatibility, multitasking, and development tooling across web and mobile workflows.",
+          "Windows 11 serves as my primary environment for legacy tooling and mobile development, while I am dedicating time to learning Ubuntu to build a more robust, native Linux development skill set.",
       },
       {
-        title: "PowerShell",
+        title: "Terminal (PowerShell & Bash)",
         description:
-          "Used daily for Git workflows, package management, CLI tooling, automation tasks, and development operations.",
+          "I use PowerShell for Windows automation and am actively learning Bash to master system navigation, scripting, and development operations in the Ubuntu environment.",
       },
       {
         title: "Google Chrome",
         description:
-          "Still the best balance for frontend debugging, DevTools inspection, extension support, and responsive layout testing.",
+          "My primary browser for both OS environments, enabling synchronized debugging tools and responsive layout testing across platforms.",
       },
     ],
   },
@@ -69,12 +69,12 @@ const setupSections = [
       {
         title: "Git & GitHub",
         description:
-          "Version control, collaboration, open-source contributions, and workflow management across all projects.",
+          "Version control, collaboration, and repository management. Maintaining a consistent SSH configuration across both OS environments allows me to switch between them without friction.",
       },
       {
         title: "Notion",
         description:
-          "Used for organizing project planning, engineering notes, ideas, and long-term workflow tracking.",
+          "Used for project planning, documenting my learning progress with Linux, engineering notes, and tracking long-term goals.",
       },
     ],
   },
@@ -84,35 +84,32 @@ const setupSections = [
       {
         title: "Ollama",
         description:
-          "Used for experimenting with local LLM workflows using models like Llama 3, exploring offline inference, lightweight AI tooling, and understanding local model ecosystems outside cloud-based platforms.",
+          "Exploring local LLM workflows. I am currently learning how to optimize model inference and manage local AI resources within an Ubuntu environment.",
       },
       {
         title: "Gemini",
         description:
-          "Used for resolving doubts, brainstorming ideas, exploring unfamiliar topics, and general learning workflows beyond direct coding tasks.",
+          "Used for brainstorming, resolving conceptual doubts, and accelerating my learning curve while exploring unfamiliar topics.",
       },
       {
         title: "ChatGPT",
         description:
-          "Used extensively for technical research, debugging support, architecture discussions, concept exploration, and accelerating problem-solving workflows during development.",
+          "A key tool for technical research, debugging code, and understanding complex architectural concepts during development.",
       },
-
       {
         title: "GitHub Copilot",
         description:
-          "Used selectively for reducing repetitive coding tasks, generating boilerplate, and improving development iteration speed without replacing core problem-solving.",
+          "Used to automate repetitive coding tasks and improve iteration speed while I focus on learning core development patterns.",
       },
-
       {
         title: "Claude",
         description:
-          "Helpful for long-form reasoning, structured technical thinking, implementation planning, and breaking down complex engineering concepts.",
+          "Helpful for long-form reasoning, structured technical thinking, and planning complex engineering tasks.",
       },
-
       {
         title: "Perplexity",
         description:
-          "Primarily used for fast documentation lookup, technical research, source discovery, and verifying information across multiple references.",
+          "My go-to for fast documentation lookup and verifying technical research across multiple sources.",
       },
     ],
   },
@@ -120,7 +117,7 @@ const setupSections = [
 
 const intro = {
   title: "The tools, systems, and environment behind my workflow.",
-  body: "A look into the hardware, software, and development tools I use daily to design, build, debug, and ship products efficiently.",
+  body: "A look into the hardware, software, and development tools I use daily. I operate a dual-boot setup, bridging Windows and Ubuntu as I actively expand my development skills in a native Linux environment.",
 };
 
 const descisions = {

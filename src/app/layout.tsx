@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { homeMetadata } from "@/constants/meta";
 import { getUnifiedSchema } from "@/constants/schema";
+import ThemeProvider from "@/components/Theme";
 
 export const metadata: Metadata = homeMetadata;
 
@@ -15,7 +16,6 @@ export default function RootLayout({
       lang="en"
       className="h-full antialiased"
       data-scroll-behavior="smooth"
-      data-theme="dark"
     >
       <head>
         <script
@@ -30,9 +30,11 @@ export default function RootLayout({
           content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com;"
         />
       </head>
+      <ThemeProvider>
       <body className="min-h-full flex flex-col relative scroll-smooth bg-theme-surface text-theme-on-surface">
         {children}
       </body>
+      </ThemeProvider>
     </html>
   );
 }

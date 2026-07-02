@@ -1,23 +1,24 @@
-interface Campaign {
-  utm_source?: string;
-  utm_medium?: string;
-  utm_campaign?: string;
-  utm_term?: string;
-  utm_content?: string;
+export interface Campaign {
+  source?: string;
+  medium?: string;
+  campaign?: string;
+  term?: string;
+  content?: string;
 }
 
-interface BaseTracker extends Campaign {
+export interface BaseTracker {
   time: number;
-  ipHash: string;
-  device: "desktop" | "mobile" | "tablet";
-  country?: string;
+  sessionId: string;
 }
 
-interface Tracker extends BaseTracker {
+export interface Tracker extends BaseTracker {
   route: string;
-  event?: string;
+  event: string;
+  device?: string;
+  country?: string;
+  utm: Partial<Campaign>;
 }
 
-export type ResumeTracker  = BaseTracker; 
+export type ResumeTracker = Tracker;
 
 export default Tracker;

@@ -187,7 +187,7 @@ const Projects: ProjectRecord[] = [
         isPrimary: true,
       },
     ],
-    featured: true,
+    featured: false,
     publishedAt: "2025-05-15",
     metrics: {
       name: "stars",

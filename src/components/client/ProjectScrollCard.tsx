@@ -132,6 +132,26 @@ const ProjectScrollCard = ({ startXat = 0 }: ProjectScrollCardProps) => {
     scrollToIndex(i);
   };
 
+  useEffect(() => {
+    const element = containerRef.current;
+    const handle = (e: any) => e.preventDefault();
+    const keyDown = (e: any) => {
+      const scrollKeys = ["ArrowLeft", "ArrowRight", "Home", "End"];
+      if (scrollKeys.includes(e.key)) handle(e);
+    };
+    if (!element) return;
+    element.addEventListener("wheel", handle);
+    element.addEventListener("touchmove", handle);
+    element.addEventListener("pointerdown", handle);
+    element.addEventListener("keydown", keyDown);
+    return () => {
+      element.removeEventListener("wheel", handle);
+      element.removeEventListener("touchmove", handle);
+      element.removeEventListener("pointerdown", handle);
+      element.removeEventListener("keydown", keyDown);
+    };
+  }, []);
+
   return (
     <div
       className="flex flex-col gap-4"
@@ -144,18 +164,7 @@ const ProjectScrollCard = ({ startXat = 0 }: ProjectScrollCardProps) => {
       <div
         ref={containerRef}
         className="flex items-center overflow-x-hidden no-scrollbar scroll-smooth"
-        onWheel={(e) => e.preventDefault()}
-        onTouchMove={(e) => e.preventDefault()}
-        onPointerDown={(e) => e.preventDefault()}
-        onKeyDown={(e) => {
-          const scrollKeys = ["ArrowLeft", "ArrowRight", "Home", "End"];
-          if (scrollKeys.includes(e.key)) e.preventDefault();
-        }}
       >
-        {/*
-          Leading spacer: pushes the first card's visible left edge to startXat.
-          Using flex-shrink-0 so it never collapses.
-        */}
         <div
           aria-hidden="true"
           className="shrink-0"
@@ -188,12 +197,6 @@ const ProjectScrollCard = ({ startXat = 0 }: ProjectScrollCardProps) => {
           </div>
         ))}
 
-        {/*
-          Trailing spacer: allows the last card to scroll until its left edge
-          aligns with startXat. Its width = containerWidth - startXat - cardWidth
-          so that scrollLeft_max lands exactly on the last card's startXat position.
-          Falls back to startXat before measurements are ready.
-        */}
         <div
           aria-hidden="true"
           className="shrink-0"

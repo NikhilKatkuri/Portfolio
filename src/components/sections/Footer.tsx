@@ -2,6 +2,7 @@ import footer from "@/constants/content/footer";
 import { publicConfigStrict } from "@/constants/links";
 import buttonVariants from "@/constants/ui/button";
 import cn from "@/utils/cn";
+import ThemeButtons from "../client/ThemeButtons";
 
 const Footer = () => {
   return (
@@ -48,19 +49,23 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3">
-            {footer.public.map(({ label, href, icon: Icon }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 rounded-full border border-theme-border-on-surface hover:bg-theme-h-100-80 p-btn-pad-2 text-sm  transition-all "
-              >
-                <Icon className="size-5  fill-theme-on-surface stroke-theme-on-surface" />
-                <span>{label}</span>
-              </a>
-            ))}
+          <div className="flex flex-col flex-wrap ">
+            <div className="flex flex-wrap items-center gap-3">
+              {footer.public.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-3 rounded-full border border-theme-border-on-surface hover:bg-theme-h-100-80 p-btn-pad-2 text-sm  transition-all "
+                >
+                  <Icon className="size-5  fill-theme-on-surface stroke-theme-on-surface" />
+                  <span>{label}</span>
+                </a>
+              ))}
+            </div>
+            <br />
+            <ThemeButtons />
           </div>
           <div className="flex flex-col gap-4  pt-6 sm:flex-row sm:items-center sm:justify-between">
             <p>{footer.config.main}</p>

@@ -1,14 +1,23 @@
 "use client";
+import publicLinks, { Mails } from "@/constants/links";
 import { SolarArrowRightUpBroken } from "@/icons";
 import SlideHover from "../ui/SlideHover";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Image from "next/image";
+
+import { useState, useEffect } from "react";
 
 interface NavbarProps {
   isStatic?: boolean;
 }
 
 const Navbar = ({ isStatic = true }: NavbarProps) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const data = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -20,6 +29,11 @@ const Navbar = ({ isStatic = true }: NavbarProps) => {
 
   const y = useTransform(scrollY, [0, 300], [300, 0]);
   const scale = useTransform(scrollY, [0, 300], [1, 0.1667]);
+  const motionStyle =
+    isMounted && !isStatic
+      ? { width: "var(--avatar-size)", height: "var(--avatar-size)", y, scale }
+      : { width: 42, height: 42 };
+  const CTA = Mails["lets-build"];
 
   return (
     <header
@@ -28,17 +42,8 @@ const Navbar = ({ isStatic = true }: NavbarProps) => {
     >
       <div className="max-w-content-mx mx-auto h-16 flex items-center max-lg:px-4 justify-between w-full relative">
         <motion.div
-          className="rounded-full  absolute origin-left"
-          style={
-            isStatic
-              ? { width: 42, height: 42 }
-              : {
-                  width: "var(--avatar-size)",
-                  height: "var(--avatar-size)",
-                  y,
-                  scale,
-                }
-          }
+          className="rounded-full absolute origin-left"
+          style={motionStyle}
         >
           <Image
             src="/hero.jpg"
@@ -56,7 +61,8 @@ const Navbar = ({ isStatic = true }: NavbarProps) => {
           <SlideHover data={data} />
         </div>
 
-        <button
+        <a
+          href={`${publicLinks.mail}?subject=${CTA.subject}&body=${CTA.body}`}
           aria-label="Contact me"
           className="bg-button-primary flex items-center gap-2 cursor-pointer rounded-full text-button-on-primary p-btn-pad hover:bg-button-hover-primary transition-colors duration-200"
         >
@@ -64,7 +70,7 @@ const Navbar = ({ isStatic = true }: NavbarProps) => {
           <span>
             <SolarArrowRightUpBroken className="stroke-button-on-primary size-5" />
           </span>
-        </button>
+        </a>
       </div>
     </header>
   );

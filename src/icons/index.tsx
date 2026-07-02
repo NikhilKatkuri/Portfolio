@@ -1,6 +1,6 @@
- 
+import { SVGProps } from "react";
 
-export function SolarArrowRightUpBroken(props: React.SVGProps<SVGSVGElement>) {
+export function SolarArrowRightUpBroken(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ export function SolarArrowRightUpBroken(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarAddFolderBroken(props: React.SVGProps<SVGSVGElement>) {
+export function SolarAddFolderBroken(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ export function SolarAddFolderBroken(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarDatabaseLineDuotone(props: React.SVGProps<SVGSVGElement>) {
+export function SolarDatabaseLineDuotone(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@ export function SolarDatabaseLineDuotone(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarSmartphoneBroken(props: React.SVGProps<SVGSVGElement>) {
+export function SolarSmartphoneBroken(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@ export function SolarSmartphoneBroken(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarCheckCircleLinear(props: React.SVGProps<SVGSVGElement>) {
+export function SolarCheckCircleLinear(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ export function SolarCheckCircleLinear(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarStarShineBroken(props: React.SVGProps<SVGSVGElement>) {
+export function SolarStarShineBroken(props: SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       {/* Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ */}
@@ -116,7 +116,7 @@ export function SolarStarShineBroken(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarCodeBroken(props: React.SVGProps<SVGSVGElement>) {
+export function SolarCodeBroken(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +136,7 @@ export function SolarCodeBroken(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarProgrammingLinear(props: React.SVGProps<SVGSVGElement>) {
+export function SolarProgrammingLinear(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +156,7 @@ export function SolarProgrammingLinear(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarMagicStick3Linear(props: React.SVGProps<SVGSVGElement>) {
+export function SolarMagicStick3Linear(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +166,7 @@ export function SolarMagicStick3Linear(props: React.SVGProps<SVGSVGElement>) {
       {...props}
     >
       {/* Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ */}
-      <g fill="none" >
+      <g fill="none">
         <path
           strokeWidth="1.5"
           d="M3.845 7.922a2.883 2.883 0 1 1 4.077-4.077l12.234 12.233a2.884 2.884 0 0 1-4.078 4.078z"
@@ -178,7 +178,7 @@ export function SolarMagicStick3Linear(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarAltArrowLeftBroken(props: React.SVGProps<SVGSVGElement>) {
+export function SolarAltArrowLeftBroken(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -199,7 +199,7 @@ export function SolarAltArrowLeftBroken(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarAltArrowRightBroken(props: React.SVGProps<SVGSVGElement>) {
+export function SolarAltArrowRightBroken(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +220,7 @@ export function SolarAltArrowRightBroken(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarLetterLinear(props: React.SVGProps<SVGSVGElement>) {
+export function SolarLetterLinear(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -241,7 +241,7 @@ export function SolarLetterLinear(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarMapPointLinear(props: React.SVGProps<SVGSVGElement>) {
+export function SolarMapPointLinear(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -259,7 +259,7 @@ export function SolarMapPointLinear(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function SolarUserLinear(props: React.SVGProps<SVGSVGElement>) {
+export function SolarUserLinear(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -277,25 +277,17 @@ export function SolarUserLinear(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => {
+export const LinkedinIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      {...props}
-     >
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path d="M18.335 18.339H15.67v-4.177c0-.996-.02-2.278-1.39-2.278-1.389 0-1.601 1.084-1.601 2.205v4.25h-2.666V9.75h2.56v1.17h.035c.358-.674 1.228-1.387 2.528-1.387 2.7 0 3.2 1.778 3.2 4.091v4.715zM7.003 8.575a1.546 1.546 0 01-1.548-1.549 1.548 1.548 0 111.547 1.549zm1.336 9.764H5.666V9.75H8.34v8.589zM19.67 3H4.329C3.593 3 3 3.58 3 4.297v15.406C3 20.42 3.594 21 4.328 21h15.338C20.4 21 21 20.42 21 19.703V4.297C21 3.58 20.4 3 19.666 3h.003z"></path>
     </svg>
   );
 };
 
-export const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => {
+export const GithubIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      {...props}
-      >
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -304,13 +296,9 @@ export const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => {
     </svg>
   );
 };
-export const MailIcon = (props: React.SVGProps<SVGSVGElement>) => {
+export const MailIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-      {...props}
-       >
+    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
       <path
         fillRule="evenodd"
         d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
@@ -320,7 +308,7 @@ export const MailIcon = (props: React.SVGProps<SVGSVGElement>) => {
 };
 
 export function SolarDownloadMinimalisticBoldDuotone(
-  props: React.SVGProps<SVGSVGElement>,
+  props: SVGProps<SVGSVGElement>,
 ) {
   return (
     <svg
@@ -342,7 +330,7 @@ export function SolarDownloadMinimalisticBoldDuotone(
   );
 }
 
-export function SolarArrowDownBroken(props: React.SVGProps<SVGSVGElement>) {
+export function SolarArrowDownBroken(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -362,7 +350,7 @@ export function SolarArrowDownBroken(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
-export function NPMjs(props: React.SVGProps<SVGSVGElement>) {
+export function NPMjs(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       width="24"
@@ -376,7 +364,86 @@ export function NPMjs(props: React.SVGProps<SVGSVGElement>) {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M0 6.4H24V17.6H11.2V20.8H6.4V17.6H0V6.4ZM6.4 16V8H1.6V16H3.2V9.6H4.8V16H6.4ZM8 8V19.2H9.6V16H12.8V8H8ZM14.4 8V16H16V9.6H17.6V16H19.2V9.6H20.8V16H22.4V8H14.4ZM9.6 14.4V9.6H11.2V14.4H9.6Z"
-        
+      />
+    </svg>
+  );
+}
+
+export function SolarMoonBoldDuotone(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      {/* Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ */}
+      <path
+        fill="currentColor"
+        fillRule="evenodd"
+        d="M22 12c0 5.523-4.477 10-10 10a10 10 0 0 1-3.321-.564A9 9 0 0 1 8 18a8.97 8.97 0 0 1 2.138-5.824A6.5 6.5 0 0 0 15.5 15a6.5 6.5 0 0 0 5.567-3.143c.24-.396.933-.32.933.143"
+        clipRule="evenodd"
+        opacity=".5"
+      />
+      <path
+        fill="currentColor"
+        d="M2 12c0 4.359 2.789 8.066 6.679 9.435A9 9 0 0 1 8 18c0-2.221.805-4.254 2.138-5.824A6.47 6.47 0 0 1 9 8.5a6.5 6.5 0 0 1 3.143-5.567C12.54 2.693 12.463 2 12 2C6.477 2 2 6.477 2 12"
+      />
+    </svg>
+  );
+}
+
+export function SolarSunBoldDuotone(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      {/* Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ */}
+      <path fill="currentColor" d="M18 12a6 6 0 1 1-12 0a6 6 0 0 1 12 0" />
+      <path
+        fill="currentColor"
+        fillRule="evenodd"
+        d="M12 1.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0V2a.75.75 0 0 1 .75-.75M1.25 12a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m19 0a.75.75 0 0 1 .75-.75h1a.75.75 0 0 1 0 1.5h-1a.75.75 0 0 1-.75-.75M12 20.25a.75.75 0 0 1 .75.75v1a.75.75 0 0 1-1.5 0v-1a.75.75 0 0 1 .75-.75"
+        clipRule="evenodd"
+      />
+      <path
+        fill="currentColor"
+        d="M4.398 4.398a.75.75 0 0 1 1.061 0l.393.393a.75.75 0 0 1-1.06 1.06l-.394-.392a.75.75 0 0 1 0-1.06m15.202 0a.75.75 0 0 1 0 1.06l-.392.393a.75.75 0 0 1-1.06-1.06l.392-.393a.75.75 0 0 1 1.06 0m-1.453 13.748a.75.75 0 0 1 1.061 0l.393.393a.75.75 0 0 1-1.06 1.06l-.394-.392a.75.75 0 0 1 0-1.06m-12.295 0a.75.75 0 0 1 0 1.06l-.393.393a.75.75 0 1 1-1.06-1.06l.392-.393a.75.75 0 0 1 1.06 0"
+        opacity=".5"
+      />
+    </svg>
+  );
+}
+
+export function SolarTvBoldDuotone(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      {...props}
+    >
+      {/* Icon from Solar by 480 Design - https://creativecommons.org/licenses/by/4.0/ */}
+      <path
+        fill="currentColor"
+        fillRule="evenodd"
+        d="M16 6H8c-2.828 0-4.243 0-5.121.879C2 7.757 2 9.172 2 12v4c0 2.828 0 4.243.879 5.121C3.757 22 5.172 22 8 22h8z"
+        clipRule="evenodd"
+      />
+      <path
+        fill="currentColor"
+        d="M22 12v4c0 2.828 0 4.242-.879 5.121c-.825.825-2.123.876-4.621.879H16V6h.5c2.498.003 3.796.053 4.621.878C22 7.758 22 9.171 22 12m-8.584-6l2.153-2.512a.75.75 0 0 0-1.138-.976L12 5.348L9.57 2.512a.75.75 0 0 0-1.14.976L10.585 6z"
+        opacity=".5"
+      />
+      <path
+        fill="currentColor"
+        d="M19 11a1 1 0 1 1 0 2a1 1 0 0 1 0-2m0 4a1 1 0 1 1 0 2a1 1 0 0 1 0-2"
       />
     </svg>
   );

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -12,6 +12,8 @@
     "@upstash/redis": "^1.38.0",
     "@vercel/functions": "^3.6.2",
     "clsx": "^2.1.1",
+    "dexie": "^4.4.4",
+    "dexie-react-hooks": "^4.4.0",
     "framer-motion": "^12.40.0",
     "lucide-react": "^1.16.0",
     "mongodb": "^7.2.0",
