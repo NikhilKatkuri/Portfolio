@@ -4,8 +4,7 @@ import publicLinks from "./links";
 const OWNER_NAME = "Nikhil Katkuri";
 const PORTFOLIO_URL = process.env.NEXT_PUBLIC_SITE_URL as string;
 const PORTFOLIO_EMAIL = publicLinks.mail.replace("mailto:", "");
-const TWITTER_HANDLE = "@nkatkuri";
-const OG_IMAGE_PATH = "/og-image.png";
+const OG_IMAGE_PATH = "/og-image.webp";
 
 interface MetadataConfig {
   path: string;
@@ -36,25 +35,17 @@ function createMetadata(config: MetadataConfig): Metadata {
       title: config.title,
       description: config.description,
       url: fullUrl,
-      siteName: `${OWNER_NAME} | Full-Stack Engineer Intern`,
+      siteName: `${OWNER_NAME} | Android Developer Intern`,
       locale: "en_US",
       images: [
         {
           url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: `${OWNER_NAME} - Full-Stack Engineer Intern at Galactix Solutions`,
+          alt: `${OWNER_NAME} - Android Developer Intern at Galactix Solutions`,
         },
       ],
       type: config.ogType || "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      site: TWITTER_HANDLE,
-      creator: TWITTER_HANDLE,
-      title: config.title,
-      description: config.description,
-      images: [ogImageUrl],
     },
     alternates: {
       canonical: fullUrl,
@@ -64,9 +55,9 @@ function createMetadata(config: MetadataConfig): Metadata {
 
 const homeMetadata: Metadata = createMetadata({
   path: "/",
-  title: "Nikhil Katkuri | Full-Stack Engineer Intern",
+  title: "Nikhil Katkuri | Android Developer Intern",
   description:
-    "Portfolio of Nikhil Katkuri, a Full-Stack Engineer Intern at Galactix Solutions Pvt. Ltd. specializing in Next.js, TypeScript, React, and modern web architectures. Exploring offline-first systems, CLI developer tooling, and scalable monorepos.",
+    "Portfolio of Nikhil Katkuri, a Android Developer Intern at Galactix Solutions Pvt. Ltd. specializing in Next.js, TypeScript, React, and modern web architectures. Exploring offline-first systems, CLI developer tooling, and scalable monorepos.",
   ogType: "profile",
   keywords: [
     "Nikhil Katkuri",

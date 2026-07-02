@@ -1,0 +1,49 @@
+# Nikhil Katkuri - Developer Profile
+
+This file provides a structured overview of Nikhil Katkuri's professional background, technical expertise, and project portfolio for AI agents and LLMs.
+
+## Professional Summary
+
+Nikhil Katkuri is a Full-Stack and Android Engineer based in Hyderabad, India. Currently an Android Developer Intern at Galactix Solutions Pvt. Ltd., he specializes in building performant, scalable systems with a strong emphasis on offline-first architectures, CLI developer tooling, and clean backend design.
+
+## Core Competencies
+
+* **Languages:** TypeScript, JavaScript, Java, Kotlin.
+* **Web:** Next.js, React, Node.js, Express.
+* **Mobile:** React Native, Android Development.
+* **Systems/Concepts:** Offline-first architecture, AES-256-CBC Cryptography, CLI design, Git internals.
+
+## Project Portfolio
+
+### [Client-to-Provider Cipher](https://nikhilkatkuri.vercel.app/project/client-provider-cipher)
+
+* **Description:** A zero-knowledge CLI utility for local file encryption.
+* **Technical Focus:** Implements AES-256-CBC encryption to ensure data privacy before syncing to third-party cloud storage providers.
+
+### [Offline-First Notes App](https://nikhilkatkuri.vercel.app/project/offline-first-notes-app)
+
+* **Description:** A production-grade notes application.
+* **Technical Focus:** Prioritizes local-first data persistence and conflict resolution strategies for seamless synchronization in low-connectivity environments.
+
+### [Paperwork](https://nikhilkatkuri.vercel.app/project/paperwork)
+
+* **Description:** A structured document management and workflow automation engine.
+* **Technical Focus:** Implements automated categorization, archival logic, and metadata indexing for digitized physical documents.
+
+### [Git Lite CLI](https://nikhilkatkuri.vercel.app/project/git-lite-cli)
+
+* **Description:** A lightweight, functional reimplementation of the Git version control system.
+* **Technical Focus:** Focuses on core VCS primitives, including object hashing (SHA), tree object creation, and index management.
+
+## Navigation & Discovery
+
+* **Home:** [https://nikhilkatkuri.vercel.app/](https://nikhilkatkuri.vercel.app/)
+* **About:** [https://nikhilkatkuri.vercel.app/about](https://nikhilkatkuri.vercel.app/about)
+* **Projects:** [https://nikhilkatkuri.vercel.app/project](https://nikhilkatkuri.vercel.app/project)
+* **Uses:** [https://nikhilkatkuri.vercel.app/uses](https://nikhilkatkuri.vercel.app/uses)
+
+## Contact Information
+
+* **Email:** nikhil07.dev@gmail.com
+* **GitHub:** [https://github.com/nikhilKatkuri](https://github.com/nikhilKatkuri)
+* **LinkedIn:** [https://www.linkedin.com/in/katkurinikhil](https://www.linkedin.com/in/katkurinikhil)

@@ -1,20 +1,19 @@
 import { PORTFOLIO_URL, OWNER_NAME, PORTFOLIO_EMAIL } from "@/constants/meta";
- 
 
 export const getUnifiedSchema = () => {
   return {
     "@context": "https://schema.org",
-    "@graph": [ 
+    "@graph": [
       {
         "@type": "Person",
         "@id": `${PORTFOLIO_URL}/#person`,
         name: OWNER_NAME,
         url: PORTFOLIO_URL,
-        image: `${PORTFOLIO_URL}/og-image.png`,
+        image: `${PORTFOLIO_URL}/og-image.webp`,
         email: PORTFOLIO_EMAIL,
         description:
-          "Senior Full-Stack Engineer & AI Specialist specializing in Next.js, TypeScript, React Native, and scalable SaaS applications.",
-        jobTitle: "Senior Full-Stack Engineer",
+          "Full-Stack and Android Engineer specializing in Next.js, TypeScript, React Native, and scalable system architectures.",
+        jobTitle: "Android Developer Intern",
         nationality: {
           "@type": "Country",
           name: "India",
@@ -29,7 +28,6 @@ export const getUnifiedSchema = () => {
           "https://www.npmjs.com/~nikhil07k",
           "https://github.com/nikhilKatkuri",
           "https://www.linkedin.com/in/katkurinikhil",
-          "https://x.com/nkatkuri",
         ],
         knowsAbout: [
           "Full-Stack Development",
@@ -52,12 +50,11 @@ export const getUnifiedSchema = () => {
         },
         worksFor: {
           "@type": "Organization",
-          name: "PixelHexa",
-          url: "https://pixel-hexa.com/",
+          name: "Galactix Solutions Pvt. Ltd.",
         },
         hasOccupation: {
           "@type": "Occupation",
-          name: "Senior Full-Stack Engineer & AI Specialist",
+          name: "Android Developer Intern",
           occupationLocation: {
             "@type": "City",
             name: "Hyderabad",
@@ -65,7 +62,6 @@ export const getUnifiedSchema = () => {
         },
       },
 
-   
       {
         "@type": "WebSite",
         "@id": `${PORTFOLIO_URL}/#website`,
