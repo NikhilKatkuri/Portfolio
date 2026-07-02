@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ["local-origin.dev", "*.local-origin.dev", "192.168.31.8","192.168.56.1"],
+  allowedDevOrigins: ["local-origin.dev", "*.local-origin.dev"],
 
   // React Strict Mode
   reactStrictMode: true,

@@ -12,6 +12,7 @@ function ThemeButtons() {
   return (
     <div className="flex items-center gap-3">
       <button
+        aria-label="System theme"
         onClick={() => changeMode("system")}
         className={cn(
           "w-10 aspect-square flex items-center justify-center rounded-full border border-button-secondary-border hover:bg-button-secondary cursor-pointer",
@@ -21,6 +22,7 @@ function ThemeButtons() {
         <SolarTvBoldDuotone className="text-button-on-secondary" />
       </button>
       <button
+        aria-label="Light theme"
         onClick={() => changeMode("light")}
         className={cn(
           "w-10 aspect-square flex items-center justify-center rounded-full border border-button-secondary-border hover:bg-button-secondary cursor-pointer",
@@ -30,6 +32,7 @@ function ThemeButtons() {
         <SolarSunBoldDuotone className="text-button-on-secondary" />
       </button>
       <button
+        aria-label="Dark theme"
         onClick={() => changeMode("dark")}
         className={cn(
           "w-10 aspect-square flex items-center justify-center rounded-full border border-button-secondary-border hover:bg-button-secondary cursor-pointer",
