@@ -6,7 +6,7 @@ const rawExperienceData: ExperienceRecord[] = [
     title: "Android Developer Intern",
     company: "Galactix Solutions Pvt. Ltd.",
     startDate: "2026-03",
-    isCurrent: true,
+    endDate: "2026-07",
     employmentType: "internship",
     workMode: "remote",
     summary:

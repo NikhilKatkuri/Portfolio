@@ -2,12 +2,12 @@ import Footer from "@/components/sections/Footer";
 import Navbar from "@/components/sections/Navbar";
 import { Metadata } from "next";
 import { usesMetadata } from "@/constants/meta";
-import { descisions, setupSections } from "@/constants/content/uses";
+import { decisions, setupSections } from "@/constants/content/uses";
 
 export const metadata: Metadata = usesMetadata;
 
 const page = () => {
-  const { intro } = descisions;
+  const { intro } = decisions;
   return (
     <>
       <Navbar />

@@ -1,12 +1,13 @@
 const intro = {
   title:
-    "Selected work built with curiosity, systems thinking, and obsession for clean execution.",
-  body: "Over the years, I've built products, tools, and experiments focused on solving practical problems through thoughtful engineering. These projects reflect how I think about architecture, developer experience, performance, and product design.",
+    "Selected projects built through curiosity, iteration, and practical engineering.",
+  body:
+    "I enjoy building web apps, mobile apps, and developer tools that solve real problems. These projects reflect my focus on clean architecture, performance, usability, and learning by shipping products from idea to deployment.",
 };
 
-const descisions = {
-      intro,
-}
+const decisions = {
+  intro,
+};
 
 const GLINTS = [
   { delay: "0s", duration: "2.4s", angle: "110deg" },
@@ -20,9 +21,7 @@ const GLINTS = [
 ];
 
 const animations = {
-      GLINTS
-}
-export {
-      descisions,
-      animations
-}
+  GLINTS,
+};
+
+export { decisions, animations };

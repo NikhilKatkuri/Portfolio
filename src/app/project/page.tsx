@@ -4,11 +4,11 @@ import Navbar from "@/components/sections/Navbar";
 import type { Metadata } from "next";
 import { projectsMetadata } from "@/constants/meta";
 import ProjectGrid from "@/components/client/ProjectGrid";
-import { descisions } from "@/constants/content/projects";
+import { decisions } from "@/constants/content/projects";
 export const metadata: Metadata = projectsMetadata;
 
 const page = () => {
-  const { intro } = descisions;
+  const { intro } = decisions;
   return (
     <>
       <Navbar />

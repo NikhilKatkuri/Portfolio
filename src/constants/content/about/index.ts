@@ -1,41 +1,46 @@
 const stats = [
   {
-    value: "First Principles",
-    label: "Engineering Approach",
+    value: "React Native",
+    label: "Mobile Development",
   },
   {
-    value: "Native-First",
-    label: "System Design",
+    value: "Next.js",
+    label: "Frontend Engineering",
   },
   {
-    value: "Full-Cycle",
-    label: "Product Focus",
+    value: "Node.js",
+    label: "Backend Development",
   },
 ];
 
 const experience = {
   title: "Experience",
-  done: "During my time at Galactix Solutions, I moved beyond just building features to engineering stability. I reduced layout-related bug reports by 40% by implementing a custom design-token system and resolving complex local-storage concurrency issues.",
+  done:
+    "During my internship at Kodemi Labs, I worked on production mobile features, improved UI consistency, fixed storage-related issues, and contributed to building more maintainable React Native components.",
   sub: {
     title: "Current Direction",
-    body: "I am currently obsessed with the intersection of mobile performance and developer experience. Through Stratify Minds, I am building reusable architecture patterns that prioritize type safety and minimal bundle sizes.",
+    body:
+      "I am currently focused on improving mobile performance, frontend architecture, and developer tooling, with an emphasis on type safety, maintainability, and clean project structure.",
   },
 };
 
 const status = {
   title: "Currently focused on",
-  body: "Mobile application systems, frontend architecture, and developer tooling.",
+  body:
+    "Full-stack applications, React Native performance, Next.js architecture, and developer tooling.",
 };
 
 const philosophy = {
   title: "Engineering Philosophy",
-  body: "I prefer building systems from first principles instead of blindly following tutorials. To understand asynchronous file handling deeply, I built a custom open-source Git utility that crossed 2,100+ organic downloads on NPM without paid promotion.",
+  body:
+    "I learn by building. Instead of copying tutorials end-to-end, I prefer implementing features myself, debugging real issues, reading documentation, and understanding the trade-offs behind technical decisions.",
 };
 
 const intro = {
-  pin: "Android & Web Developer • Hyderabad, India",
-  title: "I build software that solves real problems — not tutorial projects.",
-  body: "I'm Nikhil Katkuri, a developer focused on building scalable products, efficient cross-platform apps, and developer tooling with strong engineering fundamentals.",
+  pin: "Full-Stack & Mobile Developer • Hyderabad, India",
+  title: "I build software that solves real problems.",
+  body:
+    "I'm Nikhil Katkuri, a developer focused on building scalable web applications, cross-platform mobile apps, and practical developer tools using TypeScript, React, Next.js, Node.js, and React Native.",
 };
 
 const decisions = {
