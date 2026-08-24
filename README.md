@@ -2,7 +2,7 @@
 
 Personal portfolio website of **Nikhil Katkuri**, a Full-Stack & Android Engineer. Built with Next.js and designed around clean architecture, smooth motion, and a performance-first UI.
 
-**Live:** [nikhilkatkuri.vercel.app](https://nikhilkatkuri.vercel.app) · [portfilo-livid.vercel.app](https://portfilo-livid.vercel.app)
+**Live:** [nikhilkatkuri.vercel.app](https://nikhilkatkuri.vercel.app)
 
 ---
 
