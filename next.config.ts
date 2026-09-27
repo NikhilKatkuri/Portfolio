@@ -22,8 +22,6 @@ const nextConfig: NextConfig = {
         hostname: "*.vercel.app",
       },
     ],
-    formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
   },
 
   // Security & SEO Headers

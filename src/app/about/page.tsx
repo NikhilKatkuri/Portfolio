@@ -98,7 +98,7 @@ export default function AboutPage() {
                 }}
               >
                 <Image
-                  src="/hero.jpg"
+                  src="/hero.avif"
                   alt="Nikhil Katkuri"
                   width={520}
                   height={640}

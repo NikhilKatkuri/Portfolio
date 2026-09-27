@@ -25,8 +25,8 @@ const rawExperienceData: ExperienceRecord[] = [
     title: "Student Faculty Technical Lead",
     company: "SSG - HITM",
     startDate: "2025-01",
-    endDate: "2026-01",
-    isCurrent: false,
+    endDate: "",
+    isCurrent: true,
     employmentType: "part-time",
     workMode: "onsite",
     summary:

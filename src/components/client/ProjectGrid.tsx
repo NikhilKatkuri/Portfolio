@@ -18,7 +18,7 @@ const ProjectGrid = () => {
           >
             <div className="relative h-64 w-full overflow-hidden rounded-xl ring-1 ring-(--color-theme-border)">
               <Image
-                src={d.featuredImage ?? "/projects/placeholder.jpg"}
+                src={d.featuredImage ?? "/projects/placeholder.avif"}
                 alt={d.title}
                 fill
                 loading="eager"

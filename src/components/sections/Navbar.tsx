@@ -60,7 +60,7 @@ const Navbar = ({ isStatic = true }: NavbarProps) => {
             style={motionStyle}
           >
             <Image
-              src="/hero.jpg"
+              src="/hero.avif"
               alt="Avatar"
               fill={true}
               priority={true}
@@ -88,7 +88,9 @@ const Navbar = ({ isStatic = true }: NavbarProps) => {
             </a>
 
             <button
-              onClick={() => {setIsMenuOpen((prev) => !prev)}}
+              onClick={() => {
+                setIsMenuOpen((prev) => !prev);
+              }}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMenuOpen}
               className={cn(

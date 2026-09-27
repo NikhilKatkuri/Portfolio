@@ -3,6 +3,7 @@ import { publicConfigStrict } from "@/constants/links";
 import buttonVariants from "@/constants/ui/button";
 import cn from "@/utils/cn";
 import ThemeButtons from "../client/ThemeButtons";
+import VisitorCounter from "../client/VisitorCounter";
 
 const Footer = () => {
   return (
@@ -69,9 +70,10 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-4  pt-6 sm:flex-row sm:items-center sm:justify-between">
             <p>{footer.config.main}</p>
-            <p className="flex flex-wrap items-center gap-3">
-              {footer.config.sub}
-            </p>
+            <div className="flex flex-wrap items-center gap-3">
+              <VisitorCounter />
+              <p>{footer.config.sub}</p>
+            </div>
           </div>
         </div>
       </div>

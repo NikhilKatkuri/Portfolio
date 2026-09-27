@@ -4,7 +4,7 @@ import publicLinks from "./links";
 const OWNER_NAME = "Nikhil Katkuri";
 const PORTFOLIO_URL = process.env.NEXT_PUBLIC_SITE_URL as string;
 const PORTFOLIO_EMAIL = publicLinks.mail.replace("mailto:", "");
-const OG_IMAGE_PATH = "/og-image.webp";
+const OG_IMAGE_PATH = "/og-image.avif";
 
 interface MetadataConfig {
   path: string;
@@ -35,14 +35,14 @@ function createMetadata(config: MetadataConfig): Metadata {
       title: config.title,
       description: config.description,
       url: fullUrl,
-      siteName: `${OWNER_NAME} | Android Developer Intern`,
+      siteName: `${OWNER_NAME} | Full Stack & Android Developer Portfolio`,
       locale: "en_US",
       images: [
         {
           url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: `${OWNER_NAME} - Android Developer Intern at Galactix Solutions`,
+          alt: `${OWNER_NAME} — Full Stack & Android Developer Portfolio`,
         },
       ],
       type: config.ogType || "website",
@@ -55,19 +55,23 @@ function createMetadata(config: MetadataConfig): Metadata {
 
 const homeMetadata: Metadata = createMetadata({
   path: "/",
-  title: "Nikhil Katkuri | Android Developer Intern",
+  title: "Nikhil Katkuri | Full Stack Developer & Android Developer",
   description:
-    "Portfolio of Nikhil Katkuri, a Android Developer Intern at Galactix Solutions Pvt. Ltd. specializing in Next.js, TypeScript, React, and modern web architectures. Exploring offline-first systems, CLI developer tooling, and scalable monorepos.",
+    "Portfolio of Nikhil Katkuri, a Full Stack and Android Developer building scalable web applications, AI systems, and offline-first architectures. Second Runner-up at Microsoft Codeathon 2026 with experience as an Android Developer at Galactix Solutions Pvt. Ltd.",
   ogType: "profile",
   keywords: [
     "Nikhil Katkuri",
-    "Galactix Solutions Intern",
-    "Full Stack Intern Hyderabad",
-    "Next.js Developer India",
+    "Full Stack Developer Portfolio",
+    "Android Developer Portfolio",
+    "Microsoft Codeathon 2026",
+    "Microsoft Codeathon Second Runner-up",
+    "HackForge Top 10 Finalist",
+    "Next.js Developer",
     "TypeScript Developer",
+    "React Developer",
+    "AI Agent Developer",
     "Offline-First Architecture",
-    "Monorepo Web Applications",
-    "Software Engineer Portfolio",
+    "Hyderabad Developer",
   ],
 });
 

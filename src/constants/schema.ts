@@ -9,7 +9,7 @@ export const getUnifiedSchema = () => {
         "@id": `${PORTFOLIO_URL}/#person`,
         name: OWNER_NAME,
         url: PORTFOLIO_URL,
-        image: `${PORTFOLIO_URL}/og-image.webp`,
+        image: `${PORTFOLIO_URL}/og-image.avif`,
         email: PORTFOLIO_EMAIL,
         description:
           "Full-Stack and Android Engineer specializing in Next.js, TypeScript, React Native, and scalable system architectures.",

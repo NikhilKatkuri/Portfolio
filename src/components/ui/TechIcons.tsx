@@ -9,13 +9,13 @@ const TechIconsComponent = () => {
 
   return (
     <div className="w-full h-auto flex flex-col gap-y-6 items-center justify-center">
-      <div className="min-[1124px]:hidden flex flex-wrap gap-4 justify-items-center items-center">
+      <div className="2xl:hidden grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2 sm:gap-4 mx-auto">
         {TechIcons.map((icon) => (
           <IconCard key={icon.name} icon={icon} />
         ))}
       </div>
 
-      <div className="hidden min-[1124px]:flex flex-col gap-y-6 w-full items-center justify-center">
+      <div className="hidden 2xl:flex flex-col gap-y-6 w-full items-center justify-center">
         {rows.map((rowIcons, rowIndex) => (
           <div
             key={rowIndex}
@@ -39,7 +39,7 @@ const IconCard = ({ icon }: { icon: { name: string; icon: string } }) => (
   <div
     aria-label={icon.name}
     title={icon.name}
-    className="flex flex-col justify-center items-center gap-2 w-24 aspect-square border border-theme-border rounded-xl hover:bg-theme-tertiary cursor-pointer"
+    className="flex flex-col justify-center items-center gap-2 md:w-24 aspect-square border border-theme-border rounded-xl hover:bg-theme-tertiary cursor-pointer"
   >
     <img
       src={`/icons/${icon.icon}`}

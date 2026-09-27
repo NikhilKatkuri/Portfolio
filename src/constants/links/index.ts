@@ -13,7 +13,6 @@ const publicConfigStrict = {
   title: "Full Stack SDE",
   location: "Hyderabad, India",
   brand: "Startify Minds",
-  dbName: "portfolio-Nikhil-Katkuri-db",
   resume: "https://drive.google.com/file/d/1fC33eQqzGF8MBSHnUjz9mxcHGCnXuJSR/view"
 } as const;
 

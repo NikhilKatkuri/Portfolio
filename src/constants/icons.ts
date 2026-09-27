@@ -23,10 +23,7 @@ const TechIcons = [
   { name: "nextjs", icon: "nextjs.svg", row: 3, col: 4 },
   { name: "flutter", icon: "flutter.svg", row: 3, col: 5 },
   { name: "firebase", icon: "firebase.svg", row: 3, col: 6 },
-  { name: "mongodb", icon: "mongodb.svg", row: 3, col: 7 },
-  { name: "mongoose", icon: "mongoose.svg", row: 3, col: 8 },
- 
-  { name: "redis", icon: "redis.svg", row: 4, col: 4 },
+
   { name: "npm", icon: "npm.svg", row: 4, col: 5 },
   { name: "pnpm", icon: "pnpm.svg", row: 4, col: 6 },
   { name: "yarn", icon: "yarn.svg", row: 4, col: 7 },

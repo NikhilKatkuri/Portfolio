@@ -180,7 +180,7 @@ const ProjectScrollCard = ({ startXat = 0 }: ProjectScrollCardProps) => {
           >
             {/* Image */}
             <Image
-              src={project.featuredImage ?? "/projects/placeholder.jpg"}
+              src={project.featuredImage ?? "/projects/placeholder.avif"}
               alt={project.title}
               fill
               loading="eager"
@@ -188,7 +188,7 @@ const ProjectScrollCard = ({ startXat = 0 }: ProjectScrollCardProps) => {
               sizes="(max-width:640px) 100vw, (max-width:1024px) 384px, 576px"
               onError={(e) => {
                 (e.currentTarget as HTMLImageElement).src =
-                  "/projects/placeholder.jpg";
+                  "/projects/placeholder.avif";
               }}
             />
 

@@ -105,7 +105,7 @@ const ProjectPage = async ({ params }: PageProps) => {
           {
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden mb-10 bg-theme-surface-depth border border-theme-border shadow-md">
               <Image
-                src={project.featuredImage ?? "/projects/placeholder.jpg"}
+                src={project.featuredImage ?? "/projects/placeholder.avif"}
                 alt={`${project.title} Banner`}
                 fill
                 priority

@@ -4,6 +4,7 @@ import FeaturedProject from "@/components/sections/FeaturedProject";
 import Hero from "@/components/sections/Hero";
 import Philosphy from "@/components/sections/Philosphy";
 import TechnicalExpertise from "@/components/sections/TechnicalExpertise";
+import AchievementTimeline from "@/components/sections/achievement-timeline";
 import IconFlow from "@/components/ui/IconFlow";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
@@ -23,6 +24,7 @@ const Home = () => {
       />
       <Hero />
       <IconFlow />
+      <AchievementTimeline />
       <FeaturedProject />
       <TechnicalExpertise />
       <Experience />
