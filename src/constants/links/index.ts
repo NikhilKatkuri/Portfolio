@@ -5,7 +5,7 @@ const publicLinks = {
   github: "https://github.com/nikhilKatkuri",
   npm: "https://www.npmjs.com/~nikhil07k",
   mail: "mailto:nikhil07.dev@gmail.com",
-  resume: "/api/resume",
+  resume: "https://drive.google.com/file/d/1fC33eQqzGF8MBSHnUjz9mxcHGCnXuJSR/view",
 };
 
 const publicConfigStrict = {

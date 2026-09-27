@@ -8,6 +8,8 @@ import {
   type AnalyticsData,
 } from "@/lib/analytics";
 
+let hasTracked = false;
+
 export function useVisitorCounter() {
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -15,10 +17,14 @@ export function useVisitorCounter() {
   useEffect(() => {
     let mounted = true;
 
-    // Fire tracking POST immediately (non-blocking, no await)
-    checkNewVisitor().then((isNew) => {
-      trackVisit(isNew);
-    });
+    // Prevent double-tracking in React Strict Mode
+    if (!hasTracked) {
+      hasTracked = true;
+
+      checkNewVisitor().then((isNew) => {
+        trackVisit(isNew);
+      });
+    }
 
     // Fetch current counts in background
     fetchAnalytics().then((data) => {

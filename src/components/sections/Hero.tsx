@@ -1,10 +1,8 @@
 import { decisions } from "@/constants/content/home";
 import publicLinks from "@/constants/links";
-import {
-  SolarArrowRightUpBroken,
-  SolarDownloadMinimalisticBoldDuotone,
-} from "@/icons/index";
+import { SolarArrowRightUpBroken } from "@/icons/index";
 import Link from "next/link";
+import ResumeButton from "@/components/client/ResumeButton";
 
 const Hero = () => {
   const { hero } = decisions;
@@ -30,13 +28,7 @@ const Hero = () => {
           </span>
         </Link>
 
-        <a
-          href={publicLinks.resume}
-          className="group inline-flex items-center gap-3 rounded-full text-button-on-secondary border border-button-secondary-border bg-button-secondary shadow-xs hover:shadow hover:bg-button-hover-secondary transition-all ease-in-out duration-200 p-btn-pad-2 "
-        >
-          Download Resume
-          <SolarDownloadMinimalisticBoldDuotone className="size-5 stroke-button-on-secondary " />
-        </a>
+        <ResumeButton />
       </div>
     </div>
   );

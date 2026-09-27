@@ -11,6 +11,31 @@ export interface AnalyticsData {
 }
 
 /**
+ * Low-level helper: send a JSON payload to the Google Apps Script endpoint.
+ * Fails silently — errors are only logged in development.
+ */
+async function sendAnalytics(payload: Record<string, unknown>): Promise<void> {
+  if (!GOOGLE_APP_SCRIPT_URL || !ANALYTICS_API_KEY) return;
+
+  try {
+    const res = await fetch(GOOGLE_APP_SCRIPT_URL, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify({ apiKey: ANALYTICS_API_KEY, ...payload }),
+      redirect: "follow",
+    });
+
+    if (!res.ok && process.env.NODE_ENV === "development") {
+      console.error("Analytics request failed:", res.status, res.statusText);
+    }
+  } catch (error) {
+    if (process.env.NODE_ENV === "development") {
+      console.error("Analytics error:", error);
+    }
+  }
+}
+
+/**
  * Check if this is a new visitor using IndexedDB.
  * Generates and persists a unique visitor ID if not present.
  */
@@ -33,24 +58,17 @@ export async function checkNewVisitor(): Promise<boolean> {
 }
 
 /**
- * Send a POST request to Google Apps Script to track the visit.
+ * Track a page view (new or returning visitor).
  */
-export async function trackVisit(isNewVisitor: boolean): Promise<void> {
-  if (!GOOGLE_APP_SCRIPT_URL || !ANALYTICS_API_KEY) return;
+export function trackVisit(isNewVisitor: boolean): Promise<void> {
+  return sendAnalytics({ action: "view", isNewVisitor });
+}
 
-  try {
-    await fetch(GOOGLE_APP_SCRIPT_URL, {
-      method: "POST",
-      headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify({
-        apiKey: ANALYTICS_API_KEY,
-        isNewVisitor,
-      }),
-      redirect: "follow",
-    });
-  } catch (error) {
-    console.error("Analytics tracking error:", error);
-  }
+/**
+ * Track a resume download / view.
+ */
+export function trackResumeDownload(): Promise<void> {
+  return sendAnalytics({ action: "resume" });
 }
 
 /**

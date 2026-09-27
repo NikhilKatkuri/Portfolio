@@ -4,6 +4,7 @@ import buttonVariants from "@/constants/ui/button";
 import cn from "@/utils/cn";
 import ThemeButtons from "../client/ThemeButtons";
 import VisitorCounter from "../client/VisitorCounter";
+import ResumeButton from "../client/ResumeButton";
 
 const Footer = () => {
   return (
@@ -22,31 +23,35 @@ const Footer = () => {
             </div>
 
             <div className="gap-3 flex flex-wrap">
-              {footer.cta.map((cta, index) => (
-                <a
-                  key={index}
-                  href={cta.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={cn(
-                    buttonVariants.base,
-                    cta.isPrimary
-                      ? buttonVariants.variants.primary
-                      : buttonVariants.variants.secondary,
-                    "cursor-pointer",
-                  )}
-                >
-                  {cta.label}
-                  <cta.icon
+              {footer.cta.map((cta, index) =>
+                cta.label === "Resume" ? (
+                  <ResumeButton key={index} />
+                ) : (
+                  <a
+                    key={index}
+                    href={cta.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={cn(
-                      "h-4 w-4 transition-transform duration-300 group-hover:scale-125 scale-100",
+                      buttonVariants.base,
                       cta.isPrimary
-                        ? buttonVariants.iconVariants.primaryFill
-                        : buttonVariants.iconVariants.secondaryStroke,
+                        ? buttonVariants.variants.primary
+                        : buttonVariants.variants.secondary,
+                      "cursor-pointer",
                     )}
-                  />
-                </a>
-              ))}
+                  >
+                    {cta.label}
+                    <cta.icon
+                      className={cn(
+                        "h-4 w-4 transition-transform duration-300 group-hover:scale-125 scale-100",
+                        cta.isPrimary
+                          ? buttonVariants.iconVariants.primaryFill
+                          : buttonVariants.iconVariants.secondaryStroke,
+                      )}
+                    />
+                  </a>
+                ),
+              )}
             </div>
           </div>
 
