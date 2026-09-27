@@ -53,7 +53,7 @@ export const achievements: Achievement[] = [
       {
         name: "Mohith Mathukumalli",
         image: "/images/achievements/stratify-minds-team-mate-1.avif",
-        role: "Backend Developer",
+        role: "Frontend Developer",
       },
       {
         name: "Yavanika",
@@ -66,8 +66,8 @@ export const achievements: Achievement[] = [
         role: "Data Engineer",
       },
     ],
-    technologies: [],
-    blogUrl: "", // Certificate URL (add manually)
+    technologies: ["Vite", "TypeScript", "Express", "Tailwind CSS", "AI Agent"],
+    githubUrl: "https://github.com/NikhilKatkuri/Sentinel_cyber_defender",
   },
 
   {
@@ -99,12 +99,12 @@ export const achievements: Achievement[] = [
       {
         name: "Mohith Mathukumalli",
         image: "/images/achievements/stratify-minds-team-mate-1.avif",
-        role: "Backend Developer",
+        role: "Frontend Developer & Data Engineer",
       },
       {
         name: "Yavanika",
         image: "/images/achievements/stratify-minds-team-mate-2.avif",
-        role: "Backend Developer",
+        role: "UI/UX Designer & Backend Developer",
       },
       {
         name: "Charlson",
@@ -119,8 +119,6 @@ export const achievements: Achievement[] = [
       "Tailwind CSS",
       "AI Agent",
     ],
-    githubUrl: "", // Add manually
-    blogUrl: "", // Add blog/demo manually
-    videoUrl: "", // Add demo video manually
+    githubUrl: "https://github.com/NikhilKatkuri/Lucis",
   },
 ];
