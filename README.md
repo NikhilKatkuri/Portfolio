@@ -1,35 +1,34 @@
 # Nikhil Katkuri — Portfolio
 
-Personal portfolio website of **Nikhil Katkuri**, a Full-Stack & Android Engineer. Built with Next.js and designed around clean architecture, smooth motion, and a performance-first UI.
+Personal portfolio of **Nikhil Katkuri**, a Full-Stack & Android Engineer. Built with Next.js and designed around clean architecture, smooth motion, and a performance-first UI.
 
 **Live:** [nikhilkatkuri.vercel.app](https://nikhilkatkuri.vercel.app)
 
 ---
 
-## ✨ Overview
+## Overview
 
-This site showcases my work, technical skills, and engineering philosophy across four main sections:
+This site showcases my work, technical skills, and engineering philosophy across five main sections:
 
-- **Home** — intro, featured projects, tech stack, and experience timeline
+- **Home** — intro, achievement timeline, featured projects, tech stack, and experience
 - **About** — engineering philosophy and background
 - **Projects** — detailed case studies of selected work
 - **Uses** — tools, languages, and setup I work with
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Category | Stack |
 |---|---|
-| Framework | [Next.js](https://nextjs.org) 16 (App Router), [React](https://react.dev) 19 |
+| Framework | [Next.js](https://nextjs.org) 16 (App Router, Turbopack), [React](https://react.dev) 19 |
 | Styling | [Tailwind CSS](https://tailwindcss.com) 4 |
 | Animation | [Framer Motion](https://www.framer.com/motion/) |
-| Database | [MongoDB](https://www.mongodb.com) |
-| Cache / KV | [Upstash Redis](https://upstash.com) |
+| Analytics | Google Apps Script (page views & unique visitors) |
 | Local Storage | [Dexie](https://dexie.org) (IndexedDB) |
-| Icons | [Lucide](https://lucide.dev), [solor icons](https://solar-icons.vercel.app/icons) |
+| Icons | [Lucide](https://lucide.dev), [Solar Icons](https://solar-icons.vercel.app/icons) |
 | Deployment | [Vercel](https://vercel.com) |
 | Language | [TypeScript](https://www.typescriptlang.org/docs/) |
 
-## 📜 Scripts
+## Scripts
 
 | Command | Description |
 |---|---|
@@ -38,24 +37,42 @@ This site showcases my work, technical skills, and engineering philosophy across
 | `pnpm start` | Start the production server |
 | `pnpm lint` | Run ESLint |
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Portfolio/
-├── public/          # Static assets (images, icons)
-├── src/             # Application source (app, components, lib)
-├── next.config.ts    # Next.js configuration
-├── tsconfig.json     # TypeScript configuration
-└── package.json       # Dependencies & scripts
+├── public/                    # Static assets (images, icons)
+├── src/
+│   ├── app/                   # App Router pages & API routes
+│   ├── components/
+│   │   ├── sections/          # Page sections (Hero, Footer, AchievementTimeline, ...)
+│   │   ├── ui/                # Reusable UI components (AchievementCard, AchievementDialog, ...)
+│   │   └── client/            # Client components (VisitorCounter, ProjectGrid, ...)
+│   ├── constants/             # Content, links, icons, schema
+│   ├── hooks/                 # Custom React hooks (useVisitorCounter)
+│   ├── lib/                   # Utilities, data, analytics
+│   ├── types/                 # TypeScript type definitions
+│   └── utils/                 # Helper utilities
+├── next.config.ts             # Next.js configuration
+├── tsconfig.json              # TypeScript configuration
+└── package.json               # Dependencies & scripts
 ```
 
-## 📬 Contact
+## Performance
+
+- AVIF image format with responsive `sizes` and lazy loading
+- Code-split dialog, gallery, and team components via `React.lazy`
+- Memoized achievement cards with `React.memo`
+- Non-blocking analytics — tracking runs in parallel with UI rendering
+- `prefers-reduced-motion` respected across all animations
+
+## Contact
 
 - **Email:** [nikhil07.dev@gmail.com](mailto:nikhil07.dev@gmail.com)
 - **GitHub:** [@NikhilKatkuri](https://github.com/NikhilKatkuri)
 - **LinkedIn:** [katkurinikhil](https://www.linkedin.com/in/katkurinikhil/)
 
-## 📄 License
+## License
 
 © Nikhil Katkuri. All rights reserved.
 
