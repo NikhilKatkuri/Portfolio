@@ -14,14 +14,8 @@ export const metadata: Metadata = homeMetadata;
 
 const Home = () => {
   return (
-    <main className="h-auto w-full">
+    <main className="h-auto w-full relative ">
       <Navbar isStatic={false} />
-      <div
-        className="w-full pointer-events-none transition-all duration-75"
-        style={{
-          height: "400px",
-        }}
-      />
       <Hero />
       <IconFlow />
       <AchievementTimeline />
