@@ -2,6 +2,145 @@ import { ProjectRecord } from "@/types";
 
 const Projects: ProjectRecord[] = [
   {
+    slug: "kedis",
+    title: "Kedis — Kernel Dictionary Server",
+    summary:
+      "A lightweight Redis-inspired in-memory key-value server built in C, featuring TTL expiration, background snapshotting, and a Node.js CLI.",
+    description:
+      "Kedis is a Redis-inspired in-memory key-value server written in C with a lightweight Node.js interactive shell. It uses a hash-table-based dictionary, TCP networking, and Linux epoll for event-driven client handling. The server supports key-value operations, TTL-based expiration, active expiration, and background snapshot persistence. Docker provides a portable development and runtime environment.",
+    metaTitle: "Kedis | Redis-Inspired Key-Value Server in C",
+    metaDescription:
+      "Explore Kedis, a C-based in-memory key-value server featuring TCP networking, hash tables, TTL expiration, background snapshots, and Docker support.",
+    keywords: [
+      "C",
+      "Redis-inspired",
+      "Key-Value Store",
+      "In-Memory Database",
+      "Systems Programming",
+      "TCP Server",
+      "epoll",
+      "Persistence",
+      "TTL",
+    ],
+    featuredImage: "/projects/kedis_architecture.avif",
+    images: ['/projects/kedis_architecture.avif'],
+    role: "Creator & Systems Developer",
+    status: "in-progress",
+    startDate: "2026-11",
+    challenge:
+      "Build a lightweight in-memory key-value server while handling concurrent clients, efficient dictionary operations, key expiration, and reliable persistence.",
+    solution:
+      "Designed a hash-table-based storage engine in C, implemented a TCP server with Linux epoll, introduced TTL-based expiration using monotonic time, and added background expiration and snapshot workers. Built a Node.js interactive shell and Docker-based deployment.",
+    results: [
+      "Implemented a C-based in-memory key-value storage engine.",
+      "Added TTL-based key expiration using monotonic timestamps.",
+      "Implemented background active expiration.",
+      "Added background snapshotting and snapshot recovery.",
+      "Created a Node.js interactive CLI.",
+      "Added Docker and Docker Compose support for cross-platform execution.",
+    ],
+    keyFeatures: [
+      "Hash-table-based key-value storage",
+      "TCP client-server communication",
+      "Event-driven networking with epoll",
+      "TTL-based expiration",
+      "Background active expiration",
+      "Background snapshot persistence",
+      "Snapshot loading and recovery",
+      "Node.js interactive shell",
+      "Dockerized deployment",
+    ],
+    tags: [
+      "Systems Programming",
+      "Backend Engineering",
+      "Database Internals",
+      "Concurrency",
+      "Open Source",
+    ],
+    technologies: {
+      frontend: [],
+      backend: ["C", "Node.js"],
+      database: ["Custom Hash Table", "In-Memory Key-Value Storage"],
+      tools: ["Git", "Make", "GCC", "Netcat"],
+      infrastructure: ["Docker", "Docker Compose", "Linux", "GitHub Actions"],
+    },
+    urls: [
+      {
+        label: "GitHub Repository",
+        url: "https://github.com/NikhilKatkuri/kedis",
+        isPrimary: true,
+        icon: "github",
+      },
+    ],
+    featured: true,
+  },
+   {
+    slug: "paperwork",
+    title: "Paperwork",
+    summary:
+      "A Google Forms-inspired open-source platform designed for building dynamic forms, handling submissions, and streamlining document workflows.",
+    description:
+      "Paperwork is an intuitive form builder utility designed to mirror the simplicity of Google Forms while offering developers enhanced flexibility. It allows users to easily scaffold customized input forms, validate responses, and manage schema-driven data ingestion without complex overhead.",
+    metaTitle: "Paperwork - Google Forms Inspired Builder | Nikhil Katkuri",
+    metaDescription:
+      "An open-source, Google Forms-inspired utility built by Nikhil Katkuri to simplify dynamic form creation, structured data entry, and custom workflows.",
+    keywords: [
+      "Form Builder",
+      "Google Forms Alternative",
+      "Dynamic Forms",
+      "Schema Validation",
+      "TypeScript",
+      "Open Source",
+    ],
+    images: [],
+    videoUrl: "",
+    role: "Creator & Lead Engineer",
+    status: "in-progress",
+    startDate: "2025-01",
+    endDate: "2025-05",
+    challenge:
+      "Building flexible, reusable web forms that can adapt to changing structural requirements often demands tedious frontend adjustments and re-deployments.",
+    solution:
+      "Developed a clean, schema-driven approach inspired by Google Forms that translates declarative field configurations directly into interactive user questionnaires with built-in validation.",
+    results: [
+      "Streamlined web form deployment pipelines down to a single configuration file",
+      "Created an easily extendable interface pattern for custom question types",
+      "Delivered a lightweight, open-source codebase ready for custom self-hosting",
+    ],
+    keyFeatures: [
+      "Google Forms-inspired input components and validation states",
+      "Dynamic configuration engines for rapid question structure modifications",
+      "Centralized response processing and structured payload validation",
+    ],
+    tags: [
+      "TypeScript",
+      "Node.js",
+      "Form Builder",
+      "Developer Tools",
+      "Open Source",
+    ],
+    technologies: {
+      frontend: ["React", "Tailwind CSS"],
+      backend: ["Node.js", "TypeScript"],
+      tools: ["ESLint", "Prettier", "Zod"],
+      infrastructure: ["GitHub Actions"],
+    },
+    urls: [
+      {
+        label: "Source Code",
+        url: "https://github.com/nikhilKatkuri/paperwork",
+        icon: "github",
+        isPrimary: true,
+      },
+    ],
+    featured: false,
+    publishedAt: "2025-05-15",
+    metrics: {
+      name: "stars",
+      count: 0,
+    },
+  },
+  {
     slug: "client-provider-cipher",
     title: "Client-to-Provider Cipher",
     summary:
@@ -126,72 +265,6 @@ const Projects: ProjectRecord[] = [
     metrics: {
       name: "packages",
       count: 3,
-    },
-  },
-  {
-    slug: "paperwork",
-    title: "Paperwork",
-    summary:
-      "A Google Forms-inspired open-source platform designed for building dynamic forms, handling submissions, and streamlining document workflows.",
-    description:
-      "Paperwork is an intuitive form builder utility designed to mirror the simplicity of Google Forms while offering developers enhanced flexibility. It allows users to easily scaffold customized input forms, validate responses, and manage schema-driven data ingestion without complex overhead.",
-    metaTitle: "Paperwork - Google Forms Inspired Builder | Nikhil Katkuri",
-    metaDescription:
-      "An open-source, Google Forms-inspired utility built by Nikhil Katkuri to simplify dynamic form creation, structured data entry, and custom workflows.",
-    keywords: [
-      "Form Builder",
-      "Google Forms Alternative",
-      "Dynamic Forms",
-      "Schema Validation",
-      "TypeScript",
-      "Open Source",
-    ],
-    images: [],
-    videoUrl: "",
-    role: "Creator & Lead Engineer",
-    status: "in-progress",
-    startDate: "2025-01",
-    endDate: "2025-05",
-    challenge:
-      "Building flexible, reusable web forms that can adapt to changing structural requirements often demands tedious frontend adjustments and re-deployments.",
-    solution:
-      "Developed a clean, schema-driven approach inspired by Google Forms that translates declarative field configurations directly into interactive user questionnaires with built-in validation.",
-    results: [
-      "Streamlined web form deployment pipelines down to a single configuration file",
-      "Created an easily extendable interface pattern for custom question types",
-      "Delivered a lightweight, open-source codebase ready for custom self-hosting",
-    ],
-    keyFeatures: [
-      "Google Forms-inspired input components and validation states",
-      "Dynamic configuration engines for rapid question structure modifications",
-      "Centralized response processing and structured payload validation",
-    ],
-    tags: [
-      "TypeScript",
-      "Node.js",
-      "Form Builder",
-      "Developer Tools",
-      "Open Source",
-    ],
-    technologies: {
-      frontend: ["React", "Tailwind CSS"],
-      backend: ["Node.js", "TypeScript"],
-      tools: ["ESLint", "Prettier", "Zod"],
-      infrastructure: ["GitHub Actions"],
-    },
-    urls: [
-      {
-        label: "Source Code",
-        url: "https://github.com/nikhilKatkuri/paperwork",
-        icon: "github",
-        isPrimary: true,
-      },
-    ],
-    featured: false,
-    publishedAt: "2025-05-15",
-    metrics: {
-      name: "stars",
-      count: 0,
     },
   },
   {
